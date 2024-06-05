@@ -59,7 +59,7 @@ export function HomePage() {
             </a>
           </div>
         </div>
-        <img src="/portfolio/src/components/Img/Captura de tela 2024-05-22 222252-Photoroom.png" className={styles.foto} />
+        <img src="\portfolio\src\components\Img\Captura de tela 2024-05-22 222252-Photoroom.png" className={styles.foto} />
       </Card>
     </div>
   );

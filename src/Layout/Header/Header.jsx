@@ -79,7 +79,8 @@ return ()=> userLogado();
            ):(
          <div className={styles["container-perfil"]} >
           <Link className={styles["botao-contato"]} to="/perfil">
-          <img className={styles.perfil} src="/portfolio/src/components/Img/foto.png" alt="Foto de Perfil" />
+         <img className={styles.perfil} src="\portfolio\src\components\Img\foto.png" alt="Foto de Perfil" />
+
           </Link>
          
             <Link  to="/entrar" onClick={()=>auth.signOut()}><IoIosLogOut className={styles["item-icon-perfil"]}/></Link>
