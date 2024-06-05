@@ -1,0 +1,95 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 80vw;
+  border: #ccc 1px solid;
+  border-radius: 24px;
+  background-color: white;
+  padding: 20px;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+/*========================Error================================ */
+.errorFormk {
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /*========================Botao================================ */
+.botao {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #646cff;
+  color: #000;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 50%;
+  margin: 25px 0 0 0;
+}
+.botao:hover {
+  filter: brightness(0.5);
+  transform: scale(1);
+  opacity: 0.5;
+}
+
+.botao:focus,
+.botao:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*========================Títlo================================ */
+.titulo {
+  color: #9d8189;
+  padding: 5px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+
+@media (min-width: 600px) {
+  .formulario {
+    width: 80vw;
+  }
+  .botao{
+    width: 30%;
+  }
+  
+
+}
+@media (min-width: 650px) {
+  .formulario {
+    width: 80vw;
+  }
+  .botao{
+    width: 30%;
+  }
+ 
+}
+@media (min-width: 730px) {
+  .formulario {
+    width: 50vw;
+  }
+
+  .botao{
+    width: 30%;
+  }
+ 
+}

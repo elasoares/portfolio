@@ -1,0 +1,250 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: none;
+  transition: all 0.2s linear;
+  font-size: 100.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* ======= ContainerHeader ========  */
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 10px 14px 0 14px;
+  margin: 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 2s ease-out;
+  width: 100%;
+  height: auto;
+}
+
+/* ======= Logo ========  */
+.logo {
+  font-weight: 400;
+  color: #8338ec;
+  letter-spacing: 0.2rem;
+  transition: 1.2s;
+  font-size: 1em;
+/*   line-height: 45px; */
+}
+
+.logo:hover {
+  filter: brightness(0.5);
+  transform: scale(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* ======= Container navigation ========  */
+.container-navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ======= Icon ========  */
+.container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  position: absolute;
+  top: 300px;
+  right: 0;
+  left: -6%;
+  width: 100%;
+}
+
+.item-icon {
+  font-size: 1em;
+  animation: pulse 2s infinite;
+}
+
+.icon-item-link {
+  color: #9d8189;
+  padding-right: 10px;
+}
+
+.icon-item-link:hover {
+  filter: brightness(0.1);
+  transform: scale(1.2);
+  opacity: 0.2;
+  color: #8338ec;
+}
+
+/* ======= Humburger ========  */
+.humburger {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #8338ec;
+}
+
+.humburger-animation {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+/* ======= Container item ========  */
+.container-item {
+  display: none;
+}
+.item-menu {
+  color: #9d8189;
+  padding: 5px;
+  font-weight: 400;
+  font-size: 0.8rem;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  transition: transform 550ms, opacity 1500ms;
+}
+
+.item-menu:hover {
+  filter: brightness(0.5);
+  transform: scale(1.2);
+  opacity: 0.5;
+  color: #8338ec;
+}
+
+.mostrarNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  margin: 25px 0 0 0;
+  transition: all 2s ease-out;
+}
+
+/* ======= Botão ========  */
+/*  .botao-contato {
+  background-color: #6939ff;
+  border: 1px solid #6939ff;
+  color: #ccc;
+  border-radius: 40px;
+
+} */
+  
+.botao-contato:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+/* ======= Foto do Perfil ========  */
+.container-perfil{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 300px;
+  right:0;
+  gap: 25px;
+}
+.perfil{
+ /*  object-fit:fill; */
+ background-color: #6939ff;
+ border: 1px solid #6939ff;
+  height: 50px;
+  width: 50px;
+  border-radius: 40px;
+}
+
+.item-icon-perfil{
+  font-size: 2em;
+  color: #9d8189;
+}
+.item-icon-perfil:hover{
+  filter: brightness(0.1);
+  transform: scale(1.2);
+  opacity: 0.2;
+  color: #8338ec;
+}
+
+@media (min-width: 658px) {
+  /* ======= Itens ========  */
+  .item-menu {
+    font-size: 0.8rem;
+  }
+
+  /* ======= Logo ========  */
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1300px) {
+  /* ======= Container do Nav ========  */
+  .conatiner-header {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-shadow: none;
+    gap: 0px;
+  }
+
+  /* ======= Botão ========  */
+  /*  .botao-contato {
+    display: block;
+  } */
+
+  /* ======= Container do Item ========  */
+  .container-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+  }
+
+  /* ======= Humbuger ========  */
+  .humburger {
+    display: none;
+  }
+
+  /* ======= ICon ========  */
+  .item-icon {
+    display: none;
+  }
+
+  /* ======= Itens ========  */
+  .item-menu {
+    font-size: 1.3rem;
+  }
+
+  /* ======= Logo ========  */
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

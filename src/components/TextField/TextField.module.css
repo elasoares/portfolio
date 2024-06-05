@@ -1,0 +1,34 @@
+.textfield {
+  width: 65vw;
+  padding: 8px 5px;
+  border: 1px solid #9d8189;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+   margin: 10px; 
+  font-size: 0.7em;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.textfield:focus {
+  border: 1px solid #8338ec;
+}
+
+@media (min-width: 600px) {
+  .textfield {
+    width: 55vw;
+  }
+}
+
+@media (min-width: 650px) {
+  .textfield {
+    width: 55vw;
+  }
+}
+
+@media (min-width: 730px) {
+  .textfield {
+    width: 45vw;
+  }
+}

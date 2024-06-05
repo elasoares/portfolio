@@ -1,0 +1,127 @@
+  
+    /*========================Formulario================================ */
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        border: #06142E 1px solid;
+        border-radius: 24px;
+        background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+     /*    background-color: #2B124C; */
+        padding: 20px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+      
+      
+      /*========================FieldSet================================ */
+    
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+     /*======================== InPut================================ */
+      .textfield {
+        font-size: 0.7em;
+        border: 1px solid #9d8189;
+        border-radius: 5px;
+        margin: 0; 
+        padding: 10px 0 10px 8px; 
+        width: 45vw;
+      }
+      /*========================Text Area Messagem================================ */
+    .textAreaMessagem {
+        font-size: 0.7em;
+        border: 1px solid #9d8189;
+        border-radius: 5px;
+       /*  margin: 10px; */
+       padding: 10px 0 0 8px; 
+        width: 45vw;
+      }
+    
+      /*========================Error================================ */
+    .errorFormk {
+        font-size: 15px;
+        font-weight: bold;
+        color: red;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      
+      /*========================Títlo================================ */
+    .titulo {
+      color: #FBE4D8;
+        padding: 5px;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.2rem;
+      }
+    
+    
+      /*========================Envio do post  e camera ================================ */
+    .botao-container{
+      background-color:  #5f72bd;
+    }
+      .botao {
+      font-size: 2em;
+      color: #FBE4D8;
+      cursor: pointer;
+      }
+      .botao:hover{
+        filter: brightness(0.1);
+        transform: scale(1.2);
+        opacity: 0.2;
+        color: #F1916D;
+      }
+      .container-envio-e-camera{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       width: 95%;
+      }
+    
+    
+    
+      @media (min-width: 600px) {
+        .formulario {
+          width: 40vw;
+        }
+      
+        .textAreaMessagem {
+          width: 35vw;
+        }
+        .textfield {
+          width: 35vw;
+        }
+      }
+      @media (min-width: 650px) {
+        .formulario {
+          width: 45vw;
+        }
+      
+     
+        .textAreaMessagem {
+          width: 40vw;
+        }
+        .textfield {
+          width: 40vw;
+        }
+      }
+      @media (min-width: 730px) {
+        .formulario {
+          width: 50vw;
+        }
+      
+      
+        .textAreaMessagem {
+          width: 45vw;
+        }
+        .textfield {
+          width: 45vw;
+        }
+      }
+      
