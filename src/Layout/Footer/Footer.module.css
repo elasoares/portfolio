@@ -1,0 +1,8 @@
+.container{
+  position:fixed;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

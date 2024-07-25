@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: none;
+/*   transition: all 0.2s linear; */
+/*   font-size: 100.5%; */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* ======= ContainerHeader ========  */
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  flex-wrap: wrap;
+  padding: 10px 14px 0 14px;
+  margin: 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+/*   transition: all 2s ease-out; */
+  width: 100vw;
+  height: auto;
+/*   position: absolute;
+  z-index: 1001; */
+}
+
+/* ======= Entrar ========  */
+.entrar{
+  font-family: "Rammetto One", sans-serif;
+  color: #3d348b;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  transition: 1.2s;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/* ======= Logo ========  */
+.logo {
+  font-family: "Rammetto One", sans-serif;
+  color: #3d348b;
+  letter-spacing: 0.2rem;
+  transition: 1.2s;
+  font-size: 1.5em;
+/*   line-height: 45px; */
+}
+
+.logo:hover {
+  color: #ff2f50;
+  filter: brightness(0.5);
+  transform: scale(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* ======= Container navigation ========  */
+.container-navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ======= Humburger ========  */
+.humburger {
+  cursor: pointer;
+  font-size: 1.8em;
+  color: #3d348b;
+}
+
+.humburger-animation {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+/* ======= Container item ========  */
+.container-menu-navegacao {
+  display: none;
+}
+
+.container-item-navegador{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  gap: 25px;
+}
+
+.item-menu {
+  color: #ff2f50;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  transition: transform 550ms, opacity 1500ms;
+}
+
+.item-menu:hover {
+  filter: brightness(0.5);
+  transform: scale(1.2);
+  opacity: 0.5;
+  color: #3d348b;
+  font-weight: bold;
+}
+
+.mostrarNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.801);
+  width: 100%;
+  margin: 25px 0 0 0;
+  transition: all 2s ease-out;
+}
+
+
+
+
+@media (min-width: 658px) {
+  /* ======= Itens ========  */
+  .item-menu {
+    font-size: 0.8rem;
+  }
+
+  /* ======= Logo ========  */
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+@media(min-width: 720px) {
+    /* ======= Container do Nav ========  */
+    .conatiner-header {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin:auto 0;
+    } 
+  
+   
+    /* ======= Container do Item ========  */
+    .container-item-navegador{
+      display: flex;
+      flex-direction: row;
+      justify-content:center;
+      align-items: center;
+    }
+  .container-menu-navegacao {
+      width: 55%;
+      display: flex;
+      flex-direction: row;
+      margin: auto 0;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+     /* ======= Humbuger ========  */
+  .humburger {
+    display: none;
+  }
+  
+
+}
+
+@media (min-width: 1300px) {
+  /* ======= Container do Nav ========  */
+  .conatiner-header {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin:auto 0;
+  } 
+
+ 
+  /* ======= Container do Item ========  */
+  .container-item-navegador{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+  }
+  .container-menu-navegacao {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* ======= Humbuger ========  */
+  .humburger {
+    display: none;
+  }
+
+  /* ======= Container navigation ========  */
+  .container-navigation{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ======= Entrar ========  */
+  .entrar{
+    font-size: 1.1rem;
+  }
+  /* ======= Itens ========  */
+  .item-menu {
+    font-size: 1.1rem;
+  }
+
+  /* ======= Logo ========  */
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: auto 0;
+  }
+
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

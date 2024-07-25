@@ -1,0 +1,108 @@
+
+/* =========================Estilo do container Sobre=============================== */
+
+.container{
+display: flex;
+align-items:  center;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.container-sobre{
+    width: 100%;
+    padding: 105px 55px 80px 55px; 
+}
+
+/* =========================Estilo do container Header do sobre=============================== */
+.container-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;  
+    width: 100%;
+
+}
+/* =========================Estilo da borda=============================== */
+.border-style{
+ border: 1px solid #8338ec;
+ background-color: #8338ec;
+ border-radius: 50px;
+ width: 10%;
+ height: 5px;
+ margin: 8px 5px 0 0;
+}
+/* =========================Estilo do título=============================== */
+.titulo{
+    font-size: 2em;
+}
+
+/* =========================Estilo das minhas habilidades=============================== */
+
+.container-habilidades{
+    width: 100%;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 105px 55px 80px 55px; 
+}
+
+ .container-itens-habilidades{
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+   
+} 
+ .itens-habilidades{
+ width: 100px;
+ height: 100px;
+ /* border: 1px solid #ccc; */
+ display: flex;
+ align-items:  center;
+ justify-content: center;
+ flex-direction: column; 
+ cursor:pointer;
+} 
+
+
+/* =========================Estilo das imagens =============================== */
+.imgStyle2{
+    width: 55px;
+    height: 55px;
+}
+
+
+/* =========================@ =============================== */
+
+@media (min-width: 750px) {
+    .titulo{
+        font-size: 2.8em;
+    }
+}
+
+@media (min-width: 800px) {
+    .container{
+        display: flex;
+        align-items:  center;
+        justify-content: center;
+        flex-direction: row;
+        }
+        .titulo{
+            font-size: 2.3em;
+        }
+}
+@media (min-width: 900px) {
+    .container{
+        display: flex;
+        align-items:  center;
+        justify-content: center;
+        flex-direction: row;
+        }
+        .titulo{
+            font-size: 3em;
+        }
+}

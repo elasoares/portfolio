@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rammetto+One&display=swap');
+
+/* ======= Foto do Perfil ========  */
+.container-perfil{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+} 
+
+.botao-perfil{
+  background-color: transparent;
+}
+
+.foto-perfil{
+    object-fit:fill; 
+    background-color: #3d348b;
+    border: 2px solid #3d348b;
+     height: 50px;
+     width: 50px;
+     border-radius: 40px;
+     cursor: pointer;
+   }
+.foto-perfil:hover{
+  transform: scale(1.2);
+  color: #3d348b;
+  font-weight: bold;
+
+}
+
+   
+.menu-perfil{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   } 
+   
+ .mostrar-menu-perfil{
+     display: block;
+   }
+
+   .item-menu-perfil {
+    padding: 20px 30px; 
+    white-space: nowrap; 
+    font-size: 1.2rem;
+    color: #9d8189;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .item-menu-sair{
+    padding: 20px 30px; 
+    white-space: nowrap; 
+    font-size: 1.2rem;
+    color: #9d8189;
+    font-family: "Montserrat", sans-serif;
+    background-color: transparent;
+  }
+
+  
+  .item-menu-perfil:hover {
+      filter: brightness(0.5);
+      transform: scale(1.2);
+      opacity: 0.5;
+      font-weight: bold;
+    color:#3d348b;
+
+  }
+  .item-menu-sair:hover {
+      filter: brightness(0.5);
+      transform: scale(1.2);
+      opacity: 0.5;
+      font-weight: bold;
+    color:#3d348b;
+    cursor: pointer;
+
+  }
+
+  @media (min-width: 700px){
+    .menu-perfil{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      position: absolute; 
+      background-color: white; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      z-index: 1001; 
+      border-radius: 4px;
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+      top: 104%; 
+      right: 10%; 
+      width: 15vw;
+      height: auto;
+      } 
+  }
+
+  @media(min-width: 1200px){
+    .menu-perfil{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      position: absolute; 
+      background-color: white; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      z-index: 1001; 
+      border-radius: 4px;
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+      top: 104%; 
+      right: -120%; 
+      width: 8vw;
+      height: auto;
+      } 
+  }
