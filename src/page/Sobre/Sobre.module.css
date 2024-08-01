@@ -8,7 +8,6 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-/*     padding: 50px 10px; */
 }
 
 .container-sobre{
@@ -24,6 +23,16 @@
     flex-direction: row;  
     width: 100%;
 
+}
+.header-texto-sobre{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+.texto-sobre{
+    font-size: 1.2rem;
 }
 /* =========================Estilo da borda=============================== */
 .border-style{
@@ -89,33 +98,27 @@
     .container-habilidades{
         padding: 55px;  
     }
-    
+
+    .container-sobre{
+        padding: 100px 35px 80px 55px; 
+        margin: auto 0; 
+    }
 }
 
 
 @media (min-width: 800px) {
-    .container{
-        display: flex;
-        align-items:  center;
-        justify-content: center;
-        flex-direction: row;
-        height: 100vh;
-        }
+        .container{
+    flex-direction: row;
 
-        .container-habilidades{
-            padding: 50px 5px 50px 20px;  
-        }
+    }
+
+    .container-habilidades{
+        padding: 50px 5px 50px 20px;  
+    }
 }
 
 
 @media (min-width: 900px) {
-    .container{
-        display: flex;
-        align-items:  center;
-        justify-content: center;
-        flex-direction: row;
-        height: 100vh;
-        }
         .titulo{
             font-size: 2.3em;
         }

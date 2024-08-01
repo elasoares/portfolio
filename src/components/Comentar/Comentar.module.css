@@ -39,10 +39,18 @@
   }
 
   /* ======================== Comentário ========================== */
-  .comentario{
+  .container-comentario{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+  }
+
+  .comentario{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    padding: 0;
   }

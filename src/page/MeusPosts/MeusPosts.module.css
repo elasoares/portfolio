@@ -3,10 +3,10 @@
 /* ===========================Container================================ */
 
 .container{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: inline;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 10px;
     width: 90%;
     font-family: "Montserrat", sans-serif;
@@ -94,22 +94,33 @@
 
 
 
-
-.container-mensagem{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+/* =========================== Informação do post ================================ */
 
 
-/* .container-header{
-    display: flex;
-    justify-content:space-between;
-    align-items: flex-start;
-    width: 100%;
-} */
+.container-info{
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px 0 0 5px;
+  gap: 10px;
+}  
+
+  .mensagem {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .comentario{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
 
 
 
@@ -126,15 +137,31 @@
     align-items: center;
 }
 
-@media(min-width: 850px){
+@media(min-width: 750px){
     .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
         flex-direction: row;
         flex-wrap:wrap;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
     .card {
-        margin: 10px;
-        width: 40%;
+        width: 90%;
+      }
+}
+@media(min-width: 850px){
+    .card {
+        width: 300px;
+      }
+}
+@media(min-width: 950px){
+    .container{
+        gap: 0;
+        margin: 0 auto;
+    }
+    .card {
+        width: 350px;
       }
 }

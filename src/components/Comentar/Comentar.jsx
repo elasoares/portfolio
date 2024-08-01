@@ -49,8 +49,8 @@ export function Comentar({ postID }) {
     <div className={styles.container}>
       <div>
         {comentariosEnviados.map((comentar) => (
-          <div key={comentar.id} className={styles.comentario}>
-            <h6>Comentário:</h6>
+          <div key={comentar.id} className={styles["container-comentario"]}>
+            <span className={styles.comentario}>Comentário:</span>
             <p>{comentar.texto}</p>
           </div>
         ))}

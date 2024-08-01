@@ -77,10 +77,10 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
             </div>
               
               
-
-                <div  className={styles['container-mensagem']}>
-                <p>{postado.message}</p>
-               </div>
+            <div className={styles['container-info']}>
+             <span className={styles.comentario}> Comentário: </span> <p className={styles.mensagem}>{postado.message}</p> 
+            </div>
+                
             
                </Card>
              )) 
