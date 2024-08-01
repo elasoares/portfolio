@@ -5,4 +5,16 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/portfolio/',
+<<<<<<< Updated upstream
+=======
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      external: ['/portfolio/assets/index-Be_rP3pk.js']
+
+    }
+  }
+>>>>>>> Stashed changes
 })
