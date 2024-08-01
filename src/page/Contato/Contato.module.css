@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+}
+
+a {
   text-decoration: none;
-  outline: none;
-  border: none;
-  text-transform: none;
-  transition: all 0.2s linear;
-  font-size: 100.5%;
+}
+
+ul li {
+  list-style: none;
 }
 
 .formulario {
@@ -23,7 +27,7 @@
   background-color: white;
   padding: 20px;
   font-weight: 400;
-  margin-top: 20px;
+  margin: 20px 0 55px 0;
 }
 /*========================Fieldset================================ */
 fieldset {
@@ -48,11 +52,12 @@ fieldset {
 
 
 .termStyles a {
-  color: #646cff;
+  color: #ba68c8;
   margin-left: 5px;
 }
 .termStyles a:hover {
-  color: #9d8189;
+  color: #4a148c;
+  font-weight: bold;
 }
 
 /*========================Select================================ */
@@ -79,8 +84,8 @@ fieldset {
 
 /*========================Error================================ */
 .errorFormk {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
   color: red;
   padding: 0;
   margin: 0;
@@ -90,12 +95,12 @@ fieldset {
 /*========================Botao================================ */
 .botao {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #ba68c8;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  background-color: #646cff;
-  color: #000;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #ba68c8;
+  color: #4a148c;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
@@ -105,6 +110,7 @@ fieldset {
   filter: brightness(0.5);
   transform: scale(1);
   opacity: 0.5;
+  color: white;
 }
 
 .botao:focus,
@@ -113,10 +119,10 @@ fieldset {
 }
 /*========================Títlo================================ */
 .titulo {
-  color: #9d8189;
+  color: #4a148c;
   padding: 5px;
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 600px) {

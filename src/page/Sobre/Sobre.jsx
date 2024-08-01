@@ -1,24 +1,22 @@
 import styles from './Sobre.module.css';
+import css from "../../../public/Img/css.png";
+import html5 from "../../../public/Img/html5.png";
+import java from "../../../public/Img/JAVA.png";
+import javaScript from "../../../public/Img/javaScript.png";
+import react from "../../../public/Img/React.png";
+import git from "../../../public/Img/git.png";
+import github from "../../../public/Img/github-mark.png";
 
-/* const habilidades = [
-  {nome:"HTML", link:"/src/components/Img/html5.png" },
-  {nome:"CSS", link:"/src/components/Img/css.png" },
-  {nome:"JAVA", link:"/src/components/Img/JAVA.png"},
-  {nome:"JAVASCRIPT", link:"/src/components/Img/javaScript.png"},
-  {nome:"REACT", link:"/src/components/Img/react.png" },
-  {nome:"GIT", link:"/src/components/Img/git.png"},
-  {nome:"GITHUB", link:"/src/components/Img/github-mark.png" },
-] */
+ const habilidades = [
+  {nome:"HTML", link: html5},
+  {nome:"CSS", link: css },
+  {nome:"JAVA", link: java},
+  {nome:"JAVASCRIPT", link: javaScript},
+  {nome:"REACT", link: react },
+  {nome:"GIT", link: git},
+  {nome:"GITHUB", link: github },
+] 
 
-const habilidades = [
-  { nome: "HTML", link: "/public/Img/html5.png" },
-  { nome: "CSS", link: "/Img/css.png" },
-  { nome: "JAVA", link: "/Img/JAVA.png" },
-  { nome: "JAVASCRIPT", link: "/Img/javaScript.png" },
-  { nome: "REACT", link: "/Img/react.png" },
-  { nome: "GIT", link: "/Img/git.png" },
-  { nome: "GITHUB", link: "/Img/github-mark.png" },
-];
 
 
 

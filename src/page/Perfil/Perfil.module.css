@@ -4,7 +4,9 @@
     grid-template-areas:  "aside principal";
     grid-template-columns: 200px 1fr;
     grid-template-rows: repeat(4, 500px);
-    
+    height: 100%;
+    width: 100vw;
+    margin-top: 40px;
 }
 
 /*========================Aside================================ */
@@ -25,8 +27,8 @@
  gap: 10px;
  font-weight: 400;
  font-size: 1.7em;
- background-color: #6939ff;
- border: 1px solid #6939ff;
+ background-color: #4a148c;
+ border: 1px solid #4a148c;
  color: #FBE4D8;
  border-radius: 40px;
  margin: 5px  5px 2px  5px; 
@@ -45,12 +47,12 @@ cursor: pointer;
  gap: 10px;
  font-weight: 400;
  font-size: 1.2em;
- border: 1px solid #6939ff;
+ border: 1px solid #4a148c;
  border-radius: 3px;
- color: #6939ff;
+ color: #4a148c;
  background-color: #FBE4D8;
  margin: 1px 5px; 
- padding:12px 0 12px 10px;
+ padding:10px 0 10px 10px;
 }
 .aside-items:hover {
     filter: brightness(0.5);
@@ -64,7 +66,7 @@ cursor: pointer;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 10px; 
-   width: 100%;
+   width: 95%;
 }
 
 
@@ -92,7 +94,7 @@ cursor: pointer;
         grid-template-columns: 300px 3fr;
     }
     .principal{
-        width: 100%;
+        width: 90%;
      }
   }
   @media (min-width: 730px) {
@@ -100,7 +102,7 @@ cursor: pointer;
         grid-template-columns: 350px 3fr;
     }
     .principal{
-        width: 100%;
+        width: 90%;
      }
   }
   

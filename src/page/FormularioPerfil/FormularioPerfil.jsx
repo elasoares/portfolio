@@ -15,8 +15,8 @@ import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebas
 import { storage } from "../../firebaseConfig";
 
 export function FormularioPerfil() {
-  const [selectedFile, setSelectedFile] = useState(null);
-  const[clearImage, setClearImage]=useState(false);
+  const [selecionarArquivo, setselecionarArquivo] = useState(null);
+  const[Imagem, setImagem]=useState(false);
 
   const schemaValidationForm = yup.object({
     title: yup.string()
@@ -31,16 +31,16 @@ export function FormularioPerfil() {
   });
 
   const postar = (values, { setSubmitting, resetForm }) => {
-    if (!selectedFile) {
+    if (!selecionarArquivo) {
       toast('Por favor, selecione uma imagem para enviar.');
       setSubmitting(false);
       return;
     }
 
     const { message, title, subtitle } = values;
-    const fileName = selectedFile.name;
+    const fileName = selecionarArquivo.name;
     const storageReference = storageRef(storage, `images/${fileName}`);
-    const uploadTask = uploadBytesResumable(storageReference, selectedFile);
+    const uploadTask = uploadBytesResumable(storageReference, selecionarArquivo);
 
     uploadTask.on(
       'state_changed',
@@ -62,9 +62,9 @@ export function FormularioPerfil() {
               toast("Post realizado com sucesso.");
               setSubmitting(false);
               resetForm();
-              setSelectedFile(null); 
-              setClearImage(true);
-              setTimeout(() => setClearImage(false), 1000);
+              setselecionarArquivo(null); 
+              setImagem(true);
+              setTimeout(() => setImagem(false), 1000);
             })
             .catch((error) => {
               toast("Erro ao realizar o post, verifique e tente novamente." + error.message);
@@ -104,7 +104,7 @@ export function FormularioPerfil() {
               {touched.title && errors.title}
             </p>
  */}
-          <UpLoadsImagens onFileSelect={(file) => setSelectedFile(file)} clear={clearImage} />
+          <UpLoadsImagens onFileSelect={(file) => setselecionarArquivo(file)} clear={Imagem} />
             <fieldset>
               <TextField
                 className={styles.textfield}

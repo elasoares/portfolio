@@ -5,6 +5,7 @@ import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 import { Card } from "../../components/Card/Card";
 import styles from './MeusPosts.module.css';
 import { EditarEDeletar } from "../../components/EditarEDeletar/EditarEDeletar";
+import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
 
 
 
@@ -58,21 +59,23 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
             {posts.length > 0 ?(
               posts.map((postado, index)=>(
                <Card className={styles.card}  key={"post_" + index}>
-                              
-              <div className={styles['container-header']}> 
-              
-              
-                <div className={styles['container-titulo']}>
-                    <h5>{postado.title}</h5>
-                    <p>{postado.subtitle}</p>
-                    {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
-                </div>
-                <div> 
-                <EditarEDeletar className={styles.EditarEDeletar} onDelete={()=> handleDelete(postado.id)}  editar={`/editar/${postado.id}`} visualizar={`/visualizar/${postado.id}`}  />
-              
+               
+               <div className={styles.header}>
+              <div className={styles["container-header-perfil"]}>
+                <FotoPerfil className={styles.fotoPerfil} />
+                <div className={styles['container-header-titulo']}>
+                  <h2>Elaine Soares</h2>
+                  <p>{postado.subtitle}</p> 
                 </div>
               </div>
+              <EditarEDeletar className={styles.EditarEDeletar} onDelete={()=> handleDelete(postado.id)}  editar={`/editar/${postado.id}`} visualizar={`/visualizar/${postado.id}`}  />
+            </div>
 
+             
+             <div className={styles["container-imagem-postada"]}>
+              {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
+            </div>
+              
               
 
                 <div  className={styles['container-mensagem']}>

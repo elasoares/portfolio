@@ -2,65 +2,107 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #fafafa;
+    min-height: 50vh;
+    height: 100vh;
   }
   
   .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 350px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #dbdbdb;
+    padding: 5px;
+    margin-top: 5px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    margin: 20px;
-    overflow: hidden;
-    border: 1px solid #dbdbdb;
   }
-  
-  .header {
+
+
+  /* --------------------   Container do header do perfil   ---------------------- */
+
+  .header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 14px;
+    padding: 8px 8px;
+    width: 100%;
     border-bottom: 1px solid #dbdbdb;
   }
+
+  .container-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
   
-  .header img {
-    width: 32px;
-    height: 32px;
+  .fotoPerfil{
+    margin: auto 0;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin-right: 14px;
   }
+
+  .container-header-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    
+  }
   
   .header h2 {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 600;
     margin: 0;
   }
+  .header p {
+    font-size: 0.1rem;
+  }
   
-  .image {
+  /* ===========================Imagem do post================================ */
+  .container-imagem-postada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: auto;
+  }
+
+  .imagem {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 250px;
+   /*  object-fit:inherit; */
+    
   }
   
-  .info {
-    padding: 14px;
-  }
-  
-  .info h2 {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 10px 0;
-  }
-  
-  .info p {
-    font-size: 14px;
-    margin: 0 0 10px 0;
-  }
-  
-  .message {
+/* =========================== Informação do post ================================ */
+
+
+.container-info{
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 10px;
+}  
+
+  .mensagem {
     font-size: 14px;
     line-height: 1.6;
     color: #333;
+    margin: 0;
+    padding: 0;
   }
   
   .footer {

@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* =========================Estilo do container Sobre=============================== */
 
 .container{
-display: flex;
-align-items:  center;
-justify-content: center;
-flex-direction: column;
-
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+/*     padding: 50px 10px; */
 }
 
 .container-sobre{
     width: 100%;
-    padding: 105px 55px 80px 55px; 
+    padding: 50px 35px 80px 55px;  
 }
 
 /* =========================Estilo do container Header do sobre=============================== */
@@ -25,8 +27,8 @@ flex-direction: column;
 }
 /* =========================Estilo da borda=============================== */
 .border-style{
- border: 1px solid #8338ec;
- background-color: #8338ec;
+ border: 1px solid #ba68c8;
+ background-color: #ba68c8;
  border-radius: 50px;
  width: 10%;
  height: 5px;
@@ -35,6 +37,7 @@ flex-direction: column;
 /* =========================Estilo do título=============================== */
 .titulo{
     font-size: 2em;
+    color:#4a148c
 }
 
 /* =========================Estilo das minhas habilidades=============================== */
@@ -45,7 +48,7 @@ flex-direction: column;
     align-items:  center;
     justify-content: center;
     flex-direction: column;
-    padding: 105px 55px 80px 55px; 
+    padding: 50px 20px 50px 5px;  
 }
 
  .container-itens-habilidades{
@@ -80,9 +83,15 @@ flex-direction: column;
 
 @media (min-width: 750px) {
     .titulo{
-        font-size: 2.8em;
+        font-size: 2.3em;
     }
+
+    .container-habilidades{
+        padding: 55px;  
+    }
+    
 }
+
 
 @media (min-width: 800px) {
     .container{
@@ -90,19 +99,27 @@ flex-direction: column;
         align-items:  center;
         justify-content: center;
         flex-direction: row;
+        height: 100vh;
         }
-        .titulo{
-            font-size: 2.3em;
+
+        .container-habilidades{
+            padding: 50px 5px 50px 20px;  
         }
 }
+
+
 @media (min-width: 900px) {
     .container{
         display: flex;
         align-items:  center;
         justify-content: center;
         flex-direction: row;
+        height: 100vh;
         }
         .titulo{
-            font-size: 3em;
+            font-size: 2.3em;
+        }
+        .container-habilidades{
+            padding: 50px 20px 50px 50px;  
         }
 }

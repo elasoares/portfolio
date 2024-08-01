@@ -1,11 +1,11 @@
-/* Importe as bibliotecas necessárias */
+
 import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 /* import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa"; */
 import { Link } from "react-router-dom";
 import { PiTextAlignLeftLight } from "react-icons/pi";
-/* import { IoIosLogOut } from "react-icons/io";
-import { IoIosLogIn } from "react-icons/io"; */
+import { IoMdClose } from "react-icons/io";
+
 
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebaseConfig.js";
@@ -26,6 +26,10 @@ export function Header() {
 
   function sideNavFunctionClick() {
     setNav(!nav);
+  }
+
+  function clicarEFecharOmenu(){
+    setNav(false);
   }
 
  
@@ -56,7 +60,7 @@ export function Header() {
         <div className={styles["container-item-navegador"]}>
           {navigationLinks.map((navigation, index) => (
             <div key={index} className={styles["container-navigation"]}>
-              <Link className={styles["item-menu"]} to={navigation.link}>
+              <Link className={styles["item-menu"]} to={navigation.link} onClick={clicarEFecharOmenu}>
                 {navigation.name}
               </Link>
             </div>
@@ -65,22 +69,33 @@ export function Header() {
         <div className={styles.perfil}>
           {!user ? (
             <div>
-              <Link className={styles.entrar} to={"/entrar"}>
+              <Link className={styles.entrar} to={"/entrar"} onClick={clicarEFecharOmenu}>
                 Entrar
               </Link>
             </div>
           ) : (
-           <AcessarPerfil/>
+           <AcessarPerfil className={styles.acessarPerfil} />
           )}
           </div>
         </div>
 
-        <PiTextAlignLeftLight
+        {!nav ? ( 
+          <PiTextAlignLeftLight
           className={`${nav ? styles["humburger-animation"] : ""} ${
             styles.humburger
           }`}
           onClick={sideNavFunctionClick}
         />
+        ):(
+           <IoMdClose
+          className={`${nav ? styles["humburger-animation"] : ""} ${
+            styles.humburger
+          }`}
+          onClick={sideNavFunctionClick}
+        />
+        )        
+        }
+       
       </header>
     </>
   );
