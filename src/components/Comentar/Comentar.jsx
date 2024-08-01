@@ -1,13 +1,31 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from 'react';
 import styles from './Comentar.module.css';
 import { dataBase } from '../../firebaseConfig.js';
-import { ref, push } from 'firebase/database';
+import { ref, push, onValue } from 'firebase/database';
 import toast from 'react-simple-toasts';
+/* import { Curtir } from '../Curtir/Curtir.jsx'; */
 
-export function Comentar() {
+export function Comentar({ postID }) {
   const [comentario, setComentario] = useState('');
   const [comentariosEnviados, setComentariosEnviados] = useState([]);
-  const [confirmaEnvio, setConfirmaEnvio] = useState(false);
+
+  useEffect(() => {
+    const mensRef = ref(dataBase, `/comentarios/${postID}`);
+    const unsubscribe = onValue(mensRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const comentariosArray = Object.entries(data).map(([key, value]) => ({
+          id: key,
+          texto: value.texto,
+        }));
+        setComentariosEnviados(comentariosArray);
+      } else {
+        setComentariosEnviados([]);
+      }
+    });
+    return () => unsubscribe();
+  }, [postID]);
 
   const handleChange = (event) => {
     const { value } = event.target;
@@ -15,50 +33,47 @@ export function Comentar() {
   };
 
   const enviarParaFirebase = () => {
-    const mensRef = ref(dataBase, '/comentário');
+    const mensRef = ref(dataBase, `/comentarios/${postID}`);
 
     push(mensRef, { texto: comentario })
       .then(() => {
-        setComentariosEnviados((prevComentarios) => [...prevComentarios, comentario]);
         setComentario('');
-        setConfirmaEnvio(true);
         toast('Comentário realizado com sucesso!');
       })
       .catch((erro) => {
-        toast('Error: ' + erro.message);
+        toast('Erro: ' + erro.message);
       });
   };
 
   return (
     <div className={styles.container}>
-      <div className={styles['container-mensagem']}>
-
-        
-      <fieldset>
-      <textarea
-          placeholder="Deixe seu comentário aqui"
-          value={comentario}
-          name="message"
-          id="message"
-          rows="1"
-          cols="30"
-          className={styles['compo-input']}
-          onChange={handleChange}
-        />
-      </fieldset>
-      <button className={styles.botao} onClick={enviarParaFirebase}>Enviar</button>
-
+      <div>
+        {comentariosEnviados.map((comentar) => (
+          <div key={comentar.id} className={styles.comentario}>
+            <h6>Comentário:</h6>
+            <p>{comentar.texto}</p>
+          </div>
+        ))}
       </div>
 
-      {confirmaEnvio && (
-        <div>
-          {comentariosEnviados.map((comentar, index) => (
-            <div key={index} className={styles.comentario}>
-            <h6>Comentário:</h6>  <p>{comentar}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className={styles['container-mensagem']}>
+        {/* <Curtir className={styles['container-curtir']} /> */}
+        <fieldset>
+          <textarea
+            placeholder="Deixe seu comentário aqui"
+            value={comentario}
+            name="mensagem"
+            id="mensagem"
+            rows="1"
+            cols="30"
+            className={styles['campo-input']}
+            onChange={handleChange}
+          />
+        </fieldset>
+        <button className={styles.botao} onClick={enviarParaFirebase}>
+          Enviar
+        </button>
+      </div>
     </div>
   );
 }

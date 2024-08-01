@@ -30,12 +30,13 @@ export function GetImagens({nomeDaImagem}){
    
     return(
         <div>
+        <LoadingOverlay/> 
         {
+            
             imageUrl ? (
                 <img src={imageUrl}/> 
             ):(
-          <div>
-          <LoadingOverlay/>          
+          <div>         
                {error && <p>Error: {error}</p>}
             </div>
             )

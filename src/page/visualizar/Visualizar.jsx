@@ -1,14 +1,17 @@
 import  { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { axios } from '../../axios';
 import toast from 'react-simple-toasts';
 import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import styles from './Visualizar.module.css';
 import { Curtir } from '../../components/Curtir/Curtir';
 import { Comentar } from '../../components/Comentar/Comentar';
+import { FotoPerfil } from '../../components/FotoPerfilGet/FotoPerfil';
+import { IoMdClose } from "react-icons/io";
 
 export function Visualizar() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -35,21 +38,33 @@ export function Visualizar() {
     return <p>Post não encontrado!</p>;
   }
 
+  function navegarParaFeed(destino){
+      navigate(destino);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
 
         <div className={styles.header}>
-          <img src="/path/to/profile-pic.jpg" alt="Profile" />
-          <h2>{post.name}</h2>
+
+          <div className={styles["container-header"]}>
+            <FotoPerfil className={styles.fotoPerfil} />
+            <div className={styles['container-header-titulo']}>
+              <h2>Elaine Soares</h2>
+              <p>{post.subtitle}</p> 
+            </div>
+          </div>
+          <IoMdClose onClick={()=>navegarParaFeed('/feed')}/>
         </div>
 
-        <img className={styles.image} src={post.imageUrl} />
+        <div className={styles["container-imagem-postada"]}>
+            <img className={styles.imagem} src={post.imageUrl} />
+        </div>
+       
 
-        <div className={styles.info}>
-          <h2>{post.title}</h2>
-          <p>{post.subtitle}</p>
-          <div className={styles.message}>{post.message}</div>
+        <div className={styles['container-info']}>    
+          <div className={styles.mensagem}>{post.message}</div>
         </div>
 
         <div className={styles.footer}>

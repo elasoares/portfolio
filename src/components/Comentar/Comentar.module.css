@@ -8,7 +8,7 @@
     color: white;
     border: none;
     width: 55px;
-    height: 30px;
+    height: 35px;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -17,17 +17,32 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin: 0;
+    justify-content: center;
     padding: 0;
   }
   
-  .compo-input {
-    margin-top: 10px;
+  .campo-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #dbdbdb;
     border-radius: 4px;
   }
   
-  
+
+  .container-curtir{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+    background-color: white;
+  }
+
+  /* ======================== Comentário ========================== */
+  .comentario{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }

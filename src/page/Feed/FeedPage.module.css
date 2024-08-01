@@ -9,9 +9,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 2px; 
-    margin: 30px auto; 
-    width: 70vw;
+    margin: auto 0; 
+    width: 100vw;
+    padding: 50px 0;
     font-family: "Montserrat", sans-serif;
+
 }
 
 /* ===========================Card================================ */
@@ -23,7 +25,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    width: 300px;
+    width: 350px;
     height: auto;
     overflow: hidden;
     border: 1px solid #dbdbdb;
@@ -133,15 +135,7 @@
   
   
  
-  .container-curtir{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
 
-    width: 15%;
-    background-color: white;
-  }
   
   
 

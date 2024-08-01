@@ -12,15 +12,16 @@ a {
 ul li {
   list-style: none;
 }
-html {
+/* html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
+ */
 .container-main {
   display: flex;
   justify-content: center;
   align-items: center; 
+  height: 100vh;
 }
 
 .container-icon-lista {
@@ -28,11 +29,10 @@ html {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  margin: 100px 0 0 0;
+  margin:0;
   padding: 20px;
-  height: 65vh;
+  height: 100vh;
   border-radius: 24px;
-  background: linear-gradient(to left bottom, #ef3bff, #ff2f50, #ff2f50, #ef3bff, #ef3bff);
   color: #fdfcfd;
   width: 95%;
 }
@@ -53,7 +53,7 @@ html {
 }
 
 .titulo {
-  font-size: 25px;
+  font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   padding-top: 5px;
@@ -63,12 +63,12 @@ html {
 }
 
 .subtitulo {
-  font-size: 20px;
+  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   opacity: 0.6; 
-   padding-bottom: 22px;
-   color: #3d348b;
+  padding-bottom: 22px;
+  color: #3d348b;
 
 }
 
@@ -132,8 +132,8 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
-
+  gap: 40px;
+  padding-bottom: 105px;
 }
 
 /* ============ Foto ============ */
@@ -150,7 +150,7 @@ html {
 
 @media (min-width: 650px) {
   .container-main {
-    margin: 100px 0 0 0;
+    margin: 20px 0 0 0;
   }
 
   /*============ Foto ============ */
@@ -169,14 +169,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .titulo {
-    font-size: 23px;
-  }
-
-  .subtitulo {
-    font-size: 15px;
   }
 
   /*================Card=====================*/
@@ -201,7 +193,8 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 35px;
+    padding-bottom: 105px;
   }
 
   /* ============ Botões ============ */
@@ -221,6 +214,7 @@ html {
     justify-content: flex-start;
     align-items: center;
     backdrop-filter: blur(5px); 
+    margin: 0;
   }
 
   /* ============ Icon ============  */
@@ -235,7 +229,7 @@ html {
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    padding-left: 0;
+    padding-bottom: 0;
   }
 
   /* ============ Foto ============ */
@@ -249,15 +243,6 @@ html {
     margin: 0 0 0 0;
     right: 3%;
     box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
-  }
-  .primeiro-background-foto{
-    background-color: #3d348b;
-    width: 35vw;
-    height: 265px;
-    border-radius: 15px;
-     position: absolute;
-     right: 3%;
-     transform: scale(1.1);
   }
 .container-descricao-home{
   padding-right: 30px;
@@ -280,20 +265,12 @@ html {
     margin: 0 0 0 0;
   }
 
-  .titulo {
-    font-size: 30px;
-  }
-
-  .subtitulo {
-    font-size: 18px;
-    opacity: 0.6;
-  }
 
   /* ============ Botões ============ */
-  .botao-contato {
-    padding: 12px 12px;
+  .container-botao{
+    justify-content: flex-start;
+    width: 80%;
   }
-
   .botao {
     padding: 10px 10px;
     font-size: 7px;
@@ -307,7 +284,7 @@ html {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 50px 0 0 0; 
+     margin: 0;
     }
 
     .container-icon-lista {
@@ -319,6 +296,7 @@ html {
       width: 100%;
       padding: 0 55px 0 20px;
       border-radius: 24px;
+      margin: 0;
     }
   /*=== Informações do título e subtitulo ===*/
   .container-info {
@@ -335,20 +313,14 @@ html {
   .subtitulo {
     font-size: 20px;
   }
-
-    /* ============ Foto ============ */
-  
-    .primeiro-background-foto{
-      background-color: #3d348b;
-      width: 30vw;
-      height: 265px;
-      border-radius: 15px;
-       position: absolute;
-       right: 3%;
-       transform: scale(1.1);
-    }
 }
+
+
 @media (min-width: 1000px) {
+
+  .container-icon-lista {
+    margin: 0;
+  }
   /*=== Informações do título e subtitulo ===*/
    .titulo {
     font-size: 40px;
@@ -357,18 +329,6 @@ html {
   .subtitulo {
     font-size: 20px;
   }
-
-    /* ============ Foto ============ */
-  
-    .primeiro-background-foto{
-      background-color: #ff2f50;
-      width: 19vw;
-      height: 265px;
-      border-radius: 15px;
-       position: absolute;
-       right: 3%;
-       transform: scale(1.1);
-    }
 }
 
 @keyframes fadeIn {

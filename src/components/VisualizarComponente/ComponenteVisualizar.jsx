@@ -1,11 +1,10 @@
-
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import styles from './componenteVisualizar.module.css';
 import { HiOutlineDotsVertical } from "react-icons/hi";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
-
+/* import { IoMdClose } from "react-icons/io"; */
 
 
 
@@ -41,10 +40,4 @@ const botaoVisualizar = mostrarBotoes ? <FaEye /> : null;
 
 
     )
-}
-
-ComponenteVisualizar.propTypes = {
-    visualizar: PropTypes.func.isRequired,
-    className: PropTypes.func.isRequired
-     
 }

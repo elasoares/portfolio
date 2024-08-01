@@ -1,5 +1,5 @@
+    /* eslint-disable react/prop-types */
     import { useState } from "react";
-    import PropTypes from "prop-types";
     import { GoHeart } from "react-icons/go";
     import styles from './Curtir.module.css';
     import { GoHeartFill } from "react-icons/go";
@@ -31,8 +31,4 @@
             </div>
         
         );
-    }
-
-    Curtir.propTypes={
-        className: PropTypes.func.isRequired,
     }

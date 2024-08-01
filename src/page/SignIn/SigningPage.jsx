@@ -49,7 +49,7 @@ export function SigningPage() {
       onSubmit={handleLogin}
       >
 {({handleBlur, handleChange, handleSubmit, touched, errors, values, isValid})=>(
-  <Card>
+  <Card className={styles.container}>
 <form onSubmit={handleSubmit} noValidate  className={styles.formulario}>
 <h2 className={styles.titulo}>Logar</h2>
 <fieldset>
