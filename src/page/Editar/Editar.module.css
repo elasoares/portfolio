@@ -1,20 +1,69 @@
-  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}    
+    
+    
     /*========================Formulario================================ */
     .formulario {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50vw;
-        border: #06142E 1px solid;
-        border-radius: 24px;
-        background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
-     /*    background-color: #2B124C; */
-        padding: 20px;
-        font-weight: 400;
-        margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      width: 90%;
+      height: auto;
+      position: absolute;
+      z-index: 1001;
+      border: #e0dfdf 1px solid;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* ===========================Card================================ */
+
+      .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      overflow: hidden;
+      height: 100vh; 
       }
-      
+    /* ===========================Header-editar================================ */
+      .container-header-editar{
+          display: flex;
+          justify-content:space-around;
+          align-items: center;
+      }
+      .cancelar{
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        font-size:medium;
+      }
+
+    /*========================Título================================ */
+    .titulo{
+      font-family: "Montserrat", sans-serif;
+      color: #4a148c;
+      padding: 5px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
       
       /*========================FieldSet================================ */
     
@@ -23,105 +72,97 @@
         padding: 0;
         margin: 0;
       }
-     /*======================== InPut================================ */
-      .textfield {
-        font-size: 0.7em;
-        border: 1px solid #9d8189;
-        border-radius: 5px;
-        margin: 0; 
-        padding: 10px 0 10px 8px; 
-        width: 45vw;
-      }
-      /*========================Text Area Messagem================================ */
-    .textAreaMessagem {
-        font-size: 0.7em;
-        border: 1px solid #9d8189;
-        border-radius: 5px;
-       /*  margin: 10px; */
-       padding: 10px 0 0 8px; 
-        width: 45vw;
-      }
-    
-      /*========================Error================================ */
-    .errorFormk {
-        font-size: 15px;
-        font-weight: bold;
-        color: red;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-      }
-      
-      /*========================Títlo================================ */
-    .titulo {
-      color: #FBE4D8;
-        padding: 5px;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.2rem;
-      }
-    
-    
-      /*========================Envio do post  e camera ================================ */
-    .botao-container{
-      background-color:  #5f72bd;
-    }
-      .botao {
-      font-size: 2em;
-      color: #FBE4D8;
-      cursor: pointer;
-      }
-      .botao:hover{
-        filter: brightness(0.1);
-        transform: scale(1.2);
-        opacity: 0.2;
-        color: #F1916D;
-      }
-      .container-envio-e-camera{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       width: 95%;
-      }
-    
-    
-    
-      @media (min-width: 600px) {
-        .formulario {
-          width: 40vw;
-        }
-      
-        .textAreaMessagem {
-          width: 35vw;
-        }
+
+        /*======================== InPut================================ */
         .textfield {
-          width: 35vw;
-        }
-      }
-      @media (min-width: 650px) {
-        .formulario {
-          width: 45vw;
-        }
-      
-     
-        .textAreaMessagem {
+          font-size: 0.7em;
+          border: 1px solid #4a148c;
+          border-radius: 5px;
+          margin: 0; 
+          padding: 10px 0 10px 8px;  
           width: 40vw;
+/*           font-family: "Montserrat", sans-serif; */
         }
-        .textfield {
+        /*========================Text Area Messagem================================ */
+      .textAreaMessagem {
+          font-size: 0.7em;
+          border: 1px solid #4a148c;
+          border-radius: 5px;
+         padding: 10px 0 0 8px; 
           width: 40vw;
+          font-family: "Montserrat", sans-serif;
         }
-      }
-      @media (min-width: 730px) {
-        .formulario {
-          width: 50vw;
+      
+        /*========================Error================================ */
+      .errorFormk {
+          font-size: 12px;
+          font-weight: bold;
+          color: red;
+          padding: 0;
+          margin: 0;
+          text-align: center;
+        }
+
+      
+    /*========================Botao================================ */
+  .botao {
+    border-radius: 8px;
+    border: 1px solid #ba68c8;
+    padding: 0.6em 1.2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #ba68c8;
+    color: #4a148c;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 50%;
+   margin: auto 0;
+  }
+  .botao:hover {
+    filter: brightness(0.5);
+    transform: scale(1);
+    opacity: 0.5;
+    color: white;
+  }
+  
+  .botao:focus,
+  .botao:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+        .container-envio-e-camera{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+         width: 100%;
         }
       
       
-        .textAreaMessagem {
-          width: 45vw;
-        }
-        .textfield {
-          width: 45vw;
-        }
-      }
       
+         @media (min-width: 600px) {
+          .formulario {
+            width: 40vw;
+            
+          }
+        
+          .textAreaMessagem {
+            width: 35vw;
+          }
+          .textfield {
+            width: 35vw;
+          }
+        } 
+
+        @media (min-width: 750px) {
+           .formulario {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-wrap: nowrap;
+             
+            }
+          .card{
+           
+          }
+         
+         
+          }

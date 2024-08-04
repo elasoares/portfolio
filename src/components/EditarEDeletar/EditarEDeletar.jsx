@@ -1,10 +1,9 @@
-
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import styles from './EditarEDeletar.module.css';
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { CiEdit } from "react-icons/ci";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 
@@ -48,10 +47,3 @@ const botaoVisualizar = mostrarBotoes ? <FaEye /> : null;
     )
 }
 
-EditarEDeletar.propTypes = {
-    onDelete: PropTypes.func.isRequired,
-    editar: PropTypes.func.isRequired,
-    visualizar: PropTypes.func.isRequired,
-    className: PropTypes.func.isRequired
-     
-}

@@ -12,11 +12,7 @@ a {
 ul li {
   list-style: none;
 }
-/* html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
- */
+
 .container-main {
   display: flex;
   justify-content: center;
@@ -60,6 +56,7 @@ ul li {
   font-style: normal;
   color:#e0fbfc;
   
+  
 }
 
 .subtitulo {
@@ -94,7 +91,6 @@ ul li {
 }
 
 .botao:hover {
- /*  filter: brightness(0.8); */
   cursor: pointer;
   transform: scale(1.1);
 }

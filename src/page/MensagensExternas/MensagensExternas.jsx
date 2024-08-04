@@ -46,6 +46,15 @@ async function handleDelete(porId){
   }
 }
 
+/*     const handleNaoDeletar=()=>{
+      setDeletar(false);
+    }
+
+  async function deletar (porId){
+    setDeletar(!deleta);
+  } */
+
+
      return (
     <div>
         {
@@ -55,7 +64,19 @@ async function handleDelete(porId){
             <div  key={'mensagem_' + index}>
             <div onClick={()=>toggleMessage(mensagem.id)} className={styles.container}>
             <div><h4>Mensagem de: {mensagem.name} {mensagem.surname}</h4></div>
-            <div className={styles['botao-delete']}><AiOutlineDelete onClick={() => handleDelete(mensagem.id)}/></div>
+          
+           
+            <div className={styles['botao-delete']}>
+            <AiOutlineDelete  onClick={() => handleDelete(mensagem.id)}/>
+            </div>
+          {/*   {deleta && (
+                <div>
+                <button  onClick={() => handleDelete(mensagem.id)}>Sim</button>  
+                <button onClick={handleNaoDeletar}>Não</button>
+                </div>
+            )} */}
+          
+
             </div>
             {exibirPorId == mensagem.id && (
               <div className={styles['container-items']}>

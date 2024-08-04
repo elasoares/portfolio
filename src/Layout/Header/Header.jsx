@@ -1,12 +1,9 @@
 
 import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
-/* import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa"; */
 import { Link } from "react-router-dom";
 import { PiTextAlignLeftLight } from "react-icons/pi";
 import { IoMdClose } from "react-icons/io";
-
-
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebaseConfig.js";
 import { AcessarPerfil } from "../../components/AcessarPerfil/AcessarPerfil.jsx";

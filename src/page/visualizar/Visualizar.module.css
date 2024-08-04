@@ -79,10 +79,19 @@
   .imagem {
     margin: 0;
     padding: 0;
-    width: 80%;
+    width: 95%;
     height: 250px;
-   /*  object-fit:inherit; */
     
+  }
+  /* ===========================Botao================================ */
+  .botao {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 35px;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
 /* =========================== Informação do post ================================ */
@@ -106,7 +115,7 @@
   }
   
   .footer {
-    padding: 14px;
+/*     padding: 14px; */
     border-top: 1px solid #dbdbdb;
     display: flex;
     justify-content: space-between;

@@ -3,13 +3,14 @@
 /* ===========================Container================================ */
 
 .container{
-  display: inline;
+   display: inline;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
     width: 90%;
     font-family: "Montserrat", sans-serif;
+    height: 100vh;
     }
 
 /* ===================== Header do post ==================== */
@@ -81,7 +82,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 98%;
+    width: 58%;
     height: auto;
     overflow: hidden;
     border: #e0dfdf 1px solid;
@@ -142,13 +143,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-        flex-direction: row;
-        flex-wrap:wrap;
-        width: 100%;
-        margin: 0 auto;
+      flex-direction: row;
+      flex-wrap:wrap;
+      padding: 50px 0 155px 0;
+      height: 100%;
+
     }
     .card {
-        width: 90%;
+        width: 50%;
       }
 }
 @media(min-width: 850px){

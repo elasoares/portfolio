@@ -33,6 +33,7 @@
 
 .texto-sobre{
     font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
 }
 /* =========================Estilo da borda=============================== */
 .border-style{
@@ -46,7 +47,8 @@
 /* =========================Estilo do título=============================== */
 .titulo{
     font-size: 2em;
-    color:#4a148c
+    color:#4a148c;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* =========================Estilo das minhas habilidades=============================== */

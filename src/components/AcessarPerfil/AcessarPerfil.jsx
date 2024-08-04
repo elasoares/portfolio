@@ -10,7 +10,6 @@ export function AcessarPerfil({className}) {
   const navigate = useNavigate();
 
   function navegarPeloPerfil() {
-    console.log("Foto do perfil clicada");
     setPerfil(!perfil);
   }
 

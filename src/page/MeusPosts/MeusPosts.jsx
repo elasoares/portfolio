@@ -54,7 +54,7 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
 
     return (
         <div  className={styles.container} >
-            <LoadingOverlay/>
+          
          
             {posts.length > 0 ?(
               posts.map((postado, index)=>(
@@ -78,14 +78,14 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
               
               
             <div className={styles['container-info']}>
-             <span className={styles.comentario}> Comentário: </span> <p className={styles.mensagem}>{postado.message}</p> 
+            <p className={styles.mensagem}>{postado.message}</p> 
             </div>
                 
             
                </Card>
              )) 
             ):(
-                <p>Nenhum dado encontrado!</p>
+                <LoadingOverlay/>
             )
             }
 

@@ -1,22 +1,28 @@
-import  { useEffect, useState } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { Card } from '../../components/Card/Card';
-import { VscSend } from 'react-icons/vsc';
-import { IoCameraOutline } from 'react-icons/io5';
 import styles from './Editar.module.css';
 import { TextField } from '../../components/TextField/TextField';
 import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import { Button } from '../../components/Button/Button';
 import toast from 'react-simple-toasts';
-import {axios} from '../../axios';
+import { axios } from '../../axios';
+import { UpLoadsImagens } from "../../components/UpLoadsImagens/UpLoadsImagens";
+import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { dataBase, storage } from '../../firebaseConfig';
+import { ref, update } from "firebase/database";
+import { IoMdClose } from "react-icons/io";
+
 
 export function Editar() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [editando, setEditando] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selecionarArquivo, setselecionarArquivo] = useState(null);
+  const[cancelar, setCancelar] = useState(false);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -48,10 +54,6 @@ export function Editar() {
   }
 
   const schemaValidationForm = yup.object({
-    title: yup.string()
-      .min(1, "O campo de título deve conter no mínimo um caractere.")
-      .max(25, "O campo de título deve conter no máximo vinte e cinco caracteres.")
-      .required("O campo de título não pode ficar vazio."),
     subtitle: yup.string()
       .min(1, "O campo de subtítulo deve conter no mínimo um caractere.")
       .max(25, "O campo de subtítulo deve conter no máximo vinte e cinco caracteres.")
@@ -60,22 +62,67 @@ export function Editar() {
   });
 
   const handleSubmit = async (values, { setSubmitting }) => {
-    try {
-      await axios.put(`/meu-post/${id}.json`, values);
-      setSubmitting(false);
-      toast("Editação realizada com sucesso!");
-      navigate("/perfil");
-    } catch (error) {
-      toast("Erro ao atualizar o post: " + error.message);
+    let imageUrl = editando.imageUrl;
+
+    if (selecionarArquivo) {
+      const fileName = selecionarArquivo.name;
+      const storageReference = storageRef(storage, `images/${fileName}`);
+      const uploadTask = uploadBytesResumable(storageReference, selecionarArquivo);
+
+      try {
+        uploadTask.on(
+          'state_changed',
+          (snapshot) => {
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log(`Progresso do upload: ${progress}%`);
+          },
+          (error) => {
+            throw error;
+          },
+          async () => {
+            imageUrl = await getDownloadURL(uploadTask.snapshot.ref);
+            const updatedData = { ...values, imageUrl };
+            await updatePostData(updatedData);
+            setSubmitting(false);
+          }
+        );
+      } catch (error) {
+        console.error("Erro no upload da imagem:", error);
+        toast("Erro no upload da imagem, tente novamente.");
+        setSubmitting(false);
+      }
+    } else {
+      await updatePostData(values);
       setSubmitting(false);
     }
   };
+
+
+
+  const updatePostData = async (data) => {
+    try {
+      const refData = ref(dataBase, `/meu-post/${id}`);
+      await update(refData, data);
+      toast("Edição realizada com sucesso!");
+      navigate("/perfil");
+    } catch (error) {
+      toast("Erro ao atualizar o post: " + error.message);
+    }
+  };
+
+
+const cancelarEditacao =()=>{
+  setCancelar(!cancelar);
+}
+/* const navegar =(destino)=>{
+  navigate(destino);
+} */
+
 
   return (
     <div className={styles.container}>
       <Formik
         initialValues={{
-          title: editando.title,
           subtitle: editando.subtitle,
           message: editando.message,
         }}
@@ -85,21 +132,19 @@ export function Editar() {
         {({ handleSubmit, touched, errors, handleChange, values }) => (
           <Card className={styles.card}>
             <form onSubmit={handleSubmit} noValidate className={styles.formulario}>
-              <h2 className={styles.titulo}>Editar</h2>
 
-              <fieldset>
-                <TextField
-                  className={styles.textfield}
-                  name="title"
-                  type="text"
-                  placeholder="Título"
-                  value={values.title}
-                  onChange={handleChange}
-                />
-                <p className={styles.errorFormk}>
-                  {touched.title && errors.title}
-                </p>
-              </fieldset>
+              <div className={styles["container-header-editar"]}>
+              <h2 className={styles.titulo}>Editar</h2>
+              <IoMdClose
+                className={`${cancelar ? navigate("/meu-post/:id") : ""} ${styles.cancelar}`}
+                onClick={cancelarEditacao}
+              />
+              </div>
+         
+
+
+
+              <UpLoadsImagens onFileSelect={(file) => setselecionarArquivo(file)} />
 
               <fieldset>
                 <TextField
@@ -132,9 +177,8 @@ export function Editar() {
               </fieldset>
 
               <div className={styles['container-envio-e-camera']}>
-                <IoCameraOutline className={styles.botao} />
-                <Button type="submit" className={styles['botao-container']} >
-                  <VscSend className={styles.botao} />
+                <Button type="submit" className={styles.botao} >
+                  Enviar
                 </Button>
               </div>
             </form>
@@ -145,4 +189,4 @@ export function Editar() {
   );
 }
 
-export default Editar;
+

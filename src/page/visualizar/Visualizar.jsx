@@ -4,8 +4,6 @@ import { axios } from '../../axios';
 import toast from 'react-simple-toasts';
 import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import styles from './Visualizar.module.css';
-import { Curtir } from '../../components/Curtir/Curtir';
-import { Comentar } from '../../components/Comentar/Comentar';
 import { FotoPerfil } from '../../components/FotoPerfilGet/FotoPerfil';
 import { IoMdClose } from "react-icons/io";
 
@@ -65,11 +63,6 @@ export function Visualizar() {
 
         <div className={styles['container-info']}>    
           <div className={styles.mensagem}>{post.message}</div>
-        </div>
-
-        <div className={styles.footer}>
-          <Curtir className={styles['container-curtir']}/>
-          <Comentar/>
         </div>
 
       </div>
