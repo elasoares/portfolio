@@ -31,7 +31,7 @@ export function FormularioPerfil() {
       return;
     }
 
-    const { message, title, subtitle } = values;
+    const { message, subtitle } = values;
     const fileName = selecionarArquivo.name;
     const storageReference = storageRef(storage, `images/${fileName}`);
     const uploadTask = uploadBytesResumable(storageReference, selecionarArquivo);
@@ -49,7 +49,7 @@ export function FormularioPerfil() {
         async () => {
           try {
             const url = await getDownloadURL(uploadTask.snapshot.ref);
-            const data = { message, title, subtitle, imageUrl: url };
+            const data = { message, subtitle, imageUrl: url };
             const refData = ref(dataBase, "/meu-post");
             await push(refData, data);
             toast("Post realizado com sucesso.");
