@@ -14,7 +14,7 @@ export function MensagemCVerMais({classNameContainer, classNameFilho, children})
     return(
         <div>
         <div className={classNameContainer}>
-            <p className={classNameFilho}>{mensagem ? text : `${text.substring(0, 100)}...`}</p> 
+            <p className={classNameFilho}>{mensagem ? text : `${text.substring(0, 105)}...`}</p> 
             </div>
             <div className={styles['container-botao']}>
             <button className={styles.botao} onClick={handleVerMensagem}>
