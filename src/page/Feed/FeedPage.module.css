@@ -53,7 +53,7 @@
     font-family: "Montserrat", sans-serif;
   }
   .header p {
-    font-size: 5px;
+    font-size: 0.7rem;
   }
   .container-header-titulo{
     display: flex;

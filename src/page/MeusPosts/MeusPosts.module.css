@@ -29,7 +29,7 @@
     margin: 0;
   }
   .header p {
-    font-size: 0.1rem;
+    font-size: 0.7rem;
   }
   .container-header-titulo{
     display: flex;
@@ -82,7 +82,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 58%;
+    width: 95%;
     height: auto;
     overflow: hidden;
     border: #e0dfdf 1px solid;
@@ -150,7 +150,7 @@
 
     }
     .card {
-        width: 50%;
+        width: 80%;
       }
 }
 @media(min-width: 850px){

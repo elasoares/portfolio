@@ -6,6 +6,7 @@ import { Card } from "../../components/Card/Card";
 import styles from './MeusPosts.module.css';
 import { EditarEDeletar } from "../../components/EditarEDeletar/EditarEDeletar";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
+import { MensagemCVerMais } from "../../components/MensagemCVerMais/MensagemCVerMais";
 
 
 
@@ -76,11 +77,10 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
               {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
             </div>
               
-              
-            <div className={styles['container-info']}>
-            <p className={styles.mensagem}>{postado.message}</p> 
-            </div>
-                
+            
+            <MensagemCVerMais 
+            classNameContainer={styles['container-info']} 
+            classNameFilho={styles.mensagem}>{postado.message}</MensagemCVerMais>
             
                </Card>
              )) 

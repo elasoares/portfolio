@@ -80,7 +80,7 @@ ul li {
 }
 
 .botao {
-  font-size: 8px;
+  font-size: 9px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   background-color: transparent;
@@ -100,7 +100,7 @@ ul li {
 }
 
 .botao-contato {
-  font-size: 8px;
+  font-size: 9px;
   background-color: #3d348b;
   color: #ccc;
   border-radius: 40px;
@@ -196,11 +196,12 @@ ul li {
   /* ============ Botões ============ */
   .botao-contato {
     padding: 10px 12px;
+    font-size: 10px;
   }
 
   .botao a {
     padding: 8px 10px;
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 
@@ -267,10 +268,12 @@ ul li {
     justify-content: flex-start;
     width: 80%;
   }
-  .botao {
-    padding: 10px 10px;
-    font-size: 7px;
-  }
+    .botao-contato {
+      font-size: 10px;
+    }
+    .botao{
+      font-size: 10px;
+    }
 }
 
 @media (min-width: 850px) {
@@ -309,6 +312,15 @@ ul li {
   .subtitulo {
     font-size: 20px;
   }
+
+    /* ============ Botões ============ */
+
+.botao-contato {
+  font-size: 10px;
+}
+.botao{
+  font-size: 10px;
+}
 }
 
 
@@ -325,6 +337,17 @@ ul li {
   .subtitulo {
     font-size: 20px;
   }
+
+  /* ============ Botões ============ */
+
+.botao-contato {
+  font-size: 12px;
+}
+.botao{
+  font-size: 12px;
+}
+
+
 }
 
 @keyframes fadeIn {
