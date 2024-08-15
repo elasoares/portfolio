@@ -7,6 +7,7 @@ import { Card } from "../../components/Card/Card";
 import { ComponenteVisualizar } from '../../components/VisualizarComponente/ComponenteVisualizar';
 import { Comentar } from "../../components/Comentar/Comentar";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
+import { MensagemCVerMais } from "../../components/MensagemCVerMais/MensagemCVerMais";
 
 export function FeedPage() {
   const [dados, setDados] = useState([]);
@@ -52,9 +53,9 @@ export function FeedPage() {
               {dado.imageUrl && <img src={dado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
             </div>
             
-            <div className={styles['container-info']}>
-              <p className={styles.mensagem}>{dado.message}</p> 
-            </div>
+            <MensagemCVerMais 
+            classNameContainer={styles['container-info']} 
+            classNameFilho={styles.mensagem}>{dado.message}</MensagemCVerMais>
 
             <div className={styles['container-footer']}>
               <div className={styles['footer-up']}>

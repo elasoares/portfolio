@@ -7,13 +7,23 @@
   }
   
   .botao {
-    background-color: #3897f0;
-    color: white;
-    border: none;
+    background-color: #4a148c;
     width: 55px;
     height: 35px;
     border-radius: 4px;
     cursor: pointer;
+    border: 1px solid #ba68c8;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #ba68c8;
+    color: #4a148c;
+    transition: border-color 0.25s;
+  }
+  .botao:hover {
+    filter: brightness(0.5);
+    transform: scale(1);
+    opacity: 0.5;
+    color: white;
   }
 
   .container-mensagem{

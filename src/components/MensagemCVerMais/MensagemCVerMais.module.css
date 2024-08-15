@@ -1,0 +1,13 @@
+
+.container-botao{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.botao{
+    background: none;
+    color: #3d348b;
+    font-weight: bold;
+    cursor: pointer;
+}
