@@ -80,9 +80,9 @@ async function handleDelete(porId){
             </div>
             {exibirPorId == mensagem.id && (
               <div className={styles['container-items']}>
-              <h4> {mensagem.name} {mensagem.surname}</h4>
-              <p className={ styles['exibir-display']}>{mensagem.opcao}</p>
-              <p className={styles['exibir-display']}>{mensagem.message}</p>
+              <p> <span className={styles.assunto}>De:</span> {mensagem.name} {mensagem.surname}</p>
+              <p className={ styles['exibir-display']}> <span className={styles.assunto}>Assunto:</span> {mensagem.opcao}</p>
+              <p className={styles['exibir-display']}><span className={styles.assunto}>Mensagem:</span> {mensagem.message}</p>
               </div>
             )}
            
