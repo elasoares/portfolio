@@ -67,7 +67,7 @@ fieldset {
 .botao:hover {
   filter: brightness(0.5);
   transform: scale(1);
-  opacity: 0.5;
+  opacity: 8;
 }
 
 .botao:focus,

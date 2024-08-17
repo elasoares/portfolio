@@ -9,8 +9,6 @@
   outline: none;
   border: none;
   text-transform: none;
-/*   transition: all 0.2s linear; */
-/*   font-size: 100.5%; */
 }
 
 a {
@@ -27,7 +25,7 @@ ul li {
   justify-content: space-between;
   align-items:flex-start;
   flex-wrap: wrap;
-  padding: 10px 4vw 0 14px;
+  padding: 15px 4vw 0 14px;
   margin: 0;
   width: 100vw;
   height: auto;
@@ -39,19 +37,21 @@ ul li {
   margin: 0 0 17px 0;
 }
 .entrar{
-  font-family: "Rammetto One", sans-serif;
-  color: #4a148c;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
+  color: #20186e;
+  padding: 8px 15px;
+  border-radius: 40px;
+  border: 1px solid #20186e;
+  letter-spacing: 0.1rem;
   transition: 1.2s;
-  font-size: 1em;
+  font-size: 1.4em;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
 
 .entrar:hover {
   color: #ba68c8;
-  filter: brightness(0.5);
-  transform: scale(1);
+  border: 1px solid #ba68c8;
+  filter: brightness(0.2);
   opacity: 0.5;
   cursor: pointer;
 }
@@ -60,10 +60,10 @@ ul li {
 /* ======= Logo ========  */
 .logo {
   font-family: "Rammetto One", sans-serif;
-  color: #fdf0d5;
+  color: #fff;
   letter-spacing: 0.2rem;
   transition: 1.2s;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .logo:hover {
@@ -84,8 +84,8 @@ ul li {
 /* ======= Humburger ========  */
 .humburger {
   cursor: pointer;
-  font-size: 1.8em;
-  color: #fdf0d5;
+  font-size: 2em;
+  color: #fff;
   
 }
 
@@ -108,10 +108,10 @@ ul li {
 }
 
 .item-menu {
-  color: #4a148c;
+  color: #20186e;
   padding: 5px;
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 650;
+  font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   transition: 0.2s;
   letter-spacing: 0.1rem;
@@ -121,7 +121,7 @@ ul li {
 .item-menu:hover {
   filter: brightness(0.5);
   transform: scale(1.2);
-  opacity: 0.5;
+  opacity: 0.8;
   color: #ba68c8;
   font-weight: bold;
 }
@@ -138,7 +138,6 @@ ul li {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.856); 
-/*   transition: all 2s ease-out; */ 
   position: absolute;
   z-index: 1001; 
 }
@@ -149,14 +148,15 @@ ul li {
 @media (min-width: 658px) {
   /* ======= Itens ========  */
   .item-menu {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   /* ======= Logo ========  */
   .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
   }
+
 }
 
 @media(min-width: 720px) {
@@ -192,7 +192,7 @@ ul li {
       align-items: center;
     }
   .container-menu-navegacao {
-      width: 65%;
+      width: 85%;
       height: 60px;
       display: flex;
       flex-direction: row;
@@ -211,7 +211,6 @@ ul li {
   margin: 0 auto;
  }
   
-
 }
 
 @media (min-width: 1300px) {

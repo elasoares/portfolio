@@ -12,7 +12,7 @@ import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
 
 
 const iconLinks = [
-  { icon: <FaLinkedinIn />, link: "www.linkedin.com/in/ela-284860153" },
+  { icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/elaine-soares-ti" },
   { icon: <FaGithub />, link: "https://github.com/elasoares" },
   { icon: <FaInstagram />, link: "#" },
   {link: "/contate-me"}

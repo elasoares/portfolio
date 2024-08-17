@@ -1,5 +1,5 @@
 .container{
     background: linear-gradient(135deg, #4a148c, #7b1fa2, #ba68c8, #e1bee7, #f3e5f5); 
     height: auto;
-    width: auto;
+    width: 100%;
 }

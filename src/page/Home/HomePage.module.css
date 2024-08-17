@@ -4,7 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 a {
   text-decoration: none;
 }
@@ -17,7 +22,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center; 
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container-icon-lista {
@@ -26,8 +31,8 @@ ul li {
   align-items: center;
   flex-direction: row;
   margin:0;
-  padding: 20px;
-  height: 100vh;
+  height: auto;
+  max-height: 100%;
   border-radius: 24px;
   color: #fdfcfd;
   width: 95%;
@@ -43,13 +48,12 @@ ul li {
   align-items: center;
   flex-direction: column;
  	overflow-y: hidden; 
-  margin-bottom: 125px; 
-  height: 75vh;
+  height: auto;
   width: 90%;
 }
 
 .titulo {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   padding-top: 5px;
@@ -60,12 +64,11 @@ ul li {
 }
 
 .subtitulo {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  opacity: 0.6; 
   padding-bottom: 22px;
-  color: #3d348b;
+  color: #20186e;
 
 }
 
@@ -80,15 +83,16 @@ ul li {
 }
 
 .botao {
-  font-size: 9px;
+  font-size: 1.1rem;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   background-color: transparent;
-  color: #3d348b;
+  color: #20186e;
   padding: 8px 15px;
   border-radius: 40px;
-  border: 1px solid #3d348b;
+  border: 1px solid #20186e;
 }
+
 
 .botao:hover {
   cursor: pointer;
@@ -100,8 +104,8 @@ ul li {
 }
 
 .botao-contato {
-  font-size: 9px;
-  background-color: #3d348b;
+  font-size: 1.1rem;
+  background-color: #20186e;
   color: #ccc;
   border-radius: 40px;
   padding: 9px 20px;
@@ -119,8 +123,8 @@ ul li {
 }
 
 .item-icon {
-  font-size: 1.8rem;
-  color: #e0fbfc;
+  font-size: 2rem;
+  color: white;
 }
 
 .icon {
@@ -128,17 +132,16 @@ ul li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
-  padding-bottom: 105px;
+  gap: 60px;
 }
 
 /* ============ Foto ============ */
 .foto {
-  height: 250px;
+   height: 250px;
    width: 250px;
    border-radius: 100%;
-   border: 2px solid #3d348b;
-  object-fit: cover;
+   border: 2px solid #20186e;
+ /*   object-fit: cover; */
 }
 
 
@@ -146,7 +149,10 @@ ul li {
 
 @media (min-width: 650px) {
   .container-main {
-    margin: 20px 0 0 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /*============ Foto ============ */
@@ -169,18 +175,14 @@ ul li {
 
   /*================Card=====================*/
   .container-icon-lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
     width: 90%;
-    border-radius: 24px;
     padding: 20px;
-    margin: 0;
   }
 
   /* ============ Icon ============  */
   .item-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ccc;
   }
 
@@ -190,7 +192,7 @@ ul li {
     align-items: center;
     flex-direction: column;
     gap: 35px;
-    padding-bottom: 105px;
+    padding-bottom: 115px;
   }
 
   /* ============ Botões ============ */
@@ -280,19 +282,17 @@ ul li {
 
     /*================Card=====================*/
     .container-main {
-      display: flex;
+      min-height: 100vh;
       justify-content: flex-start;
       align-items: center;
-     margin: 0;
     }
 
     .container-icon-lista {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      height: 70vh;
+      height: 70vh; 
       width: 75vw;
-      width: 100%;
       padding: 0 55px 0 20px;
       border-radius: 24px;
       margin: 0;
@@ -355,7 +355,7 @@ ul li {
     opacity: 0;
   }
   to {
-    opacity: 5;
+    opacity: 8;
   }
 }
 

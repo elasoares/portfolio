@@ -43,7 +43,7 @@
     padding: 20px 30px; 
     white-space: nowrap; 
     font-size: 1.2rem;
-    color: #9d8189;
+    color: #ba68c8;
     font-family: "Montserrat", sans-serif;
   }
 
@@ -51,7 +51,7 @@
     padding: 20px 30px; 
     white-space: nowrap; 
     font-size: 1.2rem;
-    color: #9d8189;
+    color: #ba68c8;
     font-family: "Montserrat", sans-serif;
     background-color: transparent;
   }
@@ -60,7 +60,6 @@
   .item-menu-perfil:hover {
       filter: brightness(0.5);
       transform: scale(1.2);
-      opacity: 0.5;
       font-weight: bold;
     color:#3d348b;
 
@@ -68,7 +67,6 @@
   .item-menu-sair:hover {
       filter: brightness(0.5);
       transform: scale(1.2);
-      opacity: 0.5;
       font-weight: bold;
     color:#3d348b;
     cursor: pointer;
