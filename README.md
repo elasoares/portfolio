@@ -50,20 +50,30 @@ Durante o desenvolvimento deste portfólio, tive a oportunidade de aprimorar vá
 
 Abaixo está uma breve visão geral da estrutura do projeto:
 
-portfolio/
-│
-├── public/
-│ └── assets/ # Imagens e outros assets estáticos
-│
-├── src/
-│ ├── components/ # Componentes reutilizáveis do React
-│ ├── Layout/ # Header, Footer e estrutura da página
-│ ├── pages/ # Páginas principais do portfólio
-│ ├── App.jsx # Componente principal do aplicativo
-│ └── main.jsx # Ponto de entrada do React
-│
-├── package.json # Dependências e scripts do projeto
-└── vite.config.js # Configuração do Vite
+    portfolio/
+
+    │
+    ├── public/
+    │ └── assets/ 
+    ### Imagens e outros assets estáticos
+    │
+    ├── src/
+
+    │ ├── components/ 
+    ### Componentes reutilizáveis do React
+    │ ├── Layout/ 
+     Header, Footer e estrutura da página
+    │ ├── pages/ 
+    ### Páginas principais do portfólio
+    │ ├── App.jsx 
+    ### Componente principal do aplicativo
+    │ └── main.jsx #
+     Ponto de entrada do React
+    │
+    ├── package.json 
+    ### Dependências e scripts do projeto
+    └── vite.config.js 
+    ### Configuração do Vite
 
 
 ---
