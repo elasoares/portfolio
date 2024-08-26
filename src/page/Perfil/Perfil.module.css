@@ -43,9 +43,9 @@ ul li {
  gap: 10px;
  font-weight: 400;
  font-size: 1.7em;
- background-color: #4a148c;
- border: 1px solid #4a148c;
- color: #FBE4D8;
+ background-color: #20186e;
+ border: 1px solid #20186e;
+ color: #fff;
  border-radius: 40px;
  margin: 5px  5px 2px  5px; 
  padding: 15px 0;
@@ -63,10 +63,10 @@ cursor: pointer;
  gap: 10px;
  font-weight: 400;
  font-size: 1.2em;
- border: 1px solid #4a148c;
+ border: 1px solid #20186e;
  border-radius: 3px;
- color: #4a148c;
- background-color: #FBE4D8;
+ color: #20186e;
+ background-color: #fff;
  margin: 1px 5px; 
  padding:10px 0 10px 10px;
 }

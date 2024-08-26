@@ -84,7 +84,8 @@ ul li {
       
       /*========================Títlo================================ */
     .titulo {
-      color: #4a148c;
+      text-align: center;
+      color: #20186e;
       padding: 5px;
       font-weight: bold;
       font-size: 1.5rem;
@@ -96,12 +97,11 @@ ul li {
   /*========================Botao================================ */
 .botao {
   border-radius: 8px;
-  border: 1px solid #ba68c8;
   padding: 0.6em 1.2em;
   font-size: 1.2em;
   font-weight: bold;
-  background-color: #ba68c8;
-  color: #4a148c;
+  background-color: #20186e;
+  color: #ccc;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 50%;
