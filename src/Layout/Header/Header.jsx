@@ -35,7 +35,6 @@ export function Header() {
     { name: "Home", link: "/home" },
     { name: "Feed", link: "/feed" },
     { name: "Sobre", link: "/sobre" },
-    /* { name: "Projetos", link: "/projetos" }, */
     { name: "Contato", link: "/contate-me" },
     { link: "/entrar" },
   ];

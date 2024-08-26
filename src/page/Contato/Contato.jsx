@@ -58,7 +58,18 @@ export function Contato() {
 
 
   return (
-    <div>
+    <div className={styles["primeiro-container"]}>
+    <div className={styles.containerContato}>
+    <div className={styles.textoContato}>
+        <h2>Entre em Contato</h2>
+        <p>
+          Ficarei feliz em ouvir de você! Se você tiver alguma dúvida, sugestão,
+          ou simplesmente quiser dizer olá, sinta-se à vontade para entrar em
+          contato. Preencha o formulário ao lado e responderei o mais breve
+          possível. Estou ansioso para conversar com você!
+        </p>
+      </div>
+      <div className={styles.formContainer}>
       <Formik
         validationSchema={signUpSchema}
         initialValues={{
@@ -86,7 +97,7 @@ export function Contato() {
               noValidate
               className={styles.formulario}
             >
-              <h2 className={styles.titulo}>Contate-me</h2>
+           
              
               <fieldset>
                 <TextField
@@ -163,24 +174,25 @@ export function Contato() {
                 </p>
 
 
-              <fieldset>
+              <fieldset className={styles["termo-container"]}>
                 <input
                   type="checkbox"
                   name="acceptTerms"
                   checked={values.acceptTerms}
                   onChange={handleChange}
-                />
-                <label htmlFor="acceptTerms" className={styles.termStyles}>
+                  className={styles["input-termo"]}
+                /> 
+                 <label htmlFor="acceptTerms" className={styles.termStyles}>
                   Para continuar, você deverá preencher o campo, conforme
                   <a className={styles.termLinkStyles} href="https://caiogondim.github.io/piao-da-casa-propria-em-css-3d/">
                     termo de contrato.
                   </a>
-                </label>
+                </label> 
               
-              </fieldset>
+               </fieldset>
               <p className={styles.errorFormk}>
                   {touched.acceptTerms && errors.acceptTerms}
-                </p>
+                </p> 
               <Button
                 className={styles.botao}
                 type="submit"
@@ -191,6 +203,8 @@ export function Contato() {
           </Card>
         )}
       </Formik>
+    </div>
+    </div>
     </div>
   );
 }

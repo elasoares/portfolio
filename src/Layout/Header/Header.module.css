@@ -32,25 +32,22 @@ ul li {
 }
 
 /* ======= Entrar ========  */
-
-.acessarPerfil{
-  margin: 0 0 17px 0;
+.perfil{
+  width: 100%;
 }
 .entrar{
   color: #20186e;
-  padding: 8px 15px;
+  padding: 5px 8px;
   border-radius: 40px;
-  border: 1px solid #20186e;
+ /*  border: 1px solid #20186e; */
   letter-spacing: 0.1rem;
   transition: 1.2s;
   font-size: 1.4em;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
 }
 
 .entrar:hover {
-  color: #ba68c8;
-  border: 1px solid #ba68c8;
   filter: brightness(0.2);
   opacity: 0.5;
   cursor: pointer;
@@ -104,12 +101,12 @@ ul li {
   flex-direction: column;
   justify-content:center;
   align-items: center;
-  gap: 25px;
+  gap: 50px;
 }
 
 .item-menu {
   color: #20186e;
-  padding: 5px;
+  padding: 0 15px;
   font-weight: 650;
   font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
@@ -121,8 +118,7 @@ ul li {
 .item-menu:hover {
   filter: brightness(0.5);
   transform: scale(1.2);
-  opacity: 0.8;
-  color: #ba68c8;
+  color: #3d348b;
   font-weight: bold;
 }
 
@@ -132,9 +128,9 @@ ul li {
   justify-content: space-around;
   align-items: center;
   gap: 20px;
-  width: 90vw;
+  width: 95vw;
   height: 90vh;
-  margin: 25px 0 0 0;
+  margin: 35px 0 0 0;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.856); 
@@ -142,6 +138,9 @@ ul li {
   z-index: 1001; 
 }
 
+.perfil{
+  width: 100%;
+}
 
 
 
@@ -149,6 +148,7 @@ ul li {
   /* ======= Itens ========  */
   .item-menu {
     font-size: 1.4rem;
+    padding: 10px;
   }
 
   /* ======= Logo ========  */
@@ -164,22 +164,18 @@ ul li {
     .container-header {
       justify-content: space-between;
       align-items: center;
-      flex-wrap: nowrap;
-      margin:auto 0;
-    } 
+      margin: auto 0;
+    }  
   
    
     /* ======= Container do Item ========  */
     .mostrarNav {
       display: flex;
       flex-direction: row;
-      justify-content:center;
-      align-items: center;
-       box-shadow:none; 
-      border-radius: none;
-      background-color: transparent;  
-      margin: 0;
-      padding: 0 250px;
+     justify-content: space-around;
+     align-items: center;
+      box-shadow:none; 
+      margin: auto 0;
       position: relative;
       z-index:auto; 
       height: auto;
@@ -188,19 +184,19 @@ ul li {
     .container-item-navegador{
       display: flex;
       flex-direction: row;
-      justify-content:center;
-      align-items: center;
+      gap: 10px;
+      width: 100%;
     }
   .container-menu-navegacao {
-      width: 85%;
-      height: 60px;
+      width: 75%;
+      height: 78px;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
       border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.856); 
+      background-color: rgba(255, 255, 255, 0.856);
     }
 
      /* ======= Humbuger ========  */
@@ -209,6 +205,14 @@ ul li {
   }
  .entrar{
   margin: 0 auto;
+ }
+
+ .item-menu{
+  font-size: 1.5rem;
+ }
+ .perfil{
+  width: 30%;
+  
  }
   
 }
@@ -220,7 +224,6 @@ ul li {
     align-items: center;
     flex-wrap: nowrap;
     margin:auto 0;
-/*     padding: 0; */
   } 
  
   /* ======= Container do Item ========  */
@@ -229,6 +232,7 @@ ul li {
     flex-direction: row;
     justify-content:center;
     align-items: center;
+    gap: 10px;
   }
   .container-menu-navegacao {
     width: 65%;
@@ -253,18 +257,17 @@ ul li {
 
   /* ======= Entrar ========  */
   .entrar{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   /* ======= Itens ========  */
   .item-menu {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   /* ======= Logo ========  */
   .logo {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
-    /* margin: auto 0; */
     margin: 0  0 0 30px;
   }
 

@@ -6,6 +6,7 @@ import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import styles from './Visualizar.module.css';
 import { FotoPerfil } from '../../components/FotoPerfilGet/FotoPerfil';
 import { IoMdClose } from "react-icons/io";
+import { MensagemCVerMais } from '../../components/MensagemCVerMais/MensagemCVerMais';
 
 export function Visualizar() {
   const { id } = useParams();
@@ -41,6 +42,7 @@ export function Visualizar() {
   }
 
   return (
+    <div className={styles.primeiroContainer}>
     <div className={styles.container}>
       <div className={styles.card}>
 
@@ -53,7 +55,7 @@ export function Visualizar() {
               <p>{post.subtitle}</p> 
             </div>
           </div>
-          <IoMdClose onClick={()=>navegarParaFeed('/feed')}/>
+          <IoMdClose className={styles.close} onClick={()=>navegarParaFeed('/feed')}/>
         </div>
 
         <div className={styles["container-imagem-postada"]}>
@@ -61,11 +63,16 @@ export function Visualizar() {
         </div>
        
 
-        <div className={styles['container-info']}>    
-          <div className={styles.mensagem}>{post.message}</div>
-        </div>
+        <div className={styles.containerMensagem}>
+        <MensagemCVerMais 
+            classNameContainer={styles['container-info']} 
+            classNameFilho={styles.mensagem}>{post.message}
+
+         </MensagemCVerMais>
+      </div>
 
       </div>
+    </div>
     </div>
   );
 }

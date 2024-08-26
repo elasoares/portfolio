@@ -29,10 +29,8 @@ ul li {
   width: 80vw;
   border: #ccc 1px solid;
   border-radius: 24px;
-  background-color: white;
-/*   padding: 20px;
-  font-weight: 400; */
-  height: 70vh;
+  background-color: #ffffff36;
+  height: 50vh;
 }
 
 fieldset {
@@ -51,17 +49,16 @@ fieldset {
   
   /*========================Botao================================ */
 .botao {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1.2em;
+  font-size: 1.3rem;
+  background-color: #20186e;
+  color: #ccc;
+  padding: 9px 20px;
   font-weight: bold;
-  font-style: normal;
-  background-color: #ba68c8;
-  color: #4a148c;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 50%;
+  width: 60%;
   margin: 25px 0 0 0;
 }
 .botao:hover {
@@ -77,11 +74,11 @@ fieldset {
 
 /*========================Títlo================================ */
 .titulo {
-  color: #4a148c;
+  color: #20186e;
+  font-family: "Montserrat", sans-serif;
   padding: 5px;
   font-weight: bold;
-  font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 
@@ -106,7 +103,7 @@ fieldset {
 }
 @media (min-width: 730px) {
   .formulario {
-    width: 50vw;
+    width: 40vw;
   }
 
   .botao{

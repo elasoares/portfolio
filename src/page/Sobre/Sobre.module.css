@@ -1,18 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* =========================Estilo do container Sobre=============================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
 
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+/* =========================Estilo do container Sobre=============================== */
+.primeiro-container{
+    overflow: auto;
+    height: 100vh;
+}
 .container{
     display: flex;
     align-items:  center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    padding: 50px 10px 150px 10px;
+    gap: 155px;
+    
 }
 
 .container-sobre{
     width: 100%;
-    padding: 50px 35px 80px 55px;  
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 25px;
+    border-radius: 10% 5px;
 }
 
 /* =========================Estilo do container Header do sobre=============================== */
@@ -33,12 +52,14 @@
 
 .texto-sobre{
     font-size: 1.2rem;
+    color: #020202;
+    font-weight: 500;
     font-family: "Montserrat", sans-serif;
 }
 /* =========================Estilo da borda=============================== */
 .border-style{
- border: 1px solid #ba68c8;
- background-color: #ba68c8;
+ border: 1px solid #20186e;
+ background-color: #20186e;
  border-radius: 50px;
  width: 10%;
  height: 5px;
@@ -47,7 +68,8 @@
 /* =========================Estilo do título=============================== */
 .titulo{
     font-size: 2em;
-    color:#4a148c;
+    font-weight: bold;
+    color:#20186e;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -59,7 +81,6 @@
     align-items:  center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px 20px 50px 5px;  
 }
 
  .container-itens-habilidades{
@@ -74,13 +95,18 @@
  .itens-habilidades{
  width: 100px;
  height: 100px;
- /* border: 1px solid #ccc; */
  display: flex;
  align-items:  center;
  justify-content: center;
  flex-direction: column; 
  cursor:pointer;
 } 
+
+.itens{
+    font-size: 1.2rem;
+    color: #020202;
+    font-weight: 500;
+}
 
 
 /* =========================Estilo das imagens =============================== */
@@ -94,37 +120,32 @@
 
 @media (min-width: 750px) {
     .titulo{
-        font-size: 2.3em;
+        font-size: 2.5em;
     }
+    .container{
+     padding: 50px 25px 50px 15px;
+     width: 100%;
+     }
 
     .container-habilidades{
-        padding: 55px;  
+     padding: 0;  
+     width: 100%;
     }
 
     .container-sobre{
-        padding: 100px 35px 80px 55px; 
         margin: auto 0; 
+        width: 100%;
     }
 }
 
 
 @media (min-width: 800px) {
-        .container{
+  .container{
     flex-direction: row;
-
-    }
-
-    .container-habilidades{
-        padding: 50px 5px 50px 20px;  
+    gap: 0;
+    height: 100vh;
+    padding: 50px 10px 150px 10px;
     }
 }
 
 
-@media (min-width: 900px) {
-        .titulo{
-            font-size: 2.3em;
-        }
-        .container-habilidades{
-            padding: 50px 20px 50px 50px;  
-        }
-}

@@ -23,6 +23,7 @@ import github from '/Img/github-mark.png';
 export function Sobre() {
   return (
     
+    <div className={styles['primeiro-container']}>
     <div className={styles['container']}>
         <div className={styles['container-sobre']}>
             <h4 className={styles.titulo}>Sobre</h4>
@@ -59,6 +60,7 @@ com o nível atual intermediário B1, o que me capacita a atuar em ambientes int
     </div> 
 
 
+  </div>
   </div>
 
   );

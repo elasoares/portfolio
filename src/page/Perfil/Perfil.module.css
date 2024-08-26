@@ -102,7 +102,7 @@ cursor: pointer;
     }
     .principal{
        /*  margin: 0 50px 0 0; */
-       width: 100%;
+       width: 95%;
     }
   }
   @media (min-width: 650px) {
@@ -110,7 +110,7 @@ cursor: pointer;
         grid-template-columns: 300px 3fr;
     }
     .principal{
-        width: 90%;
+        width: 95%;
      }
   }
   @media (min-width: 730px) {
@@ -118,7 +118,17 @@ cursor: pointer;
         grid-template-columns: 350px 3fr;
     }
     .principal{
-        width: 90%;
+        width: 95%;
+     }
+  }
+  @media (min-width: 850px) {
+    .principal{
+        width: 98%;
+     }
+  }
+  @media (min-width: 950px) {
+    .principal{
+        width: 99%;
      }
   }
   

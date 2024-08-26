@@ -30,8 +30,9 @@ export function AcessarPerfil({className}) {
       <button className={`${styles["botao-perfil"]} ${className}`} onClick={navegarPeloPerfil}>
         <FotoPerfil className={styles["foto-perfil"]}/>
       </button>
-      
+    
       {perfil && (
+        <div className={styles["container-acessar"]}>
         <div className={styles["menu-perfil"]}>
           <Link
             className={styles["item-menu-perfil"]}
@@ -44,7 +45,9 @@ export function AcessarPerfil({className}) {
             Sair
           </button>
         </div>
+        </div>
       )}
-    </div>
+      </div>
+    
   );
 }

@@ -1,192 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-html, body {
+
+ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+ overflow: auto;
+}
+
+  body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}  
+.PrimeiroContainer{
   overflow: auto;
+  height: 100vh;
 }
-/* ===========================Container================================ */
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 2px; 
-    margin: auto 0; 
-    width: 100vw;
-    height: auto;
-    padding: 50px 0;
-    font-family: "Montserrat", sans-serif;
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
+  width: 100vw;
+   padding: 20px 0 150px 0; 
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
-
-/* ===========================Card================================ */
 
 .card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
-    width: 350px;
-    height: auto;
-    overflow: hidden;
-    border: 1px solid #dbdbdb;
-    padding: 5px;
-    margin-top: 5px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 330px;
+  border: 1px solid #dbdbdb;
+  padding: 5px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-/* ===================== Header do post ==================== */
-  .header {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid #dbdbdb;
-  }
-  
-  
-  .header h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-  }
-  .header p {
-    font-size: 1rem;
-  }
-  .container-header-titulo{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 6px;
-    
-  }
-/* --------------------   Container do header do perfil   ---------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+}
 
-.container-header-perfil{
+.header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+}
+
+.header p {
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.container-header-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.container-header-perfil {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.fotoPerfil{
-  margin: auto 0;
-  width: 35px;
-  height: 35px;
+.fotoPerfil {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 14px;
 }
 
-
-  /* ===========================Imagem do post================================ */
-  .container-imagem-postada{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .imagem {
-    margin: 0;
-    padding: 0;
-    width: 98%;
-    height: 250px;
-    
-  }
-
-/* =========================== Informação do post ================================ */
-
-
- .container-info{
+.container-imagem-postada {
   display: flex;
-  justify-content:flex-start;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imagem {
+  width: 95%;
+  height: 240px;
+}
+
+/* =========================== Mensagem do post ================================ */
+
+.containerMensagem{
+  height: 120px;
+  overflow-y: scroll;
+}
+.container-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
   width: 100%;
-  padding-left: 10px;
+  padding: 0 10px 0 10px;
 }  
 
   .mensagem {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 550;
     line-height: 1.6;
-    color: #333;
+    color: #000000;
     margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
   }
-  
 
-
-
-
-
-  .container-footer {
- /*    padding: 8px; */
-    border-top: 1px solid #dbdbdb;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  
-  
-  
- 
-
-  
-  
-
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-
-
-@media (min-width: 650px){
-
-  /* ===========================Container================================ */
-
-.container{
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0; 
-
-}
-  .card {
-    width: 300px;
-    height: auto;
-   
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 850px){
-  .card{
-    width: 350px;
-  }
 
-  .container{
+@media (min-width: 650px) {
+  .container {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0; 
-    width: 100vw;
+  
+  }
+}
+
+@media (min-width: 750px) {
+  .container {
+ /*    padding: 0 10px;
+    padding: 50px 0; */
+  }
+
+  .card {
+    width: 350px;
+  }
+}
+
+@media (min-width: 850px) {
+  .card {
+    width: 320px;
+  }
+
+  .container {
+    width: 95vw;
+  /*   min-height: 100vh;  */
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 950px) {
+  .card {
+    width: 320px;
+  }
+
+  .container {
+  
   }
 }

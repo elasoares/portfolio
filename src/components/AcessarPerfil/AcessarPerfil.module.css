@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rammetto+One&display=swap');
 
 /* ======= Foto do Perfil ========  */
-.container-perfil{
-  position: relative;
+.container-perfil {
   display: flex;
   flex-direction: column;
-} 
+
+}
+
 
 .botao-perfil{
   background-color: transparent;
 }
+
 
 .foto-perfil{
     object-fit:fill; 
@@ -20,6 +22,7 @@
      border-radius: 40px;
      cursor: pointer;
    }
+
 .foto-perfil:hover{
   transform: scale(1.2);
   color: #3d348b;
@@ -30,30 +33,35 @@
    
 .menu-perfil{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
+ 
    } 
    
- .mostrar-menu-perfil{
-     display: block;
-   }
 
    .item-menu-perfil {
     padding: 20px 30px; 
     white-space: nowrap; 
-    font-size: 1.2rem;
-    color: #ba68c8;
+    font-size: 1.4rem;
+    font-weight: 600;
     font-family: "Montserrat", sans-serif;
+    transition: 0.2s;
+    letter-spacing: 0.1rem;
+    transition: transform 550ms, opacity 1500ms;
+    color: #20186e;
   }
 
   .item-menu-sair{
     padding: 20px 30px; 
-    white-space: nowrap; 
-    font-size: 1.2rem;
-    color: #ba68c8;
+    font-size: 1.4rem;
+    font-weight: 600;
     font-family: "Montserrat", sans-serif;
-    background-color: transparent;
+    transition: 0.2s;
+    letter-spacing: 0.1rem;
+    transition: transform 550ms, opacity 1500ms;
+    color: #20186e;
+    background: none;
   }
 
   
@@ -61,54 +69,95 @@
       filter: brightness(0.5);
       transform: scale(1.2);
       font-weight: bold;
-    color:#3d348b;
+     color:#3d348b;
 
   }
   .item-menu-sair:hover {
       filter: brightness(0.5);
       transform: scale(1.2);
       font-weight: bold;
-    color:#3d348b;
-    cursor: pointer;
+     color:#3d348b;
+     cursor: pointer;
+   
 
   }
 
   @media (min-width: 700px){
-    .menu-perfil{
+    .container-acessar{
+      position: absolute;
+      z-index: 999;
+      width: 150px;
+      height:250px;
+      background-color: rgba(255, 255, 255, 0.918);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
+      border-radius: 4px;
+      top: 95px;
+      right: 45px;
+    }
+    .menu-perfil {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      position: absolute; 
-      background-color: white; 
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-      z-index: 1001; 
-      border-radius: 4px;
-      overflow: hidden;
-      backdrop-filter: blur(5px);
-      top: 104%; 
-      right: 10%; 
-      width: 15vw;
-      height: auto;
-      } 
+    } 
   }
 
-  @media(min-width: 1200px){
-    .menu-perfil{
+
+/*   @media (min-width: 850px){
+    .container-acessar{
+      position: absolute;
+      z-index: 999;
+      width: 150px;
+      height:250px;
+      background-color: rgba(250, 19, 19, 0.918);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
+      border-radius: 4px;
+      top: 95px;
+      right: 45px;
+    }
+    .menu-perfil {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      position: absolute; 
-      background-color: white; 
+    } 
+  } */
+
+  @media(min-width: 1200px){
+    .container-acessar{
+      position: absolute;
+      z-index: 999;
+      width: 150px;
+      height:250px;
+      background-color: rgb(255, 255, 255);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-      z-index: 1001; 
       border-radius: 4px;
-      overflow: hidden;
-      backdrop-filter: blur(5px);
-      top: 104%; 
-      right: -120%; 
-      width: 8vw;
-      height: auto;
-      } 
+      top: 95px;
+      right: 60px;
+    }
+    .menu-perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    } 
+  }
+  @media(min-width: 1600px){
+    .container-acessar{
+      position: absolute;
+      z-index: 999;
+      width: 150px;
+      height:250px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      border-radius: 4px;
+      top: 98px;
+      right: 85px;
+    }
+    .menu-perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    } 
   }

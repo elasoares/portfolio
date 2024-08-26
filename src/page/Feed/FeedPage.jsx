@@ -33,6 +33,7 @@ export function FeedPage() {
   }, []);
 
   return (
+    <div className={styles.PrimeiroContainer}>
     <div className={styles.container}>
       <LoadingOverlay />
       {dados.length > 0 ? (
@@ -53,20 +54,21 @@ export function FeedPage() {
               {dado.imageUrl && <img src={dado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
             </div>
             
+            <div className={styles.containerMensagem}>
             <MensagemCVerMais 
             classNameContainer={styles['container-info']} 
-            classNameFilho={styles.mensagem}>{dado.message}</MensagemCVerMais>
-
+            classNameFilho={styles.mensagem}>{dado.message}
+            </MensagemCVerMais>
+            </div>
             <div className={styles['container-footer']}>
-              <div className={styles['footer-up']}>
                 <Comentar postID={dado.id} />
-              </div>
             </div>
           </Card>
         ))
       ) : (
         <LoadingOverlay />
       )}
+    </div>
     </div>
   );
 }

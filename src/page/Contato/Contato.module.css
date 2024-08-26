@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   font-family: "Montserrat", sans-serif;
+  transition: none;
+   overflow: hidden;
 }
 
 a {
@@ -14,6 +15,67 @@ a {
 ul li {
   list-style: none;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* =========================Estilo do container=============================== */
+.primeiro-container{
+  overflow: auto;
+  height: 100vh;
+}
+.containerContato {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 50px 10px 150px 10px;
+ width: 100%;
+ transition: none;
+}
+
+.textoContato {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 105px 15px 100px 15px;
+   border-radius: 10% 5px ;
+  width: 80%;
+  margin: auto 0;
+}
+.textoContato h2{
+  color: #20186e;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.textoContato p{
+  color: #20186e;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+
 
 .formulario {
   display: flex;
@@ -21,10 +83,9 @@ ul li {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 80vw;
-  border: #ccc 1px solid;
+  width: 90vw;
+  border: #ccc 1px solid; 
   border-radius: 24px;
-  background-color: white;
   padding: 20px;
   font-weight: 400;
   margin: 20px 0 55px 0;
@@ -45,15 +106,18 @@ fieldset {
 /*========================Select================================ */
 .termStyles {
   font-size: 0.6em;
-  font-weight: 400;
+  font-weight: 500;
   padding: 2px;
-
+  font-family: "Montserrat", sans-serif;
+  color: #000;
 }
 
 
 .termStyles a {
-  color: #ba68c8;
+  color: #20186e;
+  font-weight: 600;
   margin-left: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 .termStyles a:hover {
   color: #4a148c;
@@ -67,9 +131,10 @@ fieldset {
   margin: 10px;
   border-radius: 5px;
   font-size: 0.7em;
-  color: #494848;
+  color: rgb(117, 117, 117);
   width: 65vw;
-  padding: 7px 5px;
+  padding: 8px 15px;
+  border-radius: 10px;
 }
 
 /*========================Text Area Messagem================================ */
@@ -78,8 +143,10 @@ fieldset {
   border: 1px solid #9d8189;
   border-radius: 5px;
   margin-top: 10px; 
-  padding: 8px 5px;
+  padding: 8px 15px;
   width: 65vw;
+  border-radius: 10px;
+  color: #494848;
 }
 
 /*========================Error================================ */
@@ -94,16 +161,16 @@ fieldset {
 
 /*========================Botao================================ */
 .botao {
-  border-radius: 8px;
-  border: 1px solid #ba68c8;
-  padding: 0.6em 1.2em;
-  font-size: 1.2em;
+  font-size: 1.3rem;
+  background-color: #20186e;
+  color: #ccc;
+  padding: 9px 20px;
   font-weight: bold;
-  background-color: #ba68c8;
-  color: #4a148c;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 100%;
+  width: 60%;
   margin: 25px 0 0 0;
 }
 .botao:hover {
@@ -119,7 +186,8 @@ fieldset {
 }
 /*========================Títlo================================ */
 .titulo {
-  color: #4a148c;
+  color: #20186e;
+  font-family: "Montserrat", sans-serif;
   padding: 5px;
   font-weight: bold;
   font-size: 1.5rem;
@@ -131,33 +199,76 @@ fieldset {
   }
 
   .selectStyle {
-    width: 55vw;
+    width: 52vw;
   }
   .textAreaMessagem {
-    width: 55vw;
+    width:52vw;
   }
+  .formContainer{
+    width: 100%;
+   }
+
 }
 @media (min-width: 650px) {
   .formulario {
-    width: 80vw;
+    width: 90vw;
   }
+/*   input{
+    width: 45vw;
+  } */
 
   .selectStyle {
-    width: 55vw;
+    width: 43vw;
   }
   .textAreaMessagem {
-    width: 55vw;
+    width:43vw;
   }
+
+  .containerContato {
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 10px 0 10px;
+   }
+
+   .formContainer{
+    width: 100%;
+   }
+
+   .termo-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+   }
+
+   .input-termo{
+    width: 20px;
+   }
+
 }
 @media (min-width: 730px) {
   .formulario {
-    width: 50vw;
+    width: 95vw;
+    background-color: #ffffff36;
   }
 
   .selectStyle {
-    width: 45vw;
+    width: 37vw;
   }
   .textAreaMessagem {
-    width: 45vw;
+    width:  37vw;
   }
+
+  .containerContato {
+    flex-direction: row;
+    gap: 50px;
+    padding: 0 10px 0 55px; 
+   }
+
+   .textoContato {
+    width: 50%;
+   }
+   .formContainer{
+    width: 50%;
+    height: auto;
+   }
 }

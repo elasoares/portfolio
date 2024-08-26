@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+ html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ overflow: auto;
+}
+
+  body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+}  
+.PrimeiroContainer{
+  overflow: auto;
+/*   overflow: auto; */
+  height: 100vh;
+  width: 100%;
+  padding: 10px 0 155px 0;
+}
 /* ===========================Container================================ */
 
 .container{
@@ -7,10 +27,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
-    width: 90%;
+    width: 100%;
     font-family: "Montserrat", sans-serif;
-    height: 100vh;
+
     }
 
 /* ===================== Header do post ==================== */
@@ -66,8 +85,8 @@
       .imagem {
         margin: 0;
         padding: 5px 0 0 0;
-        width: 98%;
-        height: 250px;
+        width: 95%;
+        height: 240px;
         object-fit:unset;
         
       }
@@ -95,24 +114,27 @@
 
 
 
-/* =========================== Informação do post ================================ */
+/* =========================== Mensagem do post ================================ */
 
-
+.containerMensagem{
+  height: 120px;
+  overflow-y: scroll;
+}
 .container-info{
   display: flex;
-  justify-content:flex-start;
-  align-items:center;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
   width: 100%;
-  padding: 5px 0 0 5px;
-  gap: 10px;
+  padding: 0 10px 0 10px;
 }  
 
   .mensagem {
-    font-size: 14px;
-    color: #333;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 1.6;
+    color: #000000;
     margin: 0;
-    padding: 0;
   }
   .comentario{
     font-size: 14px;
@@ -145,12 +167,12 @@
       align-items: center;
       flex-direction: row;
       flex-wrap:wrap;
-      padding: 50px 0 155px 0;
-      height: 100%;
+      margin: auto 0;
+      width: 100%;
 
     }
     .card {
-        width: 80%;
+        width: 70%;
       }
 }
 @media(min-width: 850px){
@@ -159,11 +181,15 @@
       }
 }
 @media(min-width: 950px){
+  .PrimeiroContainer{
+    width: 100vw;
+  }
     .container{
-        gap: 0;
+        gap:0;
         margin: 0 auto;
+        min-height: 100vh; 
     }
     .card {
-        width: 350px;
+        width: 320px;
       }
 }

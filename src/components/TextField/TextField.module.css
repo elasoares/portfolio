@@ -1,8 +1,8 @@
 .textfield {
   width: 65vw;
-  padding: 8px 5px;
+  padding: 8px 15px;
   border: 1px solid #9d8189;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
   color: black;
    margin: 10px; 
@@ -17,18 +17,18 @@
 
 @media (min-width: 600px) {
   .textfield {
-    width: 55vw;
+    width: 52vw;
   }
 }
 
 @media (min-width: 650px) {
   .textfield {
-    width: 55vw;
+    width: 43vw;
   }
 }
 
 @media (min-width: 730px) {
   .textfield {
-    width: 45vw;
+    width:  37vw;
   }
 }

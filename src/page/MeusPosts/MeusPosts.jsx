@@ -54,6 +54,7 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
 
 
     return (
+        <div  className={styles.PrimeiroContainer} >
         <div  className={styles.container} >
           
          
@@ -77,11 +78,12 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
               {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
             </div>
               
-            
+            <div className={styles.containerMensagem}>
             <MensagemCVerMais 
             classNameContainer={styles['container-info']} 
-            classNameFilho={styles.mensagem}>{postado.message}</MensagemCVerMais>
-            
+            classNameFilho={styles.mensagem}>{postado.message}
+            </MensagemCVerMais>
+            </div>
                </Card>
              )) 
             ):(
@@ -89,11 +91,7 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
             )
             }
 
-
-         
-
-
-
+        </div>
         </div>
     )
 }
