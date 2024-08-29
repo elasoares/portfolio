@@ -14,7 +14,6 @@ Este portfólio foi construído utilizando as seguintes tecnologias:
 - **Vite**: Escolhido como bundler por sua performance superior durante o desenvolvimento e build rápido para produção.
 - **JavaScript (ES6+)**: Linguagem de programação principal.
 - **CSS3 com Flexbox e Grid**: Para estilização e criação de layouts modernos e flexíveis.
-- **GitHub Pages**: Ferramenta utilizada para o deploy e hospedagem do site.
 
 ---
 
