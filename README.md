@@ -4,8 +4,6 @@ Bem-vindo ao meu portfólio! 🚀
 
 Este projeto foi desenvolvido para exibir meus trabalhos, habilidades e projetos de uma maneira visualmente atrativa e intuitiva. Ao navegar pelo portfólio, você encontrará exemplos dos meus projetos, tecnologias com as quais trabalho e informações sobre minha jornada como desenvolvedor.
 
-## 🌐 [Visite meu portfólio aqui!](https://elasoares.github.io/portfolio)
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
