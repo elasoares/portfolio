@@ -107,7 +107,7 @@ ul li {
 .item-menu {
   color: #20186e;
   padding: 0 15px;
-  font-weight: 650;
+  font-weight: 500;
   font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   transition: 0.2s;
@@ -261,7 +261,7 @@ ul li {
   }
   /* ======= Itens ========  */
   .item-menu {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   /* ======= Logo ========  */

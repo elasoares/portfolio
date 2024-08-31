@@ -25,7 +25,7 @@ axios.interceptors.request.use(config => {
     useStore.setState({ isLoading: true });
     return config;
 }, error => {
-    // Optionally handle request errors here
+
     useStore.setState({ isLoading: false });
     return Promise.reject(error);
 });
@@ -35,6 +35,6 @@ axios.interceptors.response.use(response => {
     return response;
 }, error => {
     useStore.setState({ isLoading: false });
-    // Optionally set an error message in the global state here
+
     return Promise.reject(error);
 });
