@@ -4,8 +4,6 @@ Bem-vindo ao meu portfólio! 🚀
 
 Este projeto foi desenvolvido para exibir meus trabalhos, habilidades e projetos de uma maneira visualmente atrativa e intuitiva. Ao navegar pelo portfólio, você encontrará exemplos dos meus projetos, tecnologias com as quais trabalho e informações sobre minha jornada como desenvolvedor.
 
-## 🌐 [Visite meu portfólio aqui!](https://elasoares.github.io/portfolio)
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -16,7 +14,6 @@ Este portfólio foi construído utilizando as seguintes tecnologias:
 - **Vite**: Escolhido como bundler por sua performance superior durante o desenvolvimento e build rápido para produção.
 - **JavaScript (ES6+)**: Linguagem de programação principal.
 - **CSS3 com Flexbox e Grid**: Para estilização e criação de layouts modernos e flexíveis.
-- **GitHub Pages**: Ferramenta utilizada para o deploy e hospedagem do site.
 
 ---
 
