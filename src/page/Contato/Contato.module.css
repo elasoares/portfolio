@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rammetto+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -16,54 +17,55 @@ ul li {
   list-style: none;
 }
 html, body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   overflow: auto;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+
 /* =========================Estilo do container=============================== */
 .primeiro-container{
-  overflow: auto;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .containerContato {
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
- padding: 50px 10px 150px 10px;
- width: 100%;
+ width: 90%;
+ height: 100%;
  transition: none;
+ background-color: #20186e; 
+ border-radius: 10px;
+ padding: 20px 5px;
 }
 
 .textoContato {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 105px 15px 100px 15px;
-   border-radius: 10% 5px ;
+  padding: 50px 15px 100px 15px;
+  border-radius: 10% 5px ;
   width: 80%;
   margin: auto 0;
 }
 .textoContato h2{
-  color: #20186e;
+  color: #fff;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.7rem;
+  letter-spacing: 0.1em;
   font-weight: bold;
 }
 
 .textoContato p{
-  color: #20186e;
+  color: #fff;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
+  letter-spacing: 0.1em;
 }
 
 
@@ -83,13 +85,17 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 90vw;
-  border: #ccc 1px solid; 
+  width: 100%;
+  border: #919090 1px solid; 
   border-radius: 24px;
   padding: 20px;
   font-weight: 400;
-  margin: 20px 0 55px 0;
 }
+
+.block{
+  display: none;
+}
+
 /*========================Fieldset================================ */
 fieldset {
   border: none;
@@ -105,19 +111,19 @@ fieldset {
 }
 /*========================Select================================ */
 .termStyles {
-  font-size: 0.6em;
+  font-size: 1em;
   font-weight: 500;
   padding: 2px;
-  font-family: "Montserrat", sans-serif;
-  color: #000;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
 
 .termStyles a {
-  color: #20186e;
-  font-weight: 600;
+  color: #b3b1b1;
+  font-weight: 800;
   margin-left: 5px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .termStyles a:hover {
   color: #4a148c;
@@ -127,26 +133,30 @@ fieldset {
 /*========================Select================================ */
 
 .selectStyle {
-  border: 1px solid #9d8189;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
   margin: 10px;
+  font-size: 1em;
+  color: #cfcece;
+  width: 70vw;
+  padding: 12px 15px;
   border-radius: 5px;
-  font-size: 0.7em;
-  color: rgb(117, 117, 117);
-  width: 65vw;
-  padding: 8px 15px;
-  border-radius: 10px;
+  outline: none
 }
 
 /*========================Text Area Messagem================================ */
 .textAreaMessagem {
-  font-size: 0.7em;
-  border: 1px solid #9d8189;
+  font-size: 1em;
+  border: 1px solid rgb(209, 208, 208);
   border-radius: 5px;
   margin-top: 10px; 
   padding: 8px 15px;
-  width: 65vw;
-  border-radius: 10px;
-  color: #494848;
+  width: 70vw;
+  border-radius: 5px;
+  color: rgb(209, 208, 208);
+  resize: none;
+  background-color: transparent;
+  outline: none
 }
 
 /*========================Error================================ */
@@ -164,39 +174,66 @@ fieldset {
   font-size: 1.3rem;
   background-color: #20186e;
   color: #ccc;
-  padding: 9px 20px;
+  padding: 9px 10px;
   font-weight: bold;
   border-radius: 8px;
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 60%;
+  width: 30%;
   margin: 25px 0 0 0;
+  outline: none
 }
 .botao:hover {
   filter: brightness(0.5);
   transform: scale(1);
   opacity: 0.8;
   color: white;
+  border: none;
 }
 
-.botao:focus,
-.botao:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-/*========================Títlo================================ */
-.titulo {
-  color: #20186e;
-  font-family: "Montserrat", sans-serif;
+.botao-exibir{
+  font-size: 1.3rem;
+  background-color: #20186e;
+  color: #ccc;
   padding: 5px;
   font-weight: bold;
-  font-size: 1.5rem;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: border-color 0.25s;
+/*   width: 30%; */
+  margin: 25px 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
 }
 
+.botao-exibir:hover {
+  filter: brightness(0.5);
+  transform: scale(1);
+  opacity: 0.8;
+  color: white;
+  border: none;
+  outline: none
+}
+
+/*========================Títlo================================ */
+.titulo {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  transition: 1.2s;
+  font-size: 1.8em;
+}
+
+/* .subtitulo {
+
+  color: #fff;
+  letter-spacing: 0.1rem;
+  transition: 1.2s;
+  font-size: 1.8em;
+} */
+
 @media (min-width: 600px) {
-  .formulario {
-    width: 80vw;
-  }
 
   .selectStyle {
     width: 52vw;
@@ -210,28 +247,38 @@ fieldset {
 
 }
 @media (min-width: 650px) {
-  .formulario {
-    width: 90vw;
+  .block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    border: #919090 1px solid; 
+    border-radius: 24px;
+    font-weight: 400;
+
   }
-/*   input{
-    width: 45vw;
-  } */
+
+  .botao-exibir{
+    display: none;
+  }
 
   .selectStyle {
-    width: 43vw;
+    width: 40vw;
   }
   .textAreaMessagem {
-    width:43vw;
+    width:40vw;
   }
 
   .containerContato {
     flex-direction: row;
-    gap: 10px;
-    padding: 0 10px 0 10px;
+    padding: 0 5px;
    }
-
+   .textoContato {
+    width: 50%;
+   }
    .formContainer{
-    width: 100%;
+    width: 60%;
    }
 
    .termo-container{
@@ -241,28 +288,31 @@ fieldset {
    }
 
    .input-termo{
-    width: 20px;
+    width: 50px;
    }
 
 }
 @media (min-width: 730px) {
-  .formulario {
-    width: 95vw;
-    background-color: #ffffff36;
+  .block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    border: #919090 1px solid; 
+    border-radius: 24px;
+    padding: 10px;
+    font-weight: 400;
+
   }
 
+ 
   .selectStyle {
-    width: 37vw;
+    width: 36vw;
   }
   .textAreaMessagem {
-    width:  37vw;
+    width:  36vw;
   }
-
-  .containerContato {
-    flex-direction: row;
-    gap: 50px;
-    padding: 0 10px 0 55px; 
-   }
 
    .textoContato {
     width: 50%;
@@ -271,4 +321,14 @@ fieldset {
     width: 50%;
     height: auto;
    }
+}
+
+
+@media (min-width: 830px) {
+  .block{
+   margin: 10px;
+  }
+
+ 
+
 }

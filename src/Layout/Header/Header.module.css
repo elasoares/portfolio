@@ -1,284 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rammetto+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  text-transform: none;
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 25px 20px;
 }
 
-a {
-  text-decoration: none;
+/* ======= Logo ========  */
+.logo {
+    font-family: "Rammetto One", sans-serif;
+    color: rgba(43, 58, 85, 0.9);
+    letter-spacing: 0.2rem;
+    transition: 1.2s;
+    font-size: 1.8em;
+    padding: 10px;
 }
+.logo span {
+    font-size: 72px;
+    color: rgb(133, 40, 255);
+    line-height: 0.2;
+  }
 
-ul li {
-  list-style: none;
-}
-
-/* ======= ContainerHeader ========  */
-.container-header {
-  display: flex;
-  justify-content: space-between;
-  align-items:flex-start;
-  flex-wrap: wrap;
-  padding: 15px 4vw 0 14px;
-  margin: 0;
-  width: 100vw;
-  height: auto;
+.logo:hover {
+    color: #3d348b;
+    filter: brightness(0.5);
+    transform: scale(1);
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 /* ======= Entrar ========  */
 .perfil{
-  width: 100%;
+    height: auto;
+    text-align: center;
 }
-.entrar{
-  color: #20186e;
-  padding: 5px 8px;
-  border-radius: 40px;
- /*  border: 1px solid #20186e; */
-  letter-spacing: 0.1rem;
-  transition: 1.2s;
-  font-size: 1.4em;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-}
-
-.entrar:hover {
-  filter: brightness(0.2);
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-
-/* ======= Logo ========  */
-.logo {
-  font-family: "Rammetto One", sans-serif;
-  color: #fff;
-  letter-spacing: 0.2rem;
-  transition: 1.2s;
-  font-size: 1.8em;
-}
-
-.logo:hover {
-  color: #ba68c8;
-  filter: brightness(0.5);
-  transform: scale(1);
-  opacity: 0.5;
-  cursor: pointer;
-}
-/* ======= Container navigation ========  */
-.container-navigation{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-/* ======= Humburger ========  */
-.humburger {
-  cursor: pointer;
-  font-size: 2em;
-  color: #fff;
-  
-}
-
-.humburger-animation {
-  transform: rotate(180deg);
-  transition: 0.2s;
-}
-
-/* ======= Container item ========  */
-.container-menu-navegacao {
-  display: none;
-}
-
-.container-item-navegador{
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  gap: 50px;
-}
-
-.item-menu {
-  color: #20186e;
-  padding: 0 15px;
-  font-weight: 500;
-  font-size: 1.4rem;
-  font-family: "Montserrat", sans-serif;
-  transition: 0.2s;
-  letter-spacing: 0.1rem;
-  transition: transform 550ms, opacity 1500ms;
-}
-
-.item-menu:hover {
-  filter: brightness(0.5);
-  transform: scale(1.2);
-  color: #3d348b;
-  font-weight: bold;
-}
-
-.mostrarNav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
-  width: 95vw;
-  height: 90vh;
-  margin: 35px 0 0 0;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.856); 
-  position: absolute;
-  z-index: 1001; 
-}
-
-.perfil{
-  width: 100%;
-}
-
-
-
-@media (min-width: 658px) {
-  /* ======= Itens ========  */
-  .item-menu {
-    font-size: 1.4rem;
+.perfil-container{
     padding: 10px;
-  }
-
-  /* ======= Logo ========  */
-  .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-
+    background-color: rgb(133, 40, 255);
+    border-radius: 5px;
 }
 
-@media(min-width: 720px) {
-    /* ======= Container do Nav ========  */
-    .container-header {
-      justify-content: space-between;
-      align-items: center;
-      margin: auto 0;
-    }  
-  
-   
-    /* ======= Container do Item ========  */
-    .mostrarNav {
-      display: flex;
-      flex-direction: row;
-     justify-content: space-around;
-     align-items: center;
-      box-shadow:none; 
-      margin: auto 0;
-      position: relative;
-      z-index:auto; 
-      height: auto;
-    }
-
-    .container-item-navegador{
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      width: 100%;
-    }
-  .container-menu-navegacao {
-      width: 75%;
-      height: 78px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.856);
-    }
-
-     /* ======= Humbuger ========  */
-  .humburger {
-    display: none;
-  }
- .entrar{
-  margin: 0 auto;
- }
-
- .item-menu{
-  font-size: 1.5rem;
- }
- .perfil{
-  width: 30%;
-  
- }
-  
+.entrar{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    height: 45px;
+    width: 200px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-@media (min-width: 1300px) {
-  /* ======= Container do Nav ========  */
-  .container-header {
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin:auto 0;
-  } 
- 
-  /* ======= Container do Item ========  */
-  .container-item-navegador{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    gap: 10px;
-  }
-  .container-menu-navegacao {
-    width: 65%;
-    display: flex;
-    flex-direction: row;
-    margin: auto 0;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  /* ======= Humbuger ========  */
-  .humburger {
-    display: none;
-  }
-
-  /* ======= Container navigation ========  */
-  .container-navigation{
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* ======= Entrar ========  */
-  .entrar{
-    font-size: 1.5rem;
-  }
-  /* ======= Itens ========  */
-  .item-menu {
-    font-size: 1.3rem;
-  }
-
-  /* ======= Logo ========  */
-  .logo {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0  0 0 30px;
-  }
-
+.perfil-container:hover {
+    opacity: 0.5;
+    background-color: rgb(96, 28, 184);
+    cursor: pointer;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}

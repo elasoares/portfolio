@@ -13,26 +13,17 @@ html, body {
     min-height: 100vh;
   }
 /* =========================Estilo do container Sobre=============================== */
-.primeiro-container{
-    overflow: auto;
-    height: 100vh;
-}
 .container{
     display: flex;
     align-items:  center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    padding: 50px 10px 150px 10px;
-    gap: 155px;
+/*     padding: 50px 10px 150px 10px; */
+    gap: 5px;
+    height: 100%;
     
 }
 
-.container-sobre{
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 25px;
-    border-radius: 10% 5px;
-}
 
 /* =========================Estilo do container Header do sobre=============================== */
 .container-header{
@@ -43,34 +34,44 @@ html, body {
     width: 100%;
 
 }
+.container-sobre{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;  
+    width: 90%;
+
+}
 .header-texto-sobre{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;  
 }
 
 .texto-sobre{
-    font-size: 1.2rem;
-    color: #020202;
+    font-size: 1.3rem;
+    color: rgba(43, 58, 85, 0.9);
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
 }
 /* =========================Estilo da borda=============================== */
 .border-style{
- border: 1px solid #20186e;
- background-color: #20186e;
- border-radius: 50px;
- width: 10%;
- height: 5px;
- margin: 8px 5px 0 0;
+    background-color: rgb(133, 40, 255);
+    border-radius: 50px;
+    width: 20%;
+    height: 5px;
+    margin: 0 0 10px 0;
 }
+
 /* =========================Estilo do título=============================== */
 .titulo{
     font-size: 2em;
     font-weight: bold;
-    color:#20186e;
+    color:rgba(43, 58, 85, 0.9);
     font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* =========================Estilo das minhas habilidades=============================== */
@@ -83,27 +84,27 @@ html, body {
     flex-direction: column;
 }
 
- .container-itens-habilidades{
+.container-itens-habilidades{
     display: flex;
     align-items:  center;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 25px;
-   
+
 } 
- .itens-habilidades{
- width: 100px;
- height: 100px;
- display: flex;
- align-items:  center;
- justify-content: center;
- flex-direction: column; 
- cursor:pointer;
+.itens-habilidades{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    flex-direction: column; 
+    cursor:pointer;
 } 
 
 .itens{
-    font-size: 1.2rem;
+    font-size: 0.5rem;
     color: #020202;
     font-weight: 500;
 }
@@ -119,33 +120,23 @@ html, body {
 /* =========================@ =============================== */
 
 @media (min-width: 750px) {
-    .titulo{
-        font-size: 2.5em;
-    }
-    .container{
-     padding: 50px 25px 150px 15px;
-     width: 100%;
-     }
+.titulo{
+    font-size: 2.5em;
+}
 
-    .container-habilidades{
-     padding: 0;  
-     width: 100%;
-    }
+.container-habilidades{
+    width: 100%;
+    height: 100%;
+}
 
-    .container-sobre{
-        margin: auto 0; 
-        width: 100%;
-    }
+.container-sobre{
+    width: 90%;
+    height: 100%;
+}
+
 }
 
 
-@media (min-width: 800px) {
-  .container{
-    flex-direction: row;
-    gap: 0;
-    height: 100vh;
-    padding: 50px 10px 150px 10px;
-    }
-}
+
 
 

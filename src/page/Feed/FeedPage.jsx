@@ -5,7 +5,7 @@ import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 import styles from './FeedPage.module.css';
 import { Card } from "../../components/Card/Card";
 import { ComponenteVisualizar } from '../../components/VisualizarComponente/ComponenteVisualizar';
-import { Comentar } from "../../components/Comentar/Comentar";
+/* import { Comentar } from "../../components/Comentar/Comentar"; */
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
 import { MensagemCVerMais } from "../../components/MensagemCVerMais/MensagemCVerMais";
 
@@ -60,9 +60,9 @@ export function FeedPage() {
             classNameFilho={styles.mensagem}>{dado.message}
             </MensagemCVerMais>
             </div>
-            <div className={styles['container-footer']}>
+          {/*   <div className={styles['container-footer']}>
                 <Comentar postID={dado.id} />
-            </div>
+            </div> */}
           </Card>
         ))
       ) : (

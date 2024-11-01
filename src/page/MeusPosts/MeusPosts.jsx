@@ -55,43 +55,42 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
 
     return (
         <div  className={styles.PrimeiroContainer} >
-        <div  className={styles.container} >
-          
-         
-            {posts.length > 0 ?(
-              posts.map((postado, index)=>(
-               <Card className={styles.card}  key={"post_" + index}>
-               
-               <div className={styles.header}>
-              <div className={styles["container-header-perfil"]}>
-                <FotoPerfil className={styles.fotoPerfil} />
-                <div className={styles['container-header-titulo']}>
-                  <h2>Elaine Soares</h2>
-                  <p>{postado.subtitle}</p> 
-                </div>
-              </div>
-              <EditarEDeletar className={styles.EditarEDeletar} onDelete={()=> handleDelete(postado.id)}  editar={`/editar/${postado.id}`} visualizar={`/visualizar/${postado.id}`}  />
-            </div>
+            <div  className={styles.container} >
 
-             
-             <div className={styles["container-imagem-postada"]}>
-              {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
-            </div>
-              
-            <div className={styles.containerMensagem}>
-            <MensagemCVerMais 
-            classNameContainer={styles['container-info']} 
-            classNameFilho={styles.mensagem}>{postado.message}
-            </MensagemCVerMais>
-            </div>
-               </Card>
-             )) 
-            ):(
-                <LoadingOverlay/>
-            )
-            }
+                {posts.length > 0 ?( posts.map((postado, index)=>(
 
-        </div>
+                    <Card className={styles.card}  key={"post_" + index}>
+
+                        <div className={styles.header}>
+                            <div className={styles["container-header-perfil"]}>
+                                <FotoPerfil className={styles.fotoPerfil} />
+                                <div className={styles['container-header-titulo']}>
+                                    <h2>Elaine Soares</h2>
+                                    <p>{postado.subtitle}</p> 
+                                </div>
+                            </div>
+                            <EditarEDeletar 
+                                className={styles.EditarEDeletar} 
+                                onDelete={()=> handleDelete(postado.id)}  
+                                editar={`/editar/${postado.id}`} 
+                                visualizar={`/visualizar/${postado.id}`}
+                            />
+                        </div> 
+
+                        <div className={styles["container-imagem-postada"]}>
+                            {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
+                        </div>
+                    
+                        <div className={styles.containerMensagem}>
+                            <MensagemCVerMais 
+                                classNameContainer={styles['container-info']} 
+                                classNameFilho={styles.mensagem}>
+                                {postado.message}
+                            </MensagemCVerMais>
+                        </div>
+                    </Card>
+                )) ):( <LoadingOverlay/> )}
+            </div>
         </div>
     )
 }

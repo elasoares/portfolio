@@ -9,6 +9,7 @@ import toast from "react-simple-toasts";
 import {dataBase} from '../../firebaseConfig.js'
 import { push, ref } from "firebase/database";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay.jsx";
+import { useState } from "react";
 
 
 
@@ -34,7 +35,7 @@ const signUpSchema = yup.object({
 
 
 export function Contato() {
-
+const [exibir, setExibirContato] = useState(false);
 
   const addToFirebase = (values, {setSubmitting, resetForm})=>{
     const{name, surname, opcao, message} = values;
@@ -54,22 +55,33 @@ export function Contato() {
 
 
 
+function handleToggle(){
+  setExibirContato(!exibir);
+}
 
-
+const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
 
   return (
     <div className={styles["primeiro-container"]}>
     <div className={styles.containerContato}>
+   
+   {!exibir &&(
     <div className={styles.textoContato}>
-        <h2>Entre em Contato</h2>
-        <p>
+        <h2 className={styles.titulo}>Entre em Contato</h2>
+        <p className={styles.subtitulo}>
           Ficarei feliz em ouvir de você! Se você tiver alguma dúvida, sugestão,
           ou simplesmente quiser dizer olá, sinta-se à vontade para entrar em
           contato. Preencha o formulário ao lado e responderei o mais breve
           possível. Estou ansioso para conversar com você!
         </p>
       </div>
+   )}
+   
+
       <div className={styles.formContainer}>
+
+      <button className={styles["botao-exibir"]} onClick={handleToggle}>{botaoToggle}</button>
+
       <Formik
         validationSchema={signUpSchema}
         initialValues={{
@@ -95,8 +107,10 @@ export function Contato() {
             <form
               onSubmit={handleSubmit}
               noValidate
-              className={styles.formulario}
+              className={` ${exibir ? styles.formulario : styles.block}`}
             >
+
+            <h2 className={styles.titulo}>Contato</h2>
            
              
               <fieldset>
@@ -203,6 +217,7 @@ export function Contato() {
           </Card>
         )}
       </Formik>
+     
     </div>
     </div>
     </div>

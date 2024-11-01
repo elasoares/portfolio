@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f1f7;
+  color: #2c2c2c;
   overflow: hidden;
 }
+
 a {
   text-decoration: none;
 }
@@ -22,9 +26,8 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center; 
-  min-height: 100vh;
+  min-height: 100%;
   padding-bottom: 20px;
-  
 }
 
 .container-icon-lista {
@@ -32,356 +35,153 @@ ul li {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  margin:0;
+  margin: 0;
   height: auto;
   max-height: 100%;
   border-radius: 24px;
-  color: #fdfcfd;
+  color: #563d7c;
   width: 95%;
+  padding: 20px;
 }
 
-
-
-
-/*=== Informações do título e subtitulo ===*/
+/*=== Informações do título e subtítulo ===*/
 .container-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
- 	overflow-y: hidden; 
   height: auto;
   width: 90%;
 }
 
 .titulo {
-  font-size: 2.1rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  padding-top: 5px;
-  font-style: normal;
-  color:#e0fbfc;
-  
-  
+  font-size: 3rem;
+  padding: 10px 0;
+  text-align: center;
+  color: rgba(43, 58, 85, 0.9);
+  animation: bottomIn 1.4s ease-in-out forwards;
+  animation-delay: 0.2s;
 }
 
 .subtitulo {
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  padding-bottom: 22px;
-  color: #20186e;
+  font-size: 5.5rem;
+  color: rgba(43, 58, 85, 0.9);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin: -40px 0;
+  animation: bottomIn 1.4s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
 
+.subtitulo span {
+  color: rgb(133, 40, 255);
 }
 
 /* ============ Botões ============ */
 .container-botao {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 25px;
-  height: auto;
+  justify-content: center;
+  gap: 100px;
   width: 100%;
-  padding: 25px 10px;
+  padding-top: 75px;
 }
 
 .botao {
-  font-size: 1.1rem;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  background-color: transparent;
-  color: #20186e;
-  padding: 8px 15px;
-  border-radius: 40px;
-  border: 1px solid #20186e;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  height: 50px;
+  line-height: 50px;
+  width: 250px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(43, 58, 85, 0.2);
+  animation: bottomIn 1.4s ease-in-out forwards;
+  animation-delay: 0.5s;
+  background-color: rgba(43, 58, 85, 0.9);
+  color: white;
 }
-
 
 .botao:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.botao:active {
-  filter: brightness(0.5);
+  background-color: rgb(133, 40, 255);
+  color: white;
 }
 
 .botao-contato {
-  font-size: 1.1rem;
-  background-color: #20186e;
-  color: #ccc;
-  border-radius: 40px;
-  padding: 9px 20px;
-  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(133, 40, 255);
+  border: 2px solid rgb(133, 40, 255);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  height: 50px;
+  line-height: 50px;
+  width: 250px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(43, 58, 85, 0.2);
+  animation: bottomIn 1.4s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .botao-contato:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  background-color: rgb(133, 40, 255);
+  color: white;
 }
 
-/* ============ Icon ============ */
 .icon-download {
   font-size: 1.1rem;
 }
 
-.item-icon {
-  font-size: 2rem;
-  color: white;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 60px;
-}
-
 /* ============ Foto ============ */
 .foto {
-   height: 250px;
-   width: 250px;
-   border-radius: 100%;
-   border: 2px solid #20186e;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-
-
-
-@media (min-width: 650px) {
-  .container-main {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /*============ Foto ============ */
-  .foto {
-    height: 250px;
-     width: 250px;
-     border: 50px;
-     border: 2px solid #3d348b;
-    object-fit: cover;
-  }
-
-
-
-  /*=== Informações do título e subtitulo ===*/
-  .container-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /*================Card=====================*/
-  .container-icon-lista {
-    height: auto;
-    width: 90%;
-    padding: 20px;
-  }
-
-  /* ============ Icon ============  */
-  .item-icon {
-    font-size: 2.5rem;
-    color: #fff;
-  }
-
-  .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
-    padding-bottom: 115px;
-  }
-
-  /* ============ Botões ============ */
-  .botao-contato {
-    padding: 10px 12px;
-    font-size: 10px;
-  }
-
-  .botao a {
-    padding: 8px 10px;
-    font-size: 10px;
-  }
+.foto:hover {
+  transform: scale(1.05);
 }
 
-@media (min-width: 700px) {
-  .container-main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    backdrop-filter: blur(5px); 
-    margin: 0;
-  }
-
-  /* ============ Icon ============  */
-  .item-icon {
-    font-size: 2.1rem;
-  }
-  
-
-  .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 60px;
-    padding-bottom: 0;
-  }
-
-  /* ============ Foto ============ */
-  .foto {
-    max-width: 230px;
-    width: 50vw;
-    height: 280px;
-    border-radius: 15px;
-    object-fit: cover;
-    position: absolute;
-    margin: 0 0 0 0;
-    top: 24%;
-    right: 3%;
-    box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
-  }
-.container-descricao-home{
-  padding-right: 30px;
-}
-
-  /*================Card=====================*/
-  .container-icon-lista {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 75vw;
-    max-width: 90%;
-    padding: 0 55px 0 20px;
-    border-radius: 24px;
-    height: 70vh;
-  }
-
-  /*=== Informações do título e subtitulo ===*/
-  .container-info {
-    margin: 0 0 0 0;
-  }
-  
-    .titulo {
-      font-size: 33px;
-    }
-  
-    .subtitulo {
-      font-size: 19px;
-    }
-
-
-  /* ============ Botões ============ */
-  .container-botao{
-    justify-content: flex-start;
-    width: 80%;
-  }
-    .botao-contato {
-      font-size: 10px;
-    }
-    .botao{
-      font-size: 10px;
-    }
-}
-
-@media (min-width: 850px) {
-
-    /*================Card=====================*/
-    .container-main {
-      min-height: 100vh;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    .container-icon-lista {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 70vh; 
-      width: 75vw;
-      padding: 0 55px 0 20px;
-      border-radius: 24px;
-      margin: 0;
-    }
-  /*=== Informações do título e subtitulo ===*/
-  .container-info {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    padding: 0 0 0 45px;
-  }
-
-  .titulo {
-    font-size: 36px;
-  }
-
-  .subtitulo {
-    font-size: 22px;
-  }
-  /* ============ ICon ============ */
-  .icon {
-    gap: 60px;
-
-  }
-  .item-icon {
-    font-size: 2.1rem;
-    color: #ffffff;
-  }
-    /* ============ Botões ============ */
-
-.botao-contato {
-  font-size: 15px;
-}
-.botao{
-  font-size: 15px;
-}
-
-
-}
-
-
-@media (min-width: 1000px) {
-
-  .container-icon-lista {
-    margin: 0;
-  }
-  /*=== Informações do título e subtitulo ===*/
-/*    .titulo {
-    font-size: 50px;
-  }
-
-  .subtitulo {
-    font-size: 26px;
-  } */
-
-  /* ============ Botões ============ */
-
-/* .botao-contato {
-  font-size: 18px;
-}
-.botao{
-  font-size: 18px;
-} */
-
-
-}
-
+/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
-    opacity: 8;
+    opacity: 1;
   }
 }
 
 .fadeIn {
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.typingAnimation {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #d68631;
+  white-space: nowrap;
+  animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 @keyframes typing {
@@ -393,21 +193,34 @@ ul li {
   }
 }
 
-/* ============ Animação do título ============*/
-@keyframes blink {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
+@media (min-width: 650px) {
+  .titulo {
+    font-size: 3rem;
   }
-  to {
-    border-right-color: black;
+  
+  .subtitulo {
+    font-size: 1.5rem;
   }
 }
 
-.typingAnimation {
-  display: inline-block;
-  overflow: hidden;
-  border-right: 0.15em solid rgba(255, 255, 255, 0.75);
-  white-space: nowrap;
-  margin: 0 auto;
-  animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+@media (min-width: 900px) {
+  .container-main {
+    min-height: 90%;
+    border-radius: 30px;
+    padding: 30px;
+  }
+
+  .titulo {
+    font-size: 3.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.8rem;
+  }
+
+  .foto {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+  }
 }

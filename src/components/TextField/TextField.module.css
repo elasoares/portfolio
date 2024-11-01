@@ -1,19 +1,17 @@
 .textfield {
-  width: 65vw;
-  padding: 8px 15px;
-  border: 1px solid #9d8189;
-  border-radius: 10px;
-  background-color: white;
-  color: black;
-   margin: 10px; 
-  font-size: 0.7em;
+  width: 70vw;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  margin: 10px; 
+  font-size: 1em;
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  outline: none
 }
 
-.textfield:focus {
-  border: 1px solid #8338ec;
-}
 
 @media (min-width: 600px) {
   .textfield {
@@ -23,12 +21,12 @@
 
 @media (min-width: 650px) {
   .textfield {
-    width: 43vw;
+    width: 40vw;
   }
 }
 
 @media (min-width: 730px) {
   .textfield {
-    width:  37vw;
+    width:  36vw;
   }
 }

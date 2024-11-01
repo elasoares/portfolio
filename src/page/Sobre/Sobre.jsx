@@ -22,46 +22,48 @@ import github from '/Img/github-mark.png';
 
 export function Sobre() {
   return (
-    
-    <div className={styles['primeiro-container']}>
     <div className={styles['container']}>
-        <div className={styles['container-sobre']}>
-            <h4 className={styles.titulo}>Sobre</h4>
-          
-          <div className={styles['container-header']}>
-            <span className={styles['border-style']}></span>
-            <div className={styles["header-texto-sobre"]}>
-            <p className={styles["texto-sobre"]}>Meu nome é Elaine Soares Almeida e sou graduanda em Análise e Desenvolvimento de Sistemas, com previsão de conclusão para Outubro de 2025. Estou em busca de uma oportunidade
-que me permita aplicar e expandir as habilidades que venho desenvolvendo nessa caminhada da
-minha formação acadêmica e experiência profissional.
-</p>
-<p className={styles["texto-sobre"]}>Minha jornada inclui uma formação robusta em tecnologia, evidenciada por linguagens e frameworks como JavaScript, React, Java, e SQL,
-além de ter participado do Santander Bootcamp 2024 focado em back-end Java.
-Complementando meu perfil técnico, estou cursando Inglês na Universidade Federal do Ceará,
-com o nível atual intermediário B1, o que me capacita a atuar em ambientes internacionais.</p>
+      <div className={styles['container-sobre']}>
+        <h4 className={styles.titulo}>Sobre</h4>
+        <span className={styles['border-style']}></span>
+        <div className={styles["container-header"]}>
+          <div className={styles["header-texto-sobre"]}>
+            <p className={styles["texto-sobre"]}>Meu nome é Elaine Soares Almeida e sou graduanda em Análise
+              e Desenvolvimento de Sistemas, com previsão de conclusão para Outubro de 2025. Estou em busca
+              de uma oportunidade
+              que me permita aplicar e expandir as habilidades que venho desenvolvendo nessa caminhada da
+              minha formação acadêmica e experiência profissional.
+            </p>
+            <p className={styles["texto-sobre"]}>Minha jornada inclui uma formação robusta 
+              em tecnologia, evidenciada por linguagens e frameworks como JavaScript, React, Java, e SQL,
+              além de ter participado do Santander Bootcamp 2024 focado em back-end Java.
+              Complementando meu perfil técnico, estou cursando Inglês na Universidade Federal do Ceará,
+              com o nível atual intermediário B1, o que me capacita a atuar em ambientes internacionais.
+            </p>
           </div>
-          </div>
-        </div> 
-     
+        </div>
 
-
-    <div className={styles['container-habilidades']}>
+      </div> 
+      <div className={styles['container-habilidades']}>
         <h4 className={styles.titulo}> Minhas habilidades</h4>
-
+        <span className={styles['border-style']}></span>
         <div  className={styles['container-itens-habilidades']}>
             {habilidades.map((habilidade, index)=>(
-              <div key={index} className={styles['itens-habilidades']}>
-                  <div><img className={styles.imgStyle2}  src={habilidade.link} alt={`Icon: ${habilidade.nome}`}/></div>
-                  <div><p className={styles.itens}>{habilidade.nome}</p></div>
-              </div>
-            ))}
-        </div>
-        
-    </div> 
-
-
-  </div>
-  </div>
-
+                <div key={index} className={styles['itens-habilidades']}>
+                    <div>
+                      <img 
+                      className={styles.imgStyle2}  
+                      src={habilidade.link} 
+                      alt={`Icon: ${habilidade.nome}`}
+                      />
+                    </div>
+                    <div>
+                      <p className={styles.itens}>{habilidade.nome}</p>
+                    </div>
+                </div>
+              ))}
+          </div>
+      </div> 
+    </div>
   );
 }
