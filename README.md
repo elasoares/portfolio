@@ -81,6 +81,7 @@ Caso tenha interesse em algum dos meus projetos ou queira conversar sobre tecnol
 
 - **Email**: [Meu e-mail](mailto:elaine.almeida@al.infnet.edu.br)
 - **LinkedIn**: [Meu Perfil](www.linkedin.com/in/elaine-soares-ti)
+- Acessar o site hospedado**: [Site hospedado](https://elasoares.github.io/portfolio/)
 
 ---
 
