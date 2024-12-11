@@ -49,7 +49,6 @@ export function FeedPage() {
               </div>
               <ComponenteVisualizar className={styles.visualizar} visualizar={`/visualizar/${dado.id}`} />
             </div>
-           
             <div className={styles["container-imagem-postada"]}>
               {dado.imageUrl && <img src={dado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
             </div>

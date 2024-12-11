@@ -45,22 +45,18 @@ const exibindoMeusPosts = mostrarMeusPosts ? <MeusPosts /> : "";
 
     return ( 
     <div className={styles.container}>
-    <LoadingOverlay/>
-   
+        <LoadingOverlay/>
+        <div className={styles.aside}>
+            <Button onClick={mostrarCampoPost} className={styles.escrever}> <FaPencilAlt/> Escrever </Button>
+            <Button onClick={mostrarCampoEntrada} className={styles['aside-items']}> <MdAllInbox />Caixa de entrada </Button>
+            <Button onClick={mostrarPosts} className={styles['aside-items']}> <CgFeed />Meus posts </Button>
+        </div>
 
-    <div className={styles.aside}>
-     <Button onClick={mostrarCampoPost} className={styles.escrever}> <FaPencilAlt/> Escrever </Button>
-
-    <Button onClick={mostrarCampoEntrada} className={styles['aside-items']}> <MdAllInbox />Caixa de entrada </Button>
-    <Button onClick={mostrarPosts} className={styles['aside-items']}> <CgFeed />Meus posts </Button>
-    
-    </div>
-
-    <div  className={styles.principal}> 
-   {exibindoCampoPost}
-  {exibindoCampoEntrada}
-    {exibindoMeusPosts}
-    </div>
+        <div  className={styles.principal}> 
+            {exibindoCampoPost}
+            {exibindoCampoEntrada}
+            {exibindoMeusPosts}
+        </div>
 
     </div>
     );

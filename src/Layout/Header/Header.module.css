@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     padding: 25px 20px;
 }
 
@@ -37,20 +37,9 @@
     text-align: center;
 }
 .perfil-container{
-    padding: 10px;
+    padding: 7px 10px;
     background-color: rgb(133, 40, 255);
-    border-radius: 5px;
-}
-
-.entrar{
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: white;
-    height: 45px;
-    width: 200px;
-    cursor: pointer;
-    transition: 0.3s;
+    border-radius: 10px;
 }
 
 .perfil-container:hover {
@@ -58,4 +47,16 @@
     background-color: rgb(96, 28, 184);
     cursor: pointer;
 }
+.entrar{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    height: 45px;
+    width: 200px;
+    cursor: pointer;
+    /* transition: 0.3s; */
+}
+
 

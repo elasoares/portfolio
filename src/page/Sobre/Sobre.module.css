@@ -10,7 +10,7 @@ html, body {
   body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
   }
 /* =========================Estilo do container Sobre=============================== */
 .container{
@@ -21,7 +21,7 @@ html, body {
 /*     padding: 50px 10px 150px 10px; */
     gap: 5px;
     height: 100%;
-    
+    background-color: #fff;
 }
 
 

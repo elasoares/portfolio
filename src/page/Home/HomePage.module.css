@@ -55,7 +55,7 @@ ul li {
 }
 
 .titulo {
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 10px 0;
   text-align: center;
   color: rgba(43, 58, 85, 0.9);
@@ -64,7 +64,7 @@ ul li {
 }
 
 .subtitulo {
-  font-size: 5.5rem;
+  font-size: 1.3rem;
   color: rgba(43, 58, 85, 0.9);
   text-transform: uppercase;
   font-weight: 800;
@@ -83,7 +83,7 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
   width: 100%;
   padding-top: 75px;
 }
@@ -149,11 +149,7 @@ ul li {
   transition: transform 0.3s ease;
 }
 
-.foto:hover {
-  transform: scale(1.05);
-}
 
-/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -195,7 +191,7 @@ ul li {
 
 @media (min-width: 650px) {
   .titulo {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   .subtitulo {
@@ -209,10 +205,10 @@ ul li {
     border-radius: 30px;
     padding: 30px;
   }
-
+/* 
   .titulo {
-    font-size: 3.5rem;
-  }
+    font-size: 2rem;
+  } */
 
   .subtitulo {
     font-size: 1.8rem;

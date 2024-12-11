@@ -24,7 +24,7 @@ ul li {
     width: 90%;
     height: auto;
     font-family: "Montserrat", sans-serif;
-      }
+  }
       
       /* ===========================Card================================ */
 
@@ -38,7 +38,7 @@ ul li {
   height: auto;
   overflow: hidden;
   margin: auto 0;
-  border: #e0dfdf 1px solid;
+  border: rgb(133, 40, 255) 1px solid; 
   border-radius: 10px;
   background-color: white;
   padding: 5px;
@@ -61,15 +61,15 @@ ul li {
         border-radius: 5px;
         margin: 0; 
         padding: 10px 0 10px 8px;  
-        width: 40vw;
+        width: 75vw;
       }
       /*========================Text Area Messagem================================ */
     .textAreaMessagem {
         font-size: 0.7em;
         border: 1px solid #9d8189;
         border-radius: 5px;
-       padding: 10px 0 0 8px; 
-        width: 40vw;
+        padding: 10px 0 0 8px; 
+        width: 75vw;
         resize: none;
       }
     
@@ -84,86 +84,116 @@ ul li {
       }
       
       /*========================Títlo================================ */
-    .titulo {
-      text-align: center;
-      color: #20186e;
-      padding: 5px;
-      font-weight: bold;
-      font-size: 1.5rem;
+      .titulo{
+        color: rgba(43, 58, 85, 0.9);
+        text-align: center;
+        font-size: 1.7rem;
+        letter-spacing: 0.1em;
+        font-weight: bold;
         font-family: "Montserrat", sans-serif;
       }
-    
+      
     
       /*========================Envio do post  e camera ================================ */
+
+      .container-envio-e-camera{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      
   /*========================Botao================================ */
-.botao {
-  border-radius: 8px;
-  padding: 0.6em 1.2em;
-  font-size: 1.2em;
-  font-weight: bold;
-  background-color: #20186e;
-  color: #ccc;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  width: 50%;
- margin: auto 0;
-}
-.botao:hover {
-  filter: brightness(0.5);
-  transform: scale(1);
-  opacity: 0.5;
-  color: white;
-}
+  .botao {
+    font-size: 1.3rem;
+    background-color: rgba(43, 58, 85, 0.9);
+    color: #ccc;
+    padding: 9px 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 30%;
+    margin: 25px 0 0 0;
+    outline: none
+  }
+  .botao:hover {
+    transform: scale(1);
+    color: white;
+    border: none;
+    background-color: rgb(133, 40, 255);
+  }
 
 .botao:focus,
 .botao:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-      .container-envio-e-camera{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       width: 100%;
-      }
+
+
     
     
-    
-       @media (min-width: 600px) {
-        .formulario {
-          width: 40vw;
-        }
-      
-        .textAreaMessagem {
-          width: 35vw;
-        }
-        .textfield {
-          width: 35vw;
-        }
-      } 
-      @media (min-width: 650px) {
-      /*   .formulario {
-          width: 40vw;
-        }
-      
-     
-        .textAreaMessagem {
-          width: 40vw;
-        }
-        .textfield {
-          width: 40vw;
-        } */
-      }
-     /* @media (min-width: 730px) {
-        .formulario {
-          width: 40vw;
-        }
-      
-      
-         .textAreaMessagem {
-          width: 45vw;
-        }
-        .textfield {
-          width: 45vw;
-        } 
-      }*/
-      
+@media (min-width: 550px) {
+.formulario {
+  width: 80vw;
+}
+
+.textAreaMessagem {
+  width: 75vw;
+}
+.textfield {
+  width: 75vw;
+}
+} 
+
+@media (min-width: 650px) {
+  .formulario {
+  width: 80vw;
+}
+
+.textAreaMessagem {
+  width: 78vw;
+}
+
+.textfield {
+  width: 78vw;
+}
+}
+@media (min-width: 720px) {
+  .formulario {
+  width: 80vw;
+}
+.textAreaMessagem {
+  width: 66vw;
+}
+
+.textfield {
+  width: 66vw;
+}
+}
+@media (min-width: 850px) {
+  .formulario {
+  width: 80vw;
+}
+
+.textAreaMessagem {
+  width: 68vw;
+}
+.textfield {
+  width: 68vw;
+}
+}
+@media (min-width: 1050px) {
+.card{
+  width: 60%;
+}
+
+.textAreaMessagem {
+  width: 48vw;
+}
+.textfield {
+  width: 48vw;
+}
+}
+
+

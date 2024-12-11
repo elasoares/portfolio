@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rammetto+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -29,6 +28,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .containerContato {
  display: flex;
@@ -38,7 +39,6 @@ html, body {
  width: 90%;
  height: 100%;
  transition: none;
- background-color: #20186e; 
  border-radius: 10px;
  padding: 20px 5px;
 }
@@ -50,24 +50,24 @@ html, body {
   width: 80%;
   margin: auto 0;
 }
-.textoContato h2{
-  color: #fff;
+.titulo{
+  color: rgba(43, 58, 85, 0.9);
   text-align: center;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.7rem;
   letter-spacing: 0.1em;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 
-.textoContato p{
-  color: #fff;
+/* .textoContato p{
+  color:rgba(43, 58, 85, 0.9);
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0.1em;
 }
-
+ */
 
 .formContainer {
   display: flex;
@@ -75,6 +75,7 @@ html, body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: auto;
 }
 
 
@@ -86,7 +87,7 @@ html, body {
   align-items: center;
   gap: 0;
   width: 100%;
-  border: #919090 1px solid; 
+  border: rgb(133, 40, 255) 1px solid; 
   border-radius: 24px;
   padding: 20px;
   font-weight: 400;
@@ -114,51 +115,55 @@ fieldset {
   font-size: 1em;
   font-weight: 500;
   padding: 2px;
-  font-family: "Roboto", sans-serif;
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
 }
 
 
 .termStyles a {
-  color: #b3b1b1;
+  color: #000;
   font-weight: 800;
   margin-left: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .termStyles a:hover {
-  color: #4a148c;
+  color: rgb(133, 40, 255);
   font-weight: bold;
+  cursor: pointer;
 }
 
 /*========================Select================================ */
 
 .selectStyle {
-  border-bottom: 1px solid #ccc;
+  border: 1px solid rgb(209, 208, 208);
   background-color: transparent;
-  margin: 10px;
+  /* margin: 10px; */
   font-size: 1em;
-  color: #cfcece;
-  width: 70vw;
+  color: #727272;
+  width: 80vw;
   padding: 12px 15px;
-  border-radius: 5px;
-  outline: none
+  border-radius: 10px;
+  outline: none;
 }
-
+.selectStyle:hover {
+  border: rgb(133, 40, 255) 1px solid; 
+}
 /*========================Text Area Messagem================================ */
 .textAreaMessagem {
   font-size: 1em;
   border: 1px solid rgb(209, 208, 208);
-  border-radius: 5px;
   margin-top: 10px; 
   padding: 8px 15px;
-  width: 70vw;
-  border-radius: 5px;
-  color: rgb(209, 208, 208);
+  width: 80vw;
+  border-radius: 10px;
+  color: rgb(87, 87, 87);
   resize: none;
   background-color: transparent;
-  outline: none
+  outline: none;
 }
-
+.textAreaMessagem:hover{
+  border: rgb(133, 40, 255) 1px solid; 
+}
 /*========================Error================================ */
 .errorFormk {
   font-size: 1rem;
@@ -172,7 +177,7 @@ fieldset {
 /*========================Botao================================ */
 .botao {
   font-size: 1.3rem;
-  background-color: #20186e;
+  background-color: rgba(43, 58, 85, 0.9);
   color: #ccc;
   padding: 9px 10px;
   font-weight: bold;
@@ -185,14 +190,13 @@ fieldset {
   outline: none
 }
 .botao:hover {
-  filter: brightness(0.5);
   transform: scale(1);
-  opacity: 0.8;
   color: white;
   border: none;
+  background-color: rgb(133, 40, 255);
 }
 
-.botao-exibir{
+/* .botao-exibir{
   font-size: 1.3rem;
   background-color: #20186e;
   color: #ccc;
@@ -202,24 +206,23 @@ fieldset {
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
-/*   width: 30%; */
   margin: 25px 0 0 0;
   border: 1px solid rgb(209, 208, 208);
-}
+} */
 
-.botao-exibir:hover {
+/* .botao-exibir:hover {
   filter: brightness(0.5);
   transform: scale(1);
   opacity: 0.8;
   color: white;
   border: none;
   outline: none
-}
+} */
 
 /*========================Títlo================================ */
 .titulo {
-  font-family: "Roboto", sans-serif;
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #543787;
   letter-spacing: 0.1rem;
   transition: 1.2s;
   font-size: 1.8em;
@@ -233,21 +236,9 @@ fieldset {
   font-size: 1.8em;
 } */
 
-@media (min-width: 600px) {
 
-  .selectStyle {
-    width: 52vw;
-  }
-  .textAreaMessagem {
-    width:52vw;
-  }
-  .formContainer{
-    width: 100%;
-   }
-
-}
 @media (min-width: 650px) {
-  .block{
+ /*  .block{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,78 +248,104 @@ fieldset {
     border-radius: 24px;
     font-weight: 400;
 
-  }
+  } */
 
-  .botao-exibir{
+/*   .botao-exibir{
     display: none;
   }
-
+ */
   .selectStyle {
-    width: 40vw;
+    width: 30vw;
   }
   .textAreaMessagem {
-    width:40vw;
+    width:20vw;
+  }
+
+  .containerContato {
+    width: 100%;
+  }
+  .textoContato {
+  width: 50%;
+  }
+  .formContainer{
+  width: 100%;
+  }
+
+  .termo-container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  }
+
+  .input-termo{
+  width: 50px;
+  }
+
+}
+@media (min-width: 600px) {
+
+
+  .selectStyle {
+    width: 60vw;
+  }
+  .textAreaMessagem {
+    width: 60vw;
   }
 
   .containerContato {
     flex-direction: row;
     padding: 0 5px;
-   }
-   .textoContato {
-    width: 50%;
-   }
-   .formContainer{
-    width: 60%;
-   }
+  }
 
-   .termo-container{
-    display: flex;
-    justify-content: flex-start;
-    align-items:center;
-   }
+  .termo-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  }
 
-   .input-termo{
-    width: 50px;
-   }
+  .input-termo{
+  width: 50px;
+  }
 
 }
 @media (min-width: 730px) {
-  .block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    border: #919090 1px solid; 
-    border-radius: 24px;
-    padding: 10px;
-    font-weight: 400;
 
-  }
-
- 
+  .formContainer{
+    width: 100%;
+    }
   .selectStyle {
-    width: 36vw;
+    width: 50vw;
   }
   .textAreaMessagem {
-    width:  36vw;
+    width:  50vw;
   }
 
-   .textoContato {
-    width: 50%;
-   }
-   .formContainer{
-    width: 50%;
-    height: auto;
-   }
 }
 
 
-@media (min-width: 830px) {
-  .block{
-   margin: 10px;
+@media (min-width: 950px) {
+  .formContainer{
+    width: 80%;
+    height: auto;
   }
+/*   .selectStyle {
+    width: 35vw;
+  }
+  .textAreaMessagem {
+    width:  35vw;
+  } */
 
- 
+}
+@media (min-width: 1050px) {
+  .formContainer{
+    width: 50%;
+    height: auto;
+  }
+  .selectStyle {
+    width: 35vw;
+  }
+  .textAreaMessagem {
+    width:  35vw;
+  }
 
 }

@@ -1,32 +1,36 @@
 .textfield {
-  width: 70vw;
+  width: 80vw;
   padding: 12px 15px;
-  border-bottom: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   background-color: transparent;
-  color: #fff;
-  margin: 10px; 
+  color: rgb(87, 87, 87);
   font-size: 1em;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   outline: none
 }
-
+.textfield:hover{
+  border: rgb(133, 40, 255) 1px solid; 
+}
 
 @media (min-width: 600px) {
   .textfield {
-    width: 52vw;
+    width: 60vw;
   }
 }
 
-@media (min-width: 650px) {
-  .textfield {
-    width: 40vw;
-  }
-}
 
 @media (min-width: 730px) {
   .textfield {
-    width:  36vw;
+    width:  50vw;
   }
+}
+
+
+@media (min-width: 1050px) {
+  .textfield {
+    width:  35vw;
+  }
+
 }

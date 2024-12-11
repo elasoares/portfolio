@@ -14,7 +14,8 @@
         "main"
         "footer";
     grid-template-columns: auto;
-    grid-template-rows: 5% 5% auto 5%;
+    grid-template-rows: 10% 5% auto 5%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 .header {
     grid-area: header;
@@ -23,9 +24,6 @@
     grid-area: menu;
 }
 
-.menu {
-    grid-area: menu;
-}
 
 .main {
     grid-area: main;

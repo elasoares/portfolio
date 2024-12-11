@@ -20,13 +20,14 @@
   justify-content: center;
   align-items: center;
 /*   flex-grow: 1; */
-flex-direction: column;
+  flex-direction: column;
   gap: 20px;
   width: 100vw;
   padding-top: 20px; 
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
+  background-color: #fff;
+  padding-bottom: 100px;
 }
 
 .card {
@@ -146,6 +147,7 @@ flex-direction: column;
 @media (min-width: 650px) {
   .container {
     flex-direction: column;
+    flex-wrap: wrap;
     width: 80%;
   }
 }

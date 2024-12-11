@@ -5,11 +5,9 @@ import { Button} from  '../../components/Button/Button';
 import styles from "./Contato.module.css";
 import { Card } from '../../components/Card/Card';
 import toast from "react-simple-toasts";
-
 import {dataBase} from '../../firebaseConfig.js'
 import { push, ref } from "firebase/database";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay.jsx";
-import { useState } from "react";
 
 
 
@@ -35,52 +33,34 @@ const signUpSchema = yup.object({
 
 
 export function Contato() {
-const [exibir, setExibirContato] = useState(false);
+
 
   const addToFirebase = (values, {setSubmitting, resetForm})=>{
     const{name, surname, opcao, message} = values;
     const data = {name, surname, opcao, message};
     const mensagemRef = ref(dataBase, "/mensagens");
-   push(mensagemRef, data)
-   .then(()=>{
-    toast("Sua mensagem foi enviada com sucesso!");
-    setSubmitting(false);
-    resetForm();
-   }). catch((error)=>{
-    toast("Erro ao enviar mensagem: " + error.message);
-    setSubmitting(false);
-   })
+    push(mensagemRef, data)
+    .then(()=>{
+      toast("Sua mensagem foi enviada com sucesso!");
+      setSubmitting(false);
+      resetForm();
+    }). catch((error)=>{
+      toast("Erro ao enviar mensagem: " + error.message);
+      setSubmitting(false);
+    })
   }
 
 
 
 
-function handleToggle(){
-  setExibirContato(!exibir);
-}
 
-const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
 
   return (
     <div className={styles["primeiro-container"]}>
-    <div className={styles.containerContato}>
-   
-   {!exibir &&(
-    <div className={styles.textoContato}>
-        <h2 className={styles.titulo}>Entre em Contato</h2>
-        <p className={styles.subtitulo}>
-          Ficarei feliz em ouvir de você! Se você tiver alguma dúvida, sugestão,
-          ou simplesmente quiser dizer olá, sinta-se à vontade para entrar em
-          contato. Preencha o formulário ao lado e responderei o mais breve
-          possível. Estou ansioso para conversar com você!
-        </p>
-      </div>
-   )}
-   
-
+      <div className={styles.containerContato}>
+  
       <div className={styles.formContainer}>
 
-      <button className={styles["botao-exibir"]} onClick={handleToggle}>{botaoToggle}</button>
 
       <Formik
         validationSchema={signUpSchema}
@@ -107,12 +87,10 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
             <form
               onSubmit={handleSubmit}
               noValidate
-              className={` ${exibir ? styles.formulario : styles.block}`}
+              className={` ${styles.formulario}`}
             >
 
             <h2 className={styles.titulo}>Contato</h2>
-           
-             
               <fieldset>
                 <TextField
                   name="name"
@@ -122,7 +100,6 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
                   onBlur={handleBlur}
                   value={values.name}
                 />
-             
               </fieldset>
 
               <p className={styles.errorFormk}>
@@ -162,7 +139,6 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
                   </option>
                   <option value="outros">Outros </option>
                 </select>
-               
               </fieldset>
               <p className={styles.errorFormk}>
                   {touched.opcao && errors.opcao}
@@ -173,7 +149,7 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
                 <textarea
                   name="message"
                   id="message"
-                  rows="2"
+                  rows="4"
                   cols="27"
                   placeholder="Escreva sua mensagem aqui"
                   onChange={handleChange}
@@ -181,7 +157,6 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
                   value={values.message}
                   className={styles.textAreaMessagem}
                 ></textarea>
-               
               </fieldset>
               <p className={styles.errorFormk}>
                   {touched.message && errors.message}
@@ -196,14 +171,14 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
                   onChange={handleChange}
                   className={styles["input-termo"]}
                 /> 
-                 <label htmlFor="acceptTerms" className={styles.termStyles}>
+                <label htmlFor="acceptTerms" className={styles.termStyles}>
                   Para continuar, você deverá preencher o campo, conforme
                   <a className={styles.termLinkStyles} href="https://caiogondim.github.io/piao-da-casa-propria-em-css-3d/">
                     termo de contrato.
                   </a>
                 </label> 
               
-               </fieldset>
+              </fieldset>
               <p className={styles.errorFormk}>
                   {touched.acceptTerms && errors.acceptTerms}
                 </p> 
@@ -217,7 +192,7 @@ const botaoToggle = exibir ? "Voltar" : "Enviar mensagem" ;
           </Card>
         )}
       </Formik>
-     
+
     </div>
     </div>
     </div>

@@ -11,10 +11,8 @@ export function FotoPerfil({className}){
     const [error, setError] = useState("");
       
     useEffect(() => {
-       
-        const imageRef = ref(storage, "images/Captura de tela 2024-05-22 222252-Photoroom.png"); 
+        const imageRef = ref(storage, "images/IMG_0261.jpg"); 
     
-       
         getDownloadURL(imageRef)
           .then((url) => {
             console.log("URL da imagem obtida:", url); 
@@ -32,7 +30,7 @@ export function FotoPerfil({className}){
               <img className={className} src={imageUrl} alt="Foto do perfil" />
             ) : (
               <div>
-               <LoadingOverlay/>
+              <LoadingOverlay/>
                 {error && <p>Erro: {error}</p>}
               </div>
             )}

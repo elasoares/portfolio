@@ -41,6 +41,7 @@ export function Header({className}){
             <AcessarPerfil className={styles.acessarPerfil} />
             )}
         </div>
+        
     </div>
     );
 }

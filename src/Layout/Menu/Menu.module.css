@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -21,61 +20,80 @@ ul li {
 .container-menu {
   display: flex;
   justify-content: space-between;
-  align-items:flex-start;
+  align-items:center;
   flex-wrap: wrap;
-  padding: 15px 4vw 0 14px;
+ /*  padding: 15px 4vw 0 14px; */
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
 
 /* ======= Container navigation ========  */
-.container-navigation{
+/* .container-navigation{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
+  width: 100%;
+} */
 
 
 /* ======= Humburger ========  */
 .humburger {
   cursor: pointer;
-  font-size: 2em;
-  color: #543787;
-  position: absolute;
-  right: 15px;
+  font-size: 2.5em;
+  color: rgba(43, 58, 85, 0.9);
+  position: relative;
+  top: 0;
+  right: -200px;
+  width: 95%;
+  text-align: center;
+  display: none;
 }
 
 
 /* ======= Container item ========  */
-.container-menu-navegacao {
+/* .container-menu-navegacao {
   display: none;
-}
+} */
 
-.container-item-navegador{
+/* .container-item-navegador{
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items: center;
   gap: 80px;
 
+} */
+.container-menu-navegacao {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(133, 40, 255);
+}
+.container-item-navegador{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
 }
 
 .item-menu {
-  color: rgba(43, 58, 85, 0.9);
-  padding: 0 15px;
-  font-weight: 800;
-  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   transition: 0.2s;
   letter-spacing: 0.1rem;
-  text-transform: capitalize;
   transition: transform 550ms, opacity 1500ms;
 }
 
 .item-menu:hover {
-  color:rgb(133, 40, 255);
+  color:rgba(43, 58, 85, 0.9);
 }
 
 /* ============ Icon ============ */
@@ -91,7 +109,7 @@ ul li {
 }
 
 .icon {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: row;

@@ -26,6 +26,7 @@
    display: inline;
     justify-content: center;
     align-items: center;
+    
     flex-direction: column;
     width: 100%;
     font-family: "Montserrat", sans-serif;
@@ -99,8 +100,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 95%;
     height: auto;
     overflow: hidden;
@@ -108,7 +109,7 @@
     border-radius: 10px;
     background-color: white;
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 50px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 

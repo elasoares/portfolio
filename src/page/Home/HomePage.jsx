@@ -1,8 +1,5 @@
 import styles from "./HomePage.module.css";
 import { GoDownload } from "react-icons/go";
-import { Card } from "../../components/Card/Card";
-/* import curriculo from "../../components/Img/curriculo.pdf"; */
-
 import { Link } from "react-router-dom";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
@@ -40,7 +37,7 @@ export function HomePage() {
           <div className={styles["container-botao"]}>
             <Link className={`${styles["botao-contato"]}`} to={navigater[0].link}> CONTATE-ME</Link>
             <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className={styles.botao}>
-             CURRÍCULO 
+            CURRÍCULO 
                 <GoDownload />
         
             </a>

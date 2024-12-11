@@ -42,50 +42,46 @@ export function SigningPage() {
 
 
   return (
-    <div>
+    <div className="primeiro-container">
       <Formik 
       validationSchema={schema}
       initialValues={{email:"", password:""}}
       onSubmit={handleLogin}
       >
-{({handleBlur, handleChange, handleSubmit, touched, errors, values, isValid})=>(
-  <Card className={styles.container}>
-<form onSubmit={handleSubmit} noValidate  className={styles.formulario}>
-<h2 className={styles.titulo}>Logar</h2>
-<fieldset>
-<TextField
- type='email'
- placeholder="Digite seu e-mail" 
-name='email' 
-value={values.email}
-  onChange={handleChange}
-  onBlur={handleBlur}
-/>
+        {({handleBlur, handleChange, handleSubmit, touched, errors, values, isValid})=>(
+            <Card className={styles.container}>
+              <form onSubmit={handleSubmit} noValidate  className={styles.formulario}>
+                  <h2 className={styles.titulo}>Logar</h2>
+                  <fieldset>
+                      <TextField
+                      type='email'
+                      placeholder="Digite seu e-mail" 
+                      name='email' 
+                      value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                  </fieldset>
+                  <p className={styles.errorFormk}>{touched.email && errors.email}</p>
 
-</fieldset>
-<p className={styles.errorFormk}>{touched.email && errors.email}</p>
-<fieldset>
-<TextField
- type='password'
- placeholder="Digite sua senha" 
-name='password' 
-value={values.password}
-  onChange={handleChange}
-  onBlur={handleBlur}
-/>
+                  <fieldset>
+                      <TextField
+                      type='password'
+                      placeholder="Digite sua senha" 
+                      name='password' 
+                      value={values.password}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                  </fieldset>
+                  <p className={styles.errorFormk}>{touched.password && errors.password}</p>
 
-</fieldset>
-<p className={styles.errorFormk}>{touched.password && errors.password}</p>
+                  <Button  className={`${styles.botao}`} type="submit" disabled={!isValid}>Entrar</Button>
+              </form>
+            </Card>
+        )}
 
-<Button  className={`${styles.botao}`} type="submit" disabled={!isValid}>Entrar</Button>
-
-
-</form>
-</Card>
-)}
-
-      </Formik>
-      
+      </Formik> 
     </div>
   );
 }
