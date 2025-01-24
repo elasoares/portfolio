@@ -1,11 +1,11 @@
 import styles from './Sobre.module.css';
-import css from '/Img/css.png';
-import html5 from '/Img/html5.png';
-import java from '/Img/JAVA.png';
-import javaScript from '/Img/javaScript.png';
-import react from '/Img/React.png';
-import git from '/Img/git.png';
-import github from '/Img/github-mark.png';
+import css from '/css.png';
+import html5 from '/html5.png';
+import java from '/JAVA.png';
+import javaScript from '/javaScript.png';
+import react from '/React.png';
+import git from '/git.png';
+import github from '/github-mark.png';
 
  const habilidades = [
   {nome:"HTML", link: html5},

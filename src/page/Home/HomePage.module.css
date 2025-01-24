@@ -52,6 +52,7 @@ ul li {
   flex-direction: column;
   height: auto;
   width: 90%;
+  background-color: rebeccapurple;
 }
 
 .titulo {

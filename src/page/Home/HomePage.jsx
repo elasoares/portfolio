@@ -3,7 +3,8 @@ import { GoDownload } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const navigater = [
   {link: "/contate-me"}
@@ -19,7 +20,9 @@ export function HomePage() {
       <LoadingOverlay/>
         <div className={styles["container-info"]}>
           <div className={styles["primeiro-background-foto"]}>
+          <FontAwesomeIcon icon={faGithub} />
             <div className={styles["segundo-background-foto"]}>
+
               <FotoPerfil className={styles.foto} />
             </div>
           </div>
@@ -32,7 +35,18 @@ export function HomePage() {
                 </span> 
             </h3>
             <h1 className={styles.subtitulo}>DESENVOLVEDORA <span>FRONT-END</span></h1>
+            
           </div>
+          <div>
+            <p>
+                Formanda em Outubro de 2025 com sólido domínio em
+                desenvolvimento front-end (HTML, CSS, JavaScript, React),
+                back-end (Node.js), Firebase, UX/UI design e metodologias
+                ágeis como Scrum. Proativa, organizada e motivada a
+                enfrentar novos desafios.
+            </p>
+          </div>
+          
 
           <div className={styles["container-botao"]}>
             <Link className={`${styles["botao-contato"]}`} to={navigater[0].link}> CONTATE-ME</Link>

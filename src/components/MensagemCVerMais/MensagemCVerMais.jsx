@@ -6,7 +6,7 @@ export function MensagemCVerMais({classNameContainer, classNameFilho, children})
     const[mensagem, setVerMensagem] = useState(false);
 
     function handleVerMensagem(){
-        setVerMensagem(!mensagem);
+       /*  setVerMensagem(!mensagem); */
     }
 
     const text = typeof children === 'string' ? children : " ";
