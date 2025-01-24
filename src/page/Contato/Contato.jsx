@@ -8,6 +8,7 @@ import toast from "react-simple-toasts";
 import {dataBase} from '../../firebaseConfig.js'
 import { push, ref } from "firebase/database";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay.jsx";
+import { GrSend } from "react-icons/gr";
 
 
 
@@ -15,16 +16,19 @@ const signUpSchema = yup.object({
   name: yup
     .string()
     .min(2, "O campo nome precisa ter pelo menos dois caracteres.")
-    .max(16, "O nome precisa ter até 16 caracteres.")
+    .max(26, "O nome precisa ter até 26 caracteres.")
     .required("O campo nome não pode ficar vazio."),
-  surname: yup
+  email: yup
     .string()
-    .min(2, "O campo sobrenome precisa ter pelo menos dois caracteres.")
-    .max(24, "O campo sobrenome precisa ter até 24 caracteres.")
-    .required("O campo sobrenome não pode ficar vazio."),
-  opcao: yup.string().required("Selecione uma opção de interesse."),
+    .email("Digite um e-mail válido.")
+    .required("O campo e-mail não pode ficar vazio."),
+  subject: yup
+  .string()
+  .min(5, "O campo assunto precisa ter pelo menos 5 caracteres.")
+  .max(25, "O campo assunto precisa ter até 25 caracteres.")
+  .required("O campo assunto não pode ficar vazio."),
   message: yup.string()
-  .min(16, "O campo de mensagem precisa ter pelo menos 16 caracteres.")
+  .min(6, "O campo de mensagem precisa ter pelo menos 6 caracteres.")
   .max(104, "O campo de mensagem precisa ter até 104 caracteres.")
   .required("Por favor, escreva uma mensagem."),
   acceptTerms: yup.boolean().equals([true],"O campo termo não pode ficar vazio."),
@@ -36,8 +40,8 @@ export function Contato() {
 
 
   const addToFirebase = (values, {setSubmitting, resetForm})=>{
-    const{name, surname, opcao, message} = values;
-    const data = {name, surname, opcao, message};
+    const{name, email, subject, message} = values;
+    const data = {name, email, subject, message};
     const mensagemRef = ref(dataBase, "/mensagens");
     push(mensagemRef, data)
     .then(()=>{
@@ -66,8 +70,8 @@ export function Contato() {
         validationSchema={signUpSchema}
         initialValues={{
           name: "",
-          surname: "",
-          opcao: "",
+          email: "",
+          subject: "",
           message: "",
           acceptTerms: false,
         }}
@@ -108,42 +112,32 @@ export function Contato() {
                 
               <fieldset>
                 <TextField
-                  name="surname"
-                  type="text"
-                  placeholder="Digite seu sobrenome"
+                  name="email"
+                  type="email"
+                  placeholder="Digite seu e-mail"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.surname}
+                  value={values.email}
                 />
               
               </fieldset>
               <p className={styles.errorFormk}>
-                  {touched.surname && errors.surname}
+                  {touched.email && errors.email}
                 </p>
-
               <fieldset>
-                <select
-                  name="opcao"
-                  onBlur={handleBlur}
+                <TextField
+                  name="subject"
+                  type="text"
+                  placeholder="Digite o assunto"
                   onChange={handleChange}
-                  className={styles.selectStyle}
-                >
-                  <option value="">
-                  Escolha uma opção de interesse
-                  </option>
-                  <option value="estagio">
-                    Estágio 
-                  </option>
-                  <option value="junior">
-                    Júnior 
-                  </option>
-                  <option value="outros">Outros </option>
-                </select>
+                  onBlur={handleBlur}
+                  value={values.subject}
+                />
+              
               </fieldset>
               <p className={styles.errorFormk}>
-                  {touched.opcao && errors.opcao}
+                  {touched.subject && errors.subject}
                 </p>
-
 
               <fieldset>
                 <textarea
@@ -186,7 +180,8 @@ export function Contato() {
                 className={styles.botao}
                 type="submit"
               >
-                Enviar
+              <GrSend/>
+                Enviar mensagem
               </Button>
             </form>
           </Card>

@@ -1,4 +1,4 @@
-import { LuLoader2 } from "react-icons/lu"
+import { FiLoader } from "react-icons/fi";
 import styles from './LoadingOverlay.module.css';
 import { useStore } from "../useStore";
 
@@ -10,6 +10,6 @@ if(isLoading === false){
     return null;
 }
     return(
-        <div className={styles.overlay}><LuLoader2 className={styles.spineerAnimate} /></div>
+        <div className={styles.overlay}><FiLoader className={styles.spineerAnimate} /></div>
     )
 }

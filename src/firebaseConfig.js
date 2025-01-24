@@ -6,14 +6,14 @@ import { getDatabase} from 'firebase/database';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAsiVQaEteXhBJ5swhYhJWRtXL_yRGxTnQ",
+  apiKey: "AIzaSyACG4Lbv2LV34Ui3sTErBapEZtxtRsj7GU",
   authDomain: "portifolio-bc2d3.firebaseapp.com",
   databaseURL: "https://portifolio-bc2d3-default-rtdb.firebaseio.com",
   projectId: "portifolio-bc2d3",
   storageBucket: "portifolio-bc2d3.appspot.com",
   messagingSenderId: "50618352741",
-  appId: "1:50618352741:web:74a1e4f60063c28373f28c",
-  measurementId: "G-7PE1CT460V"
+  appId: "1:50618352741:web:be70b11adec653a873f28c",
+  measurementId: "G-05ZED8B9LV"
 };
 
 // Initialize Firebase

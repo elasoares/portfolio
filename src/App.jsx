@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Layout } from "./Layout/Layoutfile/Layout";
 import { Contato } from "./page/Contato/Contato";
-import { Sobre } from "./page/Sobre/Sobre";
+/* import { Sobre } from "./page/Sobre/Sobre"; */
 import { HomePage} from './page/Home/HomePage';
 import { SigningPage } from "./page/SignIn/SigningPage";
 import "./App.css";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/feed" element={<FeedPage />} />
           <Route path="/projetos" element={<ProjetosPages />} />
-          <Route path="/sobre" element={<Sobre />} />
+{/*           <Route path="/sobre" element={<Sobre />} /> */}
           <Route path="/contate-me" element={<Contato />} />
           <Route path="/entrar" element={<SigningPage />} />
           <Route path="/perfil" element={<PerfilPage/>}/>

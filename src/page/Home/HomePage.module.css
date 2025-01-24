@@ -11,7 +11,7 @@ html, body {
   font-family: "Montserrat", sans-serif;
   background-color: #f4f1f7;
   color: #2c2c2c;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 a {
@@ -26,22 +26,21 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center; 
+  height: 100%;
   min-height: 100%;
   padding-bottom: 20px;
+  overflow-y: scroll;
 }
 
-.container-icon-lista {
+.container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0;
   height: auto;
-  max-height: 100%;
-  border-radius: 24px;
-  color: #563d7c;
-  width: 95%;
-  padding: 20px;
+  width: 100%;
+
 }
 
 /*=== Informações do título e subtítulo ===*/
@@ -50,13 +49,13 @@ ul li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: auto;
-  width: 90%;
-  background-color: rebeccapurple;
+  height: 100px;
+  width: 100%;
 }
 
 .titulo {
   font-size: 2rem;
+  font-weight: 900;
   padding: 10px 0;
   text-align: center;
   color: rgba(43, 58, 85, 0.9);
@@ -65,18 +64,60 @@ ul li {
 }
 
 .subtitulo {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: rgba(43, 58, 85, 0.9);
-  text-transform: uppercase;
-  font-weight: 800;
+  /* text-transform: uppercase; */
+  font-weight: 900;
   letter-spacing: 5px;
-  margin: -40px 0;
-  animation: bottomIn 1.4s ease-in-out forwards;
-  animation-delay: 0.3s;
+  margin: -25px 0;
+  text-align: center;
 }
 
 .subtitulo span {
   color: rgb(133, 40, 255);
+}
+.container-descricao-home{
+  text-align: center;
+  height: 310px;
+  width: 85%;
+  margin: 0;
+  padding: 0;
+
+}
+.descricao-home{
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 600 ;
+  color: rgba(75, 85, 99, 0.884);
+}
+
+/* ============ Habilidades ============ */
+div > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 20px 0;
+  gap: 15px;
+}
+
+ul li{
+  background-color: rgba(219,234,254,.8);
+  border-color: 1px transparent;
+  border-radius: 5px;
+  color: rgb(133, 40, 255);
+  width: 142px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: .75rem;
+  font-family: "Montserrat", sans-serif;
+}
+ul li:hover{
+  opacity: 0.8;
 }
 
 /* ============ Botões ============ */
@@ -86,18 +127,20 @@ ul li {
   justify-content: center;
   gap: 50px;
   width: 100%;
-  padding-top: 75px;
+  padding-top: 40px;
 }
 
 .botao {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   height: 50px;
   line-height: 50px;
-  width: 250px;
+  width: 200px;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
@@ -124,7 +167,7 @@ ul li {
   text-transform: uppercase;
   height: 50px;
   line-height: 50px;
-  width: 250px;
+  width: 200px;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
@@ -143,31 +186,69 @@ ul li {
 }
 
 /* ============ Foto ============ */
-.foto {
-  height: 250px;
-  width: 250px;
+.primeiro-background-foto {
+  position: relative;
+  width: 100%;
+  height: 550px;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 450px 0 0 0 ;
+}
+
+.foto {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative; 
+  z-index: 2; 
+  object-fit:cover;
+}
+
+/* .primeiro-background-foto > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  transform-origin: center;
+} */
+.socialMedia-icon{
+  color: rgb(133, 40, 255);
+}
+
+.socialMedia-icon:hover{
+  opacity: 0.8;
 }
 
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+.primeiro-background-foto > div:nth-child(1) {
+  transform: rotate(20deg) translate(210px);
+ 
 }
 
-.fadeIn {
-  animation: fadeIn 1.5s ease-in;
+.primeiro-background-foto > div:nth-child(2) {
+  transform: rotate(268deg) translate(200px);
+  color: rgb(133, 40, 255);
+}
+
+.primeiro-background-foto > div:nth-child(3) {
+  transform: rotate(180deg) translate(210px);
+  color: rgb(133, 40, 255);
+}
+.primeiro-background-foto > div {
+  position: absolute;
+  font-size: 30px;
+  color: #563d7c;
+  
 }
 
 .typingAnimation {
   display: inline-block;
   overflow: hidden;
-  border-right: 2px solid #d68631;
+  border-right: 2px solid rgb(133, 40, 255);
   white-space: nowrap;
   animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
 }
@@ -191,33 +272,48 @@ ul li {
 }
 
 @media (min-width: 650px) {
-  .titulo {
-    font-size: 2rem;
+  .primeiro-background-foto {
+    margin: 450px 0 0 0 ;
   }
-  
-  .subtitulo {
-    font-size: 1.5rem;
+
+  div > ul{
+    width: 90%;
+    margin: 0 0 0 45px;
+    padding-bottom: 5px;
+  }
+    .container-descricao-home{
+    justify-content: center;
+    align-items: center;
+    width: 78%;
+    height: 290px;
+
   }
 }
-
-@media (min-width: 900px) {
-  .container-main {
-    min-height: 90%;
-    border-radius: 30px;
-    padding: 30px;
-  }
-/* 
-  .titulo {
-    font-size: 2rem;
-  } */
+@media (min-width: 800px) {
 
   .subtitulo {
     font-size: 1.8rem;
   }
-
-  .foto {
-    height: 350px;
-    width: 350px;
-    border-radius: 20px;
+  .container-descricao-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78%;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+  }
+  .primeiro-background-foto {
+    margin: 350px 0 0 0 ;
+  }
+  div > ul{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1000px) {
+  div > ul{
+    width: 70%;
+    margin: 0 auto;
   }
 }

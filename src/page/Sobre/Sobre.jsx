@@ -42,27 +42,27 @@ export function Sobre() {
             </p>
           </div>
         </div>
-
       </div> 
+
       <div className={styles['container-habilidades']}>
         <h4 className={styles.titulo}> Minhas habilidades</h4>
         <span className={styles['border-style']}></span>
         <div  className={styles['container-itens-habilidades']}>
             {habilidades.map((habilidade, index)=>(
-                <div key={index} className={styles['itens-habilidades']}>
-                    <div>
-                      <img 
-                      className={styles.imgStyle2}  
-                      src={habilidade.link} 
-                      alt={`Icon: ${habilidade.nome}`}
-                      />
-                    </div>
-                    <div>
-                      <p className={styles.itens}>{habilidade.nome}</p>
-                    </div>
-                </div>
-              ))}
-          </div>
+              <div key={index} className={styles['itens-habilidades']}>
+                  <div>
+                    <img 
+                    className={styles.imgStyle2}  
+                    src={habilidade.link} 
+                    alt={`Icon: ${habilidade.nome}`}
+                    />
+                  </div>
+                  <div>
+                    <p className={styles.itens}>{habilidade.nome}</p>
+                  </div>
+              </div>
+            ))}
+        </div>
       </div> 
     </div>
   );
