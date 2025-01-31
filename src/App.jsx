@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout/Layoutfile/Layout";
 import { Contato } from "./page/Contato/Contato";
 import { Certificado } from "./page/Certificado/Certificado";
@@ -16,7 +16,6 @@ function App() {
     <BrowserRouter basename="/portfolio">
       <Layout>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/projetos" element={<ProjetoPage />} />
           <Route path="/certificado" element={<Certificado />} />
