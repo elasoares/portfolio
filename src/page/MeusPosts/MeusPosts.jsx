@@ -23,7 +23,7 @@ const[posts, setPosts] = useState([]);
             const response = await axios.get("/meu-post.json");
             const data = response.data;
             const paraObjeto = Object.keys(data).map((key)=>{
-               return{ id:key,
+            return{ id:key,
                 ...data[key]
             }
         });
@@ -85,7 +85,7 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
                             <MensagemCVerMais 
                                 classNameContainer={styles['container-info']} 
                                 classNameFilho={styles.mensagem}>
-                                {postado.message}
+                                {postado.about}
                             </MensagemCVerMais>
                         </div>
                     </Card>

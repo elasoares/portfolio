@@ -271,6 +271,28 @@ ul li:hover{
   }
 }
 
+@media (min-width: 450px) {
+  .primeiro-background-foto {
+    margin: 650px 0 0 0 ;
+  }
+
+  div > ul{
+    width: 90%;
+    margin: 0 0 0 45px;
+    padding-bottom: 5px;
+  }
+    .container-descricao-home{
+    justify-content: center;
+    align-items: center;
+    width: 78%;
+    height: 290px;
+
+  }
+  .titulo {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+}
 @media (min-width: 650px) {
   .primeiro-background-foto {
     margin: 450px 0 0 0 ;

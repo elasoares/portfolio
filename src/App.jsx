@@ -1,16 +1,15 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Layout } from "./Layout/Layoutfile/Layout";
 import { Contato } from "./page/Contato/Contato";
-/* import { Sobre } from "./page/Sobre/Sobre"; */
+import { Certificado } from "./page/Certificado/Certificado";
 import { HomePage} from './page/Home/HomePage';
 import { SigningPage } from "./page/SignIn/SigningPage";
 import "./App.css";
 import { PerfilPage } from "./page/Perfil/PerfilPage";
 import { Editar } from "./page/Editar/Editar";
-import { FeedPage } from "./page/Feed/FeedPage";
-import { ProjetosPages } from "./page/ProjetosPages";
 import { Visualizar } from "./page/visualizar/Visualizar";
 import { MeusPosts } from "./page/MeusPosts/MeusPosts";
+import { ProjetoPage } from "./page/ProjetoPage/ProjetoPage";
 
 function App() {
   return (
@@ -19,9 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/feed" element={<FeedPage />} />
-          <Route path="/projetos" element={<ProjetosPages />} />
-{/*           <Route path="/sobre" element={<Sobre />} /> */}
+          <Route path="/projetos" element={<ProjetoPage />} />
+          <Route path="/certificado" element={<Certificado />} />
           <Route path="/contate-me" element={<Contato />} />
           <Route path="/entrar" element={<SigningPage />} />
           <Route path="/perfil" element={<PerfilPage/>}/>

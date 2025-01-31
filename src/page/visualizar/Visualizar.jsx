@@ -1,12 +1,12 @@
-import  { useEffect, useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { axios } from '../../axios';
 import toast from 'react-simple-toasts';
 import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import styles from './Visualizar.module.css';
-import { FotoPerfil } from '../../components/FotoPerfilGet/FotoPerfil';
-import { IoMdClose } from "react-icons/io";
-import { MensagemCVerMais } from '../../components/MensagemCVerMais/MensagemCVerMais';
+import { IoMdClose } from 'react-icons/io';
+import { CiCircleInfo } from 'react-icons/ci';
 
 export function Visualizar() {
   const { id } = useParams();
@@ -19,60 +19,59 @@ export function Visualizar() {
       try {
         const response = await axios.get(`/meu-post/${id}.json`);
         setPost(response.data);
-        setLoading(false);
       } catch (error) {
-        toast("Erro ao carregar o post: " + error.message);
+        toast('Erro ao carregar o post: ' + error.message);
+      } finally {
         setLoading(false);
       }
     };
-
     fetchPost();
   }, [id]);
 
-  if (loading) {
-    return <LoadingOverlay />;
-  }
+  if (loading) return <LoadingOverlay />;
+  if (!post) return <p>Post não encontrado!</p>;
 
-  if (!post) {
-    return <p>Post não encontrado!</p>;
-  }
-
-  function navegarParaFeed(destino){
-      navigate(destino);
+  function fecharModal() {
+    navigate('/projetos');
   }
 
   return (
-    <div className={styles.primeiroContainer}>
-    <div className={styles.container}>
-      <div className={styles.card}>
-
-        <div className={styles.header}>
-
-          <div className={styles["container-header"]}>
-            <FotoPerfil className={styles.fotoPerfil} />
-            <div className={styles['container-header-titulo']}>
-              <h2>Elaine Soares</h2>
-              <p>{post.subtitle}</p> 
+    <div className={styles.primeiroContainer} onClick={fecharModal}>
+      <div className={styles.container1}>
+        <div className={styles.container} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.header}>
+            <h2>{post.title}</h2>
+            <IoMdClose className={styles.close} onClick={fecharModal} />
+          </div>
+          <div>
+            <p>{"</>"}</p>
+            <p>Tecnologias</p>
+            <ul>
+              {post.tecnologia && post.tecnologia.map((itensTech, index)=>(
+                <li key={index}>{itensTech}</li> 
+              )) }
+              </ul>
+          </div>
+          <div className={styles.containerImagemPostada}>
+            <img className={styles.imagem} src={post.imageUrl} alt={post.title} />
+          </div>
+          <div className={styles.containerInfo}>
+            <div className={styles.info}>
+              <h3 className={styles.tituloSobre}><CiCircleInfo /> Sobre o projeto</h3>
+              <p className={styles.mensagem}>{post.about}</p>
+                  
+                  {post.functionality ? (
+                    <div>
+                      <h4 className={styles.funcionalidade}>Funcionalidades</h4> 
+                      <p className={styles.mensagem}></p>
+                    </div>
+                  ):(
+                    <p></p>
+                  )}
             </div>
           </div>
-          <IoMdClose className={styles.close} onClick={()=>navegarParaFeed('/feed')}/>
         </div>
-
-        <div className={styles["container-imagem-postada"]}>
-            <img className={styles.imagem} src={post.imageUrl} />
-        </div>
-       
-
-        <div className={styles.containerMensagem}>
-        <MensagemCVerMais 
-            classNameContainer={styles['container-info']} 
-            classNameFilho={styles.mensagem}>{post.message}
-
-         </MensagemCVerMais>
       </div>
-
-      </div>
-    </div>
     </div>
   );
 }

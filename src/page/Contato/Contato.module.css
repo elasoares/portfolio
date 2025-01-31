@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: none;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 a {
@@ -32,42 +32,27 @@ html, body {
   height: 100%;
 }
 .containerContato {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 90%;
- height: 100%;
- transition: none;
- border-radius: 10px;
- padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: none;
+  border-radius: 10px;
+  padding: 20px 5px;
 }
 
-.textoContato {
-  padding: 20px;
-  padding: 50px 15px 100px 15px;
-  border-radius: 10% 5px ;
-  width: 80%;
-  margin: auto 0;
-}
-.titulo{
-  color: rgba(43, 58, 85, 0.9);
-  text-align: center;
-  font-size: 1.7rem;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+
+/*========================Títlo================================ */
+.titulo {
   font-family: "Montserrat", sans-serif;
+  color: #543787;
+  letter-spacing: 0.1rem;
+  transition: 1.2s;
+  font-size: 1.8em;
 }
 
-/* .textoContato p{
-  color:rgba(43, 58, 85, 0.9);
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
- */
 
 .formContainer {
   display: flex;
@@ -86,11 +71,12 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 100%;
+  width: 320px;
   border: rgb(133, 40, 255) 1px solid; 
   border-radius: 24px;
   padding: 20px;
   font-weight: 400;
+  margin: 0 10px 0 0;
 }
 
 .block{
@@ -111,6 +97,12 @@ fieldset {
   font-weight: 400;
 }
 /*========================Select================================ */
+.termo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
 .termStyles {
   font-size: 1em;
   font-weight: 500;
@@ -132,31 +124,15 @@ fieldset {
   cursor: pointer;
 }
 
-/*========================Select================================ */
-
-.selectStyle {
-  border: 1px solid rgb(209, 208, 208);
-  background-color: transparent;
-  /* margin: 10px; */
-  font-size: 1em;
-  color: #727272;
-  width: 80vw;
-  padding: 12px 15px;
-  border-radius: 10px;
-  outline: none;
-}
-.selectStyle:hover {
-  border: rgb(133, 40, 255) 1px solid; 
-}
 /*========================Text Area Messagem================================ */
 .textAreaMessagem {
   font-size: 1em;
   border: 1px solid rgb(209, 208, 208);
   margin-top: 10px; 
   padding: 8px 15px;
-  width: 80vw;
+  width: 65vw;
   border-radius: 10px;
-  color: rgb(87, 87, 87);
+  color: rgb(39, 39, 39);
   resize: none;
   background-color: transparent;
   outline: none;
@@ -177,8 +153,8 @@ fieldset {
 /*========================Botao================================ */
 .botao {
   font-size: 1.3rem;
-  background-color: rgba(43, 58, 85, 0.9);
-  color: #ccc;
+  background-color: rgb(43, 58, 85);
+  color: #ffffff;
   padding: 9px 10px;
   font-weight: bold;
   border-radius: 8px;
@@ -200,77 +176,33 @@ fieldset {
   background-color: rgb(133, 40, 255);
 }
 
-/* .botao-exibir{
-  font-size: 1.3rem;
-  background-color: #20186e;
-  color: #ccc;
-  padding: 5px;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 0.6em 1.2em;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin: 25px 0 0 0;
-  border: 1px solid rgb(209, 208, 208);
-} */
+@media (min-width: 450px) {
 
-/* .botao-exibir:hover {
-  filter: brightness(0.5);
-  transform: scale(1);
-  opacity: 0.8;
-  color: white;
-  border: none;
-  outline: none
-} */
+  .containerContato {
+    width: 100%;
+  }
 
-/*========================Títlo================================ */
-.titulo {
-  font-family: "Montserrat", sans-serif;
-  color: #543787;
-  letter-spacing: 0.1rem;
-  transition: 1.2s;
-  font-size: 1.8em;
+  .formContainer{
+  width: 100%;
+  }
+
+  .textAreaMessagem {
+    width: 60vw;
+  }
+  .formulario{
+    width: 100%;
+  }
 }
 
-/* .subtitulo {
-
-  color: #fff;
-  letter-spacing: 0.1rem;
-  transition: 1.2s;
-  font-size: 1.8em;
-} */
-
-
-@media (min-width: 650px) {
- /*  .block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    border: #919090 1px solid; 
-    border-radius: 24px;
-    font-weight: 400;
-
-  } */
-
-/*   .botao-exibir{
-    display: none;
-  }
- */
-  .selectStyle {
-    width: 30vw;
-  }
+@media (min-width: 500px) {
   .textAreaMessagem {
-    width:20vw;
+    width: 65vw;
   }
 
   .containerContato {
     width: 100%;
   }
-  .textoContato {
-  width: 50%;
-  }
+
   .formContainer{
   width: 100%;
   }
@@ -286,24 +218,22 @@ fieldset {
   }
 
 }
-@media (min-width: 600px) {
-
-
-  .selectStyle {
-    width: 60vw;
-  }
+@media (min-width: 650px) {
   .textAreaMessagem {
-    width: 60vw;
+    width: 55vw;
   }
 
   .containerContato {
-    flex-direction: row;
-    padding: 0 5px;
+    width: 100%;
+  }
+
+  .formContainer{
+  width: 100%;
   }
 
   .termo-container{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items:center;
   }
 
@@ -313,7 +243,6 @@ fieldset {
 
 }
 @media (min-width: 730px) {
-
   .formContainer{
     width: 100%;
     }
@@ -332,13 +261,7 @@ fieldset {
     width: 80%;
     height: auto;
   }
-/*   .selectStyle {
-    width: 35vw;
-  }
-  .textAreaMessagem {
-    width:  35vw;
-  } */
-
+  
 }
 @media (min-width: 1050px) {
   .formContainer{

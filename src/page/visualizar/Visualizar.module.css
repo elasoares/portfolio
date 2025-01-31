@@ -1,172 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;700&display=swap');
 
- html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
- overflow: auto;
+/* Fundo escuro semi-transparente */
+.primeiroContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-  body {
+/* Caixa do modal */
+.container1{
+  position: fixed;
+  top: 15px;
+  left: 0;
+  width: 100vw;
+  height: 95%;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}  
-.PrimeiroContainer{
-  overflow: auto;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding-bottom: 100px;
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  /* Container do header do perfil */
   
-  .card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    /* gap: 10px; */
-    width: 330px;
-    height: 450px;
-    border: 1px solid #dbdbdb;
-    padding: 5px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-
-  /* --------------------   Container do header do perfil   ---------------------- */
-
   .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
- /*    padding: 8px 8px; */
     width: 100%;
-    border-bottom: 1px solid #dbdbdb;
+    height: 80px;
+    padding: 10px;
   }
 
-  .container-header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .fotoPerfil{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 14px;
-  }
-
-  .container-header-titulo{
-    display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 6px;
-    
-  }
   
   .header h2 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     color: #000000;
+    align-self: flex-end;
   }
-  
   .header p {
     font-size: 0.5rem;
     font-weight: 500;
     color: #000000;
   }
-  
-  /* ===========================Imagem do post================================ */
-  .container-imagem-postada{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
 
-  .imagem {
-    width: 95%;
-    height: 200px;
-    
-  }
-  /* ===========================Botao================================ */
-  .botao {
-    background-color: #3897f0;
-    color: white;
-    border: none;
-    width: 55px;
-    height: 35px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .close{
-    color: #000000;
-    border: none;
-    width: 40px;
-    height: 25px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-/* =========================== Informação do post ================================ */
-
-.containerMensagem{
-  height: 120px;
-  overflow-y: scroll;
+/* Botão de fechar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
-.container-info{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  padding: 0 10px 0 10px;
-}  
 
+.close:hover {
+  color: red;
+}
+
+
+/* Informação do post */
+
+
+.containerInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 20px 0 20px 0 ;
+}  
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+}  
+.tituloSobre{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 30px;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+}  
+.funcionalidade{
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
   .mensagem {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 550;
     line-height: 1.6;
-    color: #000000;
+    color: #4b4b4b;
     margin: 0;
+    font-family: 'Inter', sans-serif;
   }
-  
-  .footer {
-    border-top: 1px solid #dbdbdb;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .footer button {
-    background: none;
-    border: none;
-    color: #5f72bd;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
-  .footer button:hover {
-    text-decoration: underline;
-  }
-  
 
-  .container-curtir{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 10%;
+    /* Imagem do post */
+    .container-imagem-postada{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin: 10px 0 50px 0;
+    }
   
-  }
+    .imagem {
+      width: 100%;
+      height: auto;
+      border: 1px solid #e5e7eb;
+    }

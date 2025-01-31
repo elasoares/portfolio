@@ -1,5 +1,5 @@
 .textfield {
-  width: 80vw;
+  width: 65vw;
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -14,9 +14,19 @@
   border: rgb(133, 40, 255) 1px solid; 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .textfield {
     width: 60vw;
+  }
+}
+@media (min-width: 500px) {
+  .textfield {
+    width: 65vw;
+  }
+}
+@media (min-width: 650px) {
+  .textfield {
+    width: 55vw;
   }
 }
 

@@ -47,9 +47,9 @@ ul li {
   width: 155px;
   font-weight: 500;
   font-size: 1.5em;
-  background-color: rgba(43, 58, 85, 0.9);
-  border: 1px solid rgba(43, 58, 85, 0.9);
-  color: #fff;
+  background-color: rgb(43, 58, 85);
+  border: 1px solid rgb(43, 58, 85);
+  color: #ffffff;
   border-radius: 40px;
   padding: 10px 5px;
 }
@@ -60,20 +60,20 @@ ul li {
 }
 
 .aside-items{
- display: flex;
- justify-content: flex-start;
- align-items:center;
- height: 50px;
- width: 150px;
- gap: 10px;
- font-weight: 400;
- font-size: 1.2em;
- border: 1px solid rgba(43, 58, 85, 0.9);
- border-radius: 3px;
- color: rgba(43, 58, 85, 0.9);
- background-color: #fff;
- margin: 1px 5px; 
- padding:5px 0 5px 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  height: 50px;
+  width: 150px;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 1.2em;
+  border: 1px solid rgb(43, 58, 85);
+  border-radius: 3px;
+  color: rgb(43, 58, 85);
+  background-color: #ffffff;
+  margin: 1px 5px; 
+  padding:5px 0 5px 5px;
 }
 .aside-items:hover {
     filter: brightness(0.8);
@@ -96,8 +96,6 @@ ul li {
 .exibir{
     display: block;
 }
-
-
 
 
 

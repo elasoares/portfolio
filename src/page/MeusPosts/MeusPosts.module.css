@@ -23,14 +23,12 @@
 /* ===========================Container================================ */
 
 .container{
-   display: inline;
+    display: inline;
     justify-content: center;
     align-items: center;
-    
     flex-direction: column;
     width: 100%;
     font-family: "Montserrat", sans-serif;
-
     }
 
 /* ===================== Header do post ==================== */
@@ -137,14 +135,6 @@
     color: #000000;
     margin: 0;
   }
-  .comentario{
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
 
 
 

@@ -8,7 +8,6 @@ import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 
 export function GetImagens({nomeDaImagem}){
     const[imageUrl, setImageUrl] = useState("");
-    const[error, setError] = useState("");
 
     
 
@@ -19,8 +18,6 @@ export function GetImagens({nomeDaImagem}){
                 const url = getDownloadURL(storageRef);
                 setImageUrl(url);
             } catch(error){
-                console.error("Error na requisição da imagem" + error);
-                setError(error.message);
                 toast("Error na requisição da imagem.");
             }
         }
@@ -28,19 +25,13 @@ export function GetImagens({nomeDaImagem}){
     },[nomeDaImagem]);
 
    
-    return(
-        <div>
-        <LoadingOverlay/> 
-        {
-            
-            imageUrl ? (
-                <img src={imageUrl}/> 
+return(
+    <div>
+        {imageUrl ? (
+            <img src={imageUrl}/> 
             ):(
-          <div>         
-               {error && <p>Error: {error}</p>}
-            </div>
-            )
-        }
-        </div>
-    );
+            <LoadingOverlay/>
+        )}
+    </div>
+);
 }

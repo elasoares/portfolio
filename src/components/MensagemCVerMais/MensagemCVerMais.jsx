@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import styles from './MensagemCVerMais.module.css';
+import { TiArrowRight } from "react-icons/ti";
 
 export function MensagemCVerMais({classNameContainer, classNameFilho, children}){
-    const[mensagem, setVerMensagem] = useState(false);
+    const[mensagem] = useState(false);
 
     function handleVerMensagem(){
        /*  setVerMensagem(!mensagem); */
@@ -18,7 +19,7 @@ export function MensagemCVerMais({classNameContainer, classNameFilho, children})
             </div>
             <div className={styles['container-botao']}>
             <button className={styles.botao} onClick={handleVerMensagem}>
-                {mensagem ? "Ver menos" : "Ver mais..."}
+                {mensagem ? "" : <p>Ver detalhes <TiArrowRight/></p>}
             </button>
             </div>
         </div>

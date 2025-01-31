@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +24,6 @@ ul li {
   justify-content: space-between;
   align-items:center;
   flex-wrap: wrap;
- /*  padding: 15px 4vw 0 14px; */
   margin: 0;
   width: 100%;
   height: auto;
@@ -83,17 +84,16 @@ ul li {
 }
 
 .item-menu {
-  color: #fff;
-  font-weight: 700;
+  color: white;
   font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.6;
   font-family: "Montserrat", sans-serif;
-  transition: 0.2s;
   letter-spacing: 0.1rem;
-  transition: transform 550ms, opacity 1500ms;
 }
 
 .item-menu:hover {
-  color:rgba(43, 58, 85, 0.9);
+  color:rgb(43, 58, 85);
 }
 
 /* ============ Icon ============ */

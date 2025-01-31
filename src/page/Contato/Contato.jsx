@@ -155,8 +155,6 @@ export function Contato() {
               <p className={styles.errorFormk}>
                   {touched.message && errors.message}
                 </p>
-
-
               <fieldset className={styles["termo-container"]}>
                 <input
                   type="checkbox"
@@ -171,7 +169,6 @@ export function Contato() {
                     termo de contrato.
                   </a>
                 </label> 
-              
               </fieldset>
               <p className={styles.errorFormk}>
                   {touched.acceptTerms && errors.acceptTerms}
@@ -180,8 +177,8 @@ export function Contato() {
                 className={styles.botao}
                 type="submit"
               >
-              <GrSend/>
                 Enviar mensagem
+                <GrSend/>
               </Button>
             </form>
           </Card>

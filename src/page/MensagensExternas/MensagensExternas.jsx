@@ -3,6 +3,7 @@ import { axios } from "../../axios"
 import { toast } from "react-toastify";
 import styles from './MensagensExternas.module.css';
 import { AiOutlineDelete } from "react-icons/ai";
+import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 
 
 export function MensagensExternas (){
@@ -55,46 +56,37 @@ async function handleDelete(porId){
   } */
 
 
-     return (
-    <div>
-        {
-            dados.length > 0 ?  (
-            
-              dados.map((mensagem, index)=>(
-            <div  key={'mensagem_' + index}>
+    return (
+      <div>
+        {dados.length > 0 ?  ( dados.map((mensagem, index)=>(
+          <div  key={'mensagem_' + index}>
             <div onClick={()=>toggleMessage(mensagem.id)} className={styles.container}>
-            <div><h4>Mensagem de: {mensagem.name} {mensagem.surname}</h4></div>
-          
-           
-            <div className={styles['botao-delete']}>
-            <AiOutlineDelete  onClick={() => handleDelete(mensagem.id)}/>
-            </div>
-          {/*   {deleta && (
-                <div>
-                <button  onClick={() => handleDelete(mensagem.id)}>Sim</button>  
-                <button onClick={handleNaoDeletar}>Não</button>
-                </div>
-            )} */}
-          
-
+              <div>
+                <h4>Mensagem de: {mensagem.name} {mensagem.surname}</h4>
+              </div>
+              <div className={styles['botao-delete']}>
+              <AiOutlineDelete  onClick={() => handleDelete(mensagem.id)}/>
+              </div>
+              {/*   {deleta && (
+                    <div>
+                    <button  onClick={() => handleDelete(mensagem.id)}>Sim</button>  
+                    <button onClick={handleNaoDeletar}>Não</button>
+                    </div>
+                )} */}
             </div>
             {exibirPorId == mensagem.id && (
               <div className={styles['container-items']}>
-              <p> <span className={styles.assunto}>De:</span> {mensagem.name} </p>
-              <p> <span className={styles.assunto}>E-mail: </span> {mensagem.email} </p>
-              <p className={ styles['exibir-display']}> <span className={styles.assunto}>Assunto:</span> {mensagem.subject}</p>
-              <p className={styles['exibir-display']}><span className={styles.assunto}>Mensagem:</span> {mensagem.message}</p>
+                <p> <span className={styles.assunto}>De:</span> {mensagem.name} </p>
+                <p> <span className={styles.assunto}>E-mail: </span> {mensagem.email} </p>
+                <p className={ styles['exibir-display']}> <span className={styles.assunto}>Assunto:</span> {mensagem.subject}</p>
+                <p className={styles['exibir-display']}><span className={styles.assunto}>Mensagem:</span> {mensagem.message}</p>
               </div>
             )}
-           
-            </div>
-           
-       ) )
+          </div>
+        ) )
         ):( 
-        <p>Nenhum dado encontrado.</p>
-        
-        )}
-   
-    </div>
+          <LoadingOverlay/>
+        )} 
+      </div>
   );
 }
