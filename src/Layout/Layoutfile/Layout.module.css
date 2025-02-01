@@ -34,16 +34,17 @@
 }
 
 
-@media(min-width: 720px) {
+/* @media(min-width: 720px) {
     .container {
         width: 100vw;
         height: 100vh;
         display: grid;
         grid-template-areas: 
-            "header header"
-            "menu main"
-            "footer footer";
-        grid-template-columns: 20% 80%;
+            "header"
+            "menu"
+            "main"
+            "footer";
+        grid-template-columns: auto;
         grid-template-rows:  10% 85% 5%;
     }
 
@@ -66,9 +67,9 @@
         grid-area: footer;
         width: 100%;
     }
-}
+} */
 
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
     .container {
         grid-template-columns: 20% 80%;
     }
@@ -81,3 +82,4 @@
     }
 
 }
+ */

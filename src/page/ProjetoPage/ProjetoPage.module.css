@@ -26,7 +26,6 @@
   padding-top: 20px; 
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  background-color: #fff;
   padding-bottom: 100px;
 }
 
@@ -37,7 +36,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
-  width: 400px;
+  width: 370px;
+  height: 570px;
   border: 1px solid #dbdbdb;
   padding: 5px;
   background: #fff;
