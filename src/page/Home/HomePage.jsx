@@ -51,11 +51,8 @@ export function HomePage() {
           </div>
           <div className={styles["container-descricao-home"]}>
           <p className={styles["descricao-home"]}>
-                Formanda em Outubro de 2025 com sólido domínio em
-                desenvolvimento front-end (HTML, CSS, JavaScript, React),
-                back-end (Node.js), Firebase, UX/UI design e metodologias
-                ágeis como Scrum. Proativa, organizada e motivada a
-                enfrentar novos desafios.
+          Desenvolvedora Front-End. Possuo experiência no desenvolvimento de interfaces responsivas e acessíveis utilizando React, JavaScript, CSS e metodologias ágeis (Scrum, Kanban). Além disso, tenho conhecimento em Node.js e Firebase CRUD, 
+          permitindo integração entre front-end e back-end.
             </p>
           </div>
           <div>
