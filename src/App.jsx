@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter , Route, Routes, Navigate } from "react-router-dom";
 import { Layout } from "./Layout/Layoutfile/Layout";
 import { Contato } from "./page/Contato/Contato";
 import { Certificado } from "./page/Certificado/Certificado";
@@ -13,23 +13,22 @@ import { ProjetoPage } from "./page/ProjetoPage/ProjetoPage";
 
 function App() {
   return (
-    <Router>
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/projetos" element={<ProjetoPage />} />
-        <Route path="/certificado" element={<Certificado />} />
-        <Route path="/contate-me" element={<Contato />} />
-        <Route path="/entrar" element={<SigningPage />} />
-        <Route path="/perfil" element={<PerfilPage />} />
-        <Route path="/editar/:id" element={<Editar />} />
-        <Route path="/visualizar/:id" element={<Visualizar />} />
-        <Route path="/meu-post/:id" element={<MeusPosts />} />
-      </Routes>
-    </Layout>
-  </Router>
-  
+    <HashRouter>
+      <Layout>
+        <Routes>
+        <Route path="/" element={<Navigate to="/#home" />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/projetos" element={<ProjetoPage />} />
+          <Route path="/certificado" element={<Certificado />} />
+          <Route path="/contate-me" element={<Contato />} />
+          <Route path="/entrar" element={<SigningPage />} />
+          <Route path="/perfil" element={<PerfilPage />} />
+          <Route path="/editar/:id" element={<Editar />} />
+          <Route path="/visualizar/:id" element={<Visualizar />} />
+          <Route path="/meu-post/:id" element={<MeusPosts />} />
+        </Routes>
+      </Layout>
+    </HashRouter>
 
   );
 }
