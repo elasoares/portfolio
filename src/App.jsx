@@ -17,7 +17,6 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/home" element={<Navigate to="/" />}/>
         <Route path="/projetos" element={<ProjetoPage />} />
         <Route path="/certificado" element={<Certificado />} />
         <Route path="/contate-me" element={<Contato />} />
@@ -26,6 +25,7 @@ function App() {
         <Route path="/editar/:id" element={<Editar />} />
         <Route path="/visualizar/:id" element={<Visualizar />} />
         <Route path="/meu-post/:id" element={<MeusPosts />} />
+        <Route path="/home" element={<Navigate to="/" />} />
       </Routes>
     </Layout>
   </HashRouter>
