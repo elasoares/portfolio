@@ -1,8 +1,8 @@
-import { HashRouter , Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout/Layoutfile/Layout";
 import { Contato } from "./page/Contato/Contato";
 import { Certificado } from "./page/Certificado/Certificado";
-import { HomePage} from './page/Home/HomePage';
+import { HomePage } from './page/Home/HomePage';
 import { SigningPage } from "./page/SignIn/SigningPage";
 import "./App.css";
 import { PerfilPage } from "./page/Perfil/PerfilPage";
@@ -16,7 +16,7 @@ function App() {
     <HashRouter>
       <Layout>
         <Routes>
-        <Route path="/" element={<Navigate to="/#home" />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/projetos" element={<ProjetoPage />} />
           <Route path="/certificado" element={<Certificado />} />
@@ -29,7 +29,6 @@ function App() {
         </Routes>
       </Layout>
     </HashRouter>
-
   );
 }
 
