@@ -142,9 +142,48 @@ width: 100%;
     background-color: rgb(133, 40, 255);
   }
 
-.botao:focus,
-.botao:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+
+/*--------------------------- Botao Tech-------------------------  */
+.containerTech{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.inputTech{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.botaoTech{
+  font-size: 1.3rem;
+  background-color: rgb(43, 58, 85);
+  color: #ffffff;
+  padding: 9px 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 50%;
+  margin: 25px 0 0 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.botaoTech:hover{
+  transform: scale(1);
+  color: white;
+  border: none;
+  background-color: rgb(133, 40, 255);
 }
 
 /* =============================Tecnologias============================ */
@@ -154,6 +193,25 @@ width: 100%;
   justify-content: flex-start;
   gap: 10px;
 }    
+
+.techItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.closedTech{
+  background-color: transparent;
+  color: rgb(133, 40, 255);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.closedTech:hover {
+  color: red;
+  cursor: pointer;
+}
+
     
 @media (min-width: 550px) {
 .formulario {

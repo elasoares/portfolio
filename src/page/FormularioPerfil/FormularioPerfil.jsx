@@ -174,36 +174,35 @@ export function FormularioPerfil() {
             <p className={styles.errorFormk}>
               {touched.functionality && errors.functionality}
             </p>
-            <button onClick={handleToggle}>
-              {toggle ?  "Ocultar Campo de Tecnologias" : "Adicionar Tecnologias?"}
-            </button>
-            {toggle && (
-              <fieldset>
-                <input
-                  type="text"
-                  placeholder="Adicione uma tecnologia"
-                  value={`${values.tecnologia} ${changeTech}`}
-                  onChange={(event) => setChangeTech(event.target.value)}
-                  className={styles.textfield}
-                />
-                <Button type="button" onClick={handleSaveTech}>
-                  Adicionar Tecnologia
-                </Button>
-              </fieldset>
-            )}
-            <ul className={styles.techList}>
-              {saveTech.map((tech, index) => (
-                <li key={index} className={styles.techItem}>
-                  {tech}{" "}
-                  <button type="button" onClick={() => deleteTecnology(index)}>
-                    X
-                  </button>
-                </li>
-              ))}
-            </ul>
-            
-              
-            
+            <div className={styles.containerTech}>
+              <button onClick={handleToggle} className={styles.botaoTech}>
+                {toggle ?  "Ocultar Campo de Tecnologias" : "Adicionar Tecnologias?"}
+              </button>
+              {toggle && (
+                <fieldset className={styles.inputTech}>
+                  <input
+                    type="text"
+                    placeholder="Adicione uma tecnologia"
+                    value={`${values.tecnologia} ${changeTech}`}
+                    onChange={(event) => setChangeTech(event.target.value)}
+                    className={styles.textfield}
+                  />
+                  <Button type="button" onClick={handleSaveTech} className={styles.botaoTech}>
+                    Clique aqui para adicionar Tecnologia
+                  </Button>
+                </fieldset>
+              )}
+              <ul className={styles.techList}>
+                {saveTech.map((tech, index) => (
+                  <li key={index} className={styles.techItem}>
+                    {tech}{" "}
+                    <button type="button" onClick={() => deleteTecnology(index)} className={styles.closedTech}>
+                      X
+                    </button>
+                  </li>
+                ))}
+              </ul> 
+            </div>
             <div className={styles[`container-envio-e-camera`]}>
               <Button type="submit" className={styles.botao}>  Enviar <GrSend/></Button>
             </div>

@@ -7,6 +7,7 @@ import styles from './MeusPosts.module.css';
 import { EditarEDeletar } from "../../components/EditarEDeletar/EditarEDeletar";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
 import { MensagemCVerMais } from "../../components/MensagemCVerMais/MensagemCVerMais";
+import { Link } from "react-router-dom";
 
 
 
@@ -66,7 +67,6 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
                                 <FotoPerfil className={styles.fotoPerfil} />
                                 <div className={styles['container-header-titulo']}>
                                     <h2>Elaine Soares</h2>
-                                    <p>{postado.subtitle}</p> 
                                 </div>
                             </div>
                             <EditarEDeletar 
@@ -82,11 +82,13 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
                         </div>
                     
                         <div className={styles.containerMensagem}>
-                            <MensagemCVerMais 
-                                classNameContainer={styles['container-info']} 
-                                classNameFilho={styles.mensagem}>
-                                {postado.about}
-                            </MensagemCVerMais>
+                            <Link to={`/visualizar/${postado.id}`}>
+                                <MensagemCVerMais 
+                                    classNameContainer={styles['container-info']} 
+                                    classNameFilho={styles.mensagem}>
+                                    {postado.about}
+                                </MensagemCVerMais>
+                            </Link>
                         </div>
                     </Card>
                 )) ):( <LoadingOverlay/> )}

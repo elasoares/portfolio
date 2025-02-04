@@ -43,9 +43,8 @@ export function Visualizar() {
             <h2>{post.title}</h2>
             <IoMdClose className={styles.close} onClick={fecharModal} />
           </div>
-          <div>
-            <p>{"</>"}</p>
-            <p>Tecnologias</p>
+          <div className={styles.conatinerTechHeader}>
+            <p>{"</>"} Tecnologias</p>
             <ul>
               {post.tecnologia && post.tecnologia.map((itensTech, index)=>(
                 <li key={index}>{itensTech}</li> 
@@ -61,7 +60,7 @@ export function Visualizar() {
               <p className={styles.mensagem}>{post.about}</p>
                   
                   {post.functionality ? (
-                    <div>
+                    <div className={styles.info}>
                       <h4 className={styles.funcionalidade}>Funcionalidades</h4> 
                       <p className={styles.mensagem}></p>
                     </div>

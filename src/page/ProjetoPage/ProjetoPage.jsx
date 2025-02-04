@@ -37,7 +37,7 @@ export function ProjetoPage() {
         <LoadingOverlay />
         {dados.length > 0 ? (
             dados
-              .filter((dado) => dado.select === "projeto") // Filtra apenas os projetos
+              .filter((dado) => dado.select === "projeto") 
               .map((dado, index) => (
                 <Card className={styles.card} key={"post_" + index}>
                   <Link to={`/visualizar/${dado.id}`}>
@@ -46,7 +46,6 @@ export function ProjetoPage() {
                         <FotoPerfil className={styles.fotoPerfil} />
                         <div className={styles['container-header-titulo']}>
                           <h2>Elaine Soares</h2>
-                          <p>{dado.subtitle}</p> 
                         </div>
                       </div>
                     </div>

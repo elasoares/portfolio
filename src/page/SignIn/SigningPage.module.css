@@ -65,8 +65,8 @@ fieldset {
   /*========================Botao================================ */
   .botao {
     font-size: 1.3rem;
-    background-color: rgba(43, 58, 85, 0.9);
-    color: #ccc;
+    background-color: rgb(43, 58, 85);
+    color: #ffffff;
     padding: 9px 10px;
     font-weight: bold;
     border-radius: 8px;
@@ -85,13 +85,12 @@ fieldset {
   }
 
 /*========================Títlo================================ */
-.titulo{
-  color: rgba(43, 58, 85, 0.9);
-  text-align: center;
+.titulo {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+  color: #543787;
+  letter-spacing: 0.1rem;
+  transition: 1.2s;
+  font-size: 1.8em;
 }
 
 @media (min-width: 600px) {
@@ -115,7 +114,7 @@ fieldset {
 }
 @media (min-width: 730px) {
   .formulario {
-    width: 40vw;
+    width: 60vw;
   }
 
   .botao{
