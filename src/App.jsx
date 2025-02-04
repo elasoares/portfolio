@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout/Layoutfile/Layout";
 import { Contato } from "./page/Contato/Contato";
 import { Certificado } from "./page/Certificado/Certificado";
@@ -13,7 +13,7 @@ import { ProjetoPage } from "./page/ProjetoPage/ProjetoPage";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -28,7 +28,7 @@ function App() {
           <Route path="/meu-post/:id" element={<MeusPosts />} />
         </Routes>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
