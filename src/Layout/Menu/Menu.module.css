@@ -27,7 +27,7 @@ ul li {
   margin: 0;
   width: 100%;
   height: 50px;
-  background-color: rgb(133, 40, 255);
+  background-color: rgba(133, 40, 255, 0.212);
 }
 
 
@@ -51,10 +51,9 @@ ul li {
 }
 
 .item-menu {
-  color: white;
+  color: rgb(133, 40, 255);
   font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.6;
+  font-weight: 650;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1rem;
 }
@@ -71,43 +70,10 @@ ul li {
 
 
 @media(min-width: 720px) {
-    /* ======= Container do Nav ========  */
-   /*  .container-menu {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: auto 0;
-      padding: 0;
-      background-color: rgb(133, 40, 255);
-      height: 100%;
-      width: 60%;
-      border-radius: 0 20px 20px 0;
-    }   */
-  
-
-    /* ======= Container do Item ========  */
-   /*  .container-item-navegador{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      gap: 10px;
-      width: 100%;
-      height: 60%;
-    }
-  .container-menu-navegacao {
-      width: 100%;
-      height: 80%;
-      display: flex;
-      flex-direction: column; 
-      justify-content: space-around;
-      align-items: center;
-    }
-    .item-menu{
-      font-size: 1.5rem;
-      color: #eadcfa;
-      padding: 20px 15px 20px 0;
-    }
-    */
+  .item-menu {
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+  }
 }
 
 

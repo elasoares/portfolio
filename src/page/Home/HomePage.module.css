@@ -60,6 +60,15 @@ ul li {
   color: rgba(43, 58, 85, 0.9);
   animation: bottomIn 1.4s ease-in-out forwards;
   animation-delay: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.titulo span{
+  color: rgb(133, 40, 255);
 }
 
 .subtitulo {
@@ -189,7 +198,7 @@ ul li:hover{
 .primeiro-background-foto {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 340px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -198,11 +207,11 @@ ul li:hover{
 }
 
 .foto {
-  width: 310px;
-  height: 310px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  position: relative; 
-  z-index: 2; 
+ /*  position: relative; 
+  z-index: 2;  */
   object-fit:cover;
 }
 
@@ -225,12 +234,12 @@ ul li:hover{
 
 
 .primeiro-background-foto > div:nth-child(1) {
-  transform: rotate(22deg) translate(190px);
+  transform: rotate(32deg) translate(190px);
  
 }
 
 .primeiro-background-foto > div:nth-child(2) {
-  transform: rotate(298deg) translate(180px);
+  transform: rotate(340deg) translate(180px);
   color: rgb(133, 40, 255);
 }
 
@@ -288,7 +297,7 @@ ul li:hover{
 }
 @media (min-width: 450px) {
   .primeiro-background-foto {
-    margin: 470px 0 0 0 ;
+    margin: 200px 0 0 0 ;
   }
 
   div > ul{

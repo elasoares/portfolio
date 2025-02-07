@@ -7,6 +7,7 @@ import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import styles from './Visualizar.module.css';
 import { IoMdClose } from 'react-icons/io';
 import { CiCircleInfo } from 'react-icons/ci';
+import { TbBrandGithub } from "react-icons/tb";
 
 export function Visualizar() {
   const { id } = useParams();
@@ -51,6 +52,13 @@ export function Visualizar() {
               )) }
               </ul>
           </div>
+          {post.link && (
+            <div className={styles["container-icon-github"]}>
+              <a href={post.link} className={styles["socialMedia-icon"]}>
+              <TbBrandGithub /> Ver código</a>
+            </div>
+          )}
+            
           <div className={styles.containerImagemPostada}>
             <img className={styles.imagem} src={post.imageUrl} alt={post.title} />
           </div>
@@ -59,13 +67,11 @@ export function Visualizar() {
               <h3 className={styles.tituloSobre}><CiCircleInfo /> Sobre o projeto</h3>
               <p className={styles.mensagem}>{post.about}</p>
                   
-                  {post.functionality ? (
+                  {post.functionality && (
                     <div className={styles.info}>
                       <h4 className={styles.funcionalidade}>Funcionalidades</h4> 
-                      <p className={styles.mensagem}></p>
+                      <p className={styles.mensagem}>{post.functionality}</p>
                     </div>
-                  ):(
-                    <p></p>
                   )}
             </div>
           </div>

@@ -44,9 +44,10 @@ export function HomePage() {
               </div>
             </div>
             <h1 className={styles.titulo}>
-                <span className={`${styles.titulo} ${styles.typingAnimation}`}>
+              Olá, eu sou 
+                <span className={` ${styles.typingAnimation}`}>
                     {" "}
-                    Olá, eu sou Elaine Soares
+                    Elaine Soares
                   </span> 
               </h1>
             <div className={styles["container-botao"]}>
@@ -71,17 +72,12 @@ export function HomePage() {
             </div>
             <div className={styles["container-habilidades"]}>
               <ul>
-                <li>Html</li>
-                <li>Css</li>
-                <li>JavaScript</li>
                 <li>React</li>
-                <li>Git</li>
-                <li>Github</li>
                 <li>Styled Comonent</li>
+                <li>Tailwind CSS</li>
                 <li>Bootstrap</li>
                 <li>Firebase</li>
                 <li>Node.js</li>
-                <li>Scrum</li>
               </ul>
             </div>                
           </div>

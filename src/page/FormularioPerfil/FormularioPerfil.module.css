@@ -151,28 +151,36 @@ width: 100%;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: auto;
 }
 
 .inputTech{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 50%;
+  gap: 20px;
 }
 
+.textfieldTech{
+  font-size: 0.7em;
+  border: 1px solid #9d8189;
+  border-radius: 5px;
+  margin: 0; 
+  padding: 10px 0 10px 0;  
+  width: 38vw;
+}
 .botaoTech{
   font-size: 1.3rem;
   background-color: rgb(43, 58, 85);
   color: #ffffff;
-  padding: 9px 10px;
   font-weight: bold;
   border-radius: 8px;
-  padding: 0.6em 1.2em;
+  padding: 7px 0 10px 0;  
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 50%;
-  margin: 25px 0 0 0;
+  width: 100%;
   outline: none;
   display: flex;
   align-items: center;

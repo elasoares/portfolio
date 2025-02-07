@@ -18,20 +18,21 @@ export function FormularioPerfil() {
   const [selecionarArquivo, setselecionarArquivo] = useState(null);
   const [imagem, setImagem] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [toggle, setToggle] = useState(false);
   const [saveTech, setSaveTech] = useState([]);
   const [changeTech, setChangeTech] = useState("");
+
 
   const schemaValidationForm = yup.object({
     title: yup.string()
       .min(1, "O campo de título deve conter no mínimo um caractere.")
-      .max(55, "O campo de título deve conter no máximo cinquenta e cinco caracteres.")
+      .max(100, "O campo de título deve conter no máximo cem caracteres.")
       .required("O campo de título não pode ficar vazio."),
     select: yup.string()
       .required("O campo de selecionar o tipo não pode ficar vazio."),
     about: yup.string().required("O campo de mensagem não pode ficar vazio."),
     functionality: yup.string(),
-    tecnologia: yup.string()
+    tecnologia: yup.string(),
+    link: yup.string()
   });
 
   const postar = async (values, { setSubmitting, resetForm }) => {
@@ -41,7 +42,7 @@ export function FormularioPerfil() {
       return;
     }
 
-    const { about, title, select, functionality } = values;
+    const { about, title, select, functionality, link } = values;
     const fileName = selecionarArquivo.name;
     const storageReference = storageRef(storage, `images/${fileName}`);
     const uploadTask = uploadBytesResumable(storageReference, selecionarArquivo);
@@ -59,7 +60,7 @@ export function FormularioPerfil() {
         async () => {
           try {
             const url = await getDownloadURL(uploadTask.snapshot.ref);
-            const data = { about, title, imageUrl: url, tecnologia: saveTech, functionality, select };
+            const data = { about, title, imageUrl: url, tecnologia: saveTech, functionality, select, link };
             const refData = ref(dataBase, "/meu-post");
             await push(refData, data);
             toast("Post realizado com sucesso.");
@@ -83,9 +84,7 @@ export function FormularioPerfil() {
   };
 
 
-  const handleToggle = () => {
-      setToggle(!toggle);
-  }
+
   const handleSaveTech = (event) => {
     event.preventDefault();
     if (changeTech.trim() !== "" && !saveTech.includes(changeTech)) {
@@ -106,6 +105,7 @@ export function FormularioPerfil() {
         about: "",
         functionality:"",
         tecnologia:"",
+        link:"",
       }}
       onSubmit={postar}>
       {({ handleBlur, handleChange, handleSubmit, values, touched, errors }) => (
@@ -143,6 +143,17 @@ export function FormularioPerfil() {
             </fieldset>
             <p className={styles.errorFormk}>{touched.select && errors.select}</p>
             <fieldset>
+              <TextField
+                className={styles.textfield}
+                name="link"
+                type="text"
+                value={values.link}
+                placeholder="Link para direcionamento"
+                onChange={handleChange}
+                onBlur={handleBlur} />
+            </fieldset>
+
+            <fieldset>
               <textarea
                 placeholder="Conte aqui sobre sua conquista"
                 value={values.about}
@@ -155,9 +166,6 @@ export function FormularioPerfil() {
                 onBlur={handleBlur}>
               </textarea>
             </fieldset>
-            <p className={styles.errorFormk}>
-              {touched.about && errors.about}
-            </p>
             <fieldset>
               <textarea
                 placeholder="Mencione as funcionalidades"
@@ -171,27 +179,19 @@ export function FormularioPerfil() {
                 onBlur={handleBlur}>
               </textarea>
             </fieldset>
-            <p className={styles.errorFormk}>
-              {touched.functionality && errors.functionality}
-            </p>
             <div className={styles.containerTech}>
-              <button onClick={handleToggle} className={styles.botaoTech}>
-                {toggle ?  "Ocultar Campo de Tecnologias" : "Adicionar Tecnologias?"}
-              </button>
-              {toggle && (
                 <fieldset className={styles.inputTech}>
                   <input
                     type="text"
                     placeholder="Adicione uma tecnologia"
                     value={`${values.tecnologia} ${changeTech}`}
                     onChange={(event) => setChangeTech(event.target.value)}
-                    className={styles.textfield}
+                    className={styles.textfieldTech}
                   />
                   <Button type="button" onClick={handleSaveTech} className={styles.botaoTech}>
-                    Clique aqui para adicionar Tecnologia
+                  Adicionar tecnologia
                   </Button>
                 </fieldset>
-              )}
               <ul className={styles.techList}>
                 {saveTech.map((tech, index) => (
                   <li key={index} className={styles.techItem}>
