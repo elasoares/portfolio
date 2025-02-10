@@ -72,6 +72,7 @@ export function HomePage() {
             </div>
             <div className={styles["container-habilidades"]}>
               <ul>
+                <li>JavaScript</li>
                 <li>React</li>
                 <li>Styled Comonent</li>
                 <li>Tailwind CSS</li>
