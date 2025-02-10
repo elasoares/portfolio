@@ -1,8 +1,7 @@
-# example netlify.toml
 [build]
-  command = "y"
-  functions = "netlify/functions"
-  publish = "npm run build"
+  command = "npm run build"        # Comando para gerar o build
+  publish = "dist"                 # Pasta onde o Vite gera os arquivos de produção
+  functions = "netlify/functions"  # Pasta para funções (se estiver usando funções do Netlify)
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
