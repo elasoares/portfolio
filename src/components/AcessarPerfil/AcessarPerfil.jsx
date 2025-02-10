@@ -35,13 +35,13 @@ export function AcessarPerfil({className}) {
         <div className={styles["container-acessar"]}>
         <div className={styles["menu-perfil"]}>
           <Link
-            className={styles["item-menu-perfil"]}
+            className={styles["item-menu"]}
             to="/perfil"
             onClick={() => handleEntrarPerfil("/perfil")}
           >
             Perfil
           </Link>
-          <button className={styles["item-menu-sair"]} onClick={handleSair}>
+          <button className={styles["item-menu"]} onClick={handleSair}>
             Sair
           </button>
         </div>

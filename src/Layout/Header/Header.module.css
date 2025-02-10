@@ -5,13 +5,14 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 25px 20px;
+    height: auto;
+    padding: 5px 20px;
 }
 
 /* ======= Logo ========  */
 .logo {
     font-family: "Rammetto One", sans-serif;
-    color: rgba(43, 58, 85, 0.9);
+    color: rgb(43, 58, 85);
     letter-spacing: 0.2rem;
     transition: 1.2s;
     font-size: 1.8em;
@@ -37,15 +38,9 @@
     text-align: center;
 }
 .perfil-container{
-    padding: 7px 10px;
+    padding: 5px 10px;
     background-color: rgb(133, 40, 255);
     border-radius: 10px;
-}
-
-.perfil-container:hover {
-    opacity: 0.5;
-    background-color: rgb(96, 28, 184);
-    cursor: pointer;
 }
 .entrar{
     font-family: "Montserrat", sans-serif;

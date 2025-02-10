@@ -6,11 +6,7 @@ import { Card } from "../../components/Card/Card";
 import styles from './MeusPosts.module.css';
 import { EditarEDeletar } from "../../components/EditarEDeletar/EditarEDeletar";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
-import { MensagemCVerMais } from "../../components/MensagemCVerMais/MensagemCVerMais";
-import { Link } from "react-router-dom";
-
-
-
+import { VerMais } from "../../components/VerMais/VerMais";
 
 
 
@@ -81,15 +77,14 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
                             {postado.imageUrl && <img src={postado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
                         </div>
                     
-                        <div className={styles.containerMensagem}>
-                            <Link to={`/visualizar/${postado.id}`}>
-                                <MensagemCVerMais 
-                                    classNameContainer={styles['container-info']} 
-                                    classNameFilho={styles.mensagem}>
+                        {postado.select === "projeto" && (
+                            <div className={styles.containerMensagem}>
+                                <VerMais  to={postado.id}>
                                     {postado.about}
-                                </MensagemCVerMais>
-                            </Link>
-                        </div>
+                                </VerMais>
+                            </div>
+                        )}
+                        
                     </Card>
                 )) ):( <LoadingOverlay/> )}
             </div>

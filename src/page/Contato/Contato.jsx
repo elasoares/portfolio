@@ -25,7 +25,7 @@ const signUpSchema = yup.object({
   subject: yup
   .string()
   .min(5, "O campo assunto precisa ter pelo menos 5 caracteres.")
-  .max(25, "O campo assunto precisa ter até 25 caracteres.")
+  .max(200, "O campo assunto precisa no máximo dozentos caracteres.")
   .required("O campo assunto não pode ficar vazio."),
   message: yup.string()
   .min(6, "O campo de mensagem precisa ter pelo menos 6 caracteres.")
@@ -143,7 +143,7 @@ export function Contato() {
                 <textarea
                   name="message"
                   id="message"
-                  rows="4"
+                  rows="3"
                   cols="27"
                   placeholder="Escreva sua mensagem aqui"
                   onChange={handleChange}

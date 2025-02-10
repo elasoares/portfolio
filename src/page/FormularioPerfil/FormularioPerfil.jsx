@@ -20,7 +20,7 @@ export function FormularioPerfil() {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [saveTech, setSaveTech] = useState([]);
   const [changeTech, setChangeTech] = useState("");
-
+  const [certificadoClicado, setCertificado] = useState(false);
 
   const schemaValidationForm = yup.object({
     title: yup.string()
@@ -32,7 +32,17 @@ export function FormularioPerfil() {
     about: yup.string().required("O campo de mensagem não pode ficar vazio."),
     functionality: yup.string(),
     tecnologia: yup.string(),
-    link: yup.string()
+    link: yup.string(),
+    institute: yup.string()
+    .min(1, "O campo instituto deve conter no mínimo um caractere.")
+    .max(100, "O campo instituto deve conter no máximo cem caracteres."),
+    date: yup.string()
+    .min(1, "O campo data deve conter no mínimo um caractere.")
+    .max(50, "O campo data deve conter no máximo ciquenta caracteres."),
+    hour: yup.string()
+    .min(1, "O campo hora deve conter no mínimo um caractere.")
+    .max(20, "O campo hora deve conter no máximo vinte caracteres."),
+
   });
 
   const postar = async (values, { setSubmitting, resetForm }) => {
@@ -42,46 +52,46 @@ export function FormularioPerfil() {
       return;
     }
 
-    const { about, title, select, functionality, link } = values;
+    const { about, title, select, functionality, link, institute, date, hour  } = values;
     const fileName = selecionarArquivo.name;
     const storageReference = storageRef(storage, `images/${fileName}`);
     const uploadTask = uploadBytesResumable(storageReference, selecionarArquivo);
-
+ try {
+uploadTask.on(
+  'state_changed',
+  (snapshot) => {
+    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    setUploadProgress(progress);
+  },
+  (error) => {
+  console.error("Erro ao enviar imagem:", error);
+},
+  async () => {
     try {
-      uploadTask.on(
-        'state_changed',
-        (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          setUploadProgress(progress);
-        },
-        (error) => {
-          throw error;
-        },
-        async () => {
-          try {
-            const url = await getDownloadURL(uploadTask.snapshot.ref);
-            const data = { about, title, imageUrl: url, tecnologia: saveTech, functionality, select, link };
-            const refData = ref(dataBase, "/meu-post");
-            await push(refData, data);
-            toast("Post realizado com sucesso.");
-            setSubmitting(false);
-            resetForm();
-            setselecionarArquivo(null);
-            setImagem(true);
-            setTimeout(() => setImagem(false), 1000);
-            setChangeTech("");
-          } catch (error) {
-            toast("Erro ao realizar o post, verifique e tente novamente. " + error.about);
-            setSubmitting(false);
-          }
-        }
-      );
-    } catch (error) {
-      console.error("Erro no upload da imagem:", error);
-      toast("Erro no upload da imagem, tente novamente.");
+      const url = await getDownloadURL(uploadTask.snapshot.ref);
+      const data = { about, title, imageUrl: url, tecnologia: saveTech, functionality, select, link, institute, date, hour};
+      const refData = ref(dataBase, "/meu-post");
+      await push(refData, data);
+      toast("Post realizado com sucesso.");
       setSubmitting(false);
+      resetForm();
+      setselecionarArquivo(null);
+      setImagem(true);
+      setTimeout(() => setImagem(false), 1000);
+      setChangeTech("");
+    }catch (error) {
+    console.error("Erro ao salvar dados no Firebase:", error);
+    toast("Erro ao realizar o post, verifique e tente novamente.");
+    setSubmitting(false);
     }
-  };
+  }
+);
+} catch (error) {
+console.error("Erro no upload da imagem:", error);
+toast("Erro no upload da imagem, tente novamente.");
+setSubmitting(false);
+}
+};
 
 
 
@@ -96,6 +106,15 @@ export function FormularioPerfil() {
     setSaveTech( saveTech.filter((_, i) => i !== index))
   }
 
+  const handleSelectChange = (event) =>{
+    const value = event.target.value;
+    if(value === "certificado"){
+      setCertificado(true);
+    }else{
+      setCertificado(false);
+    }
+  }
+
   return (
     <Formik
       validationSchema={schemaValidationForm}
@@ -106,6 +125,9 @@ export function FormularioPerfil() {
         functionality:"",
         tecnologia:"",
         link:"",
+        date:"",
+        hour:"",
+        institute:"",
       }}
       onSubmit={postar}>
       {({ handleBlur, handleChange, handleSubmit, values, touched, errors }) => (
@@ -130,18 +152,65 @@ export function FormularioPerfil() {
               {touched.title && errors.title}
             </p>
             <fieldset>
-              <select 
+            <select 
               name="select" 
               value={values.select} 
               className={styles.textfield}
-              onChange={handleChange}
+              onChange={(e) => {handleChange(e); handleSelectChange(e);}}
               onBlur={handleBlur}>
-                <option value="">Selecione o tipo de conquista</option>
-                <option value="certificado">Certificado</option>
-                <option value="projeto">Projeto</option>
-              </select>
+              <option value="">Selecione o tipo de conquista</option>
+              <option value="certificado">Certificado</option>
+              <option value="projeto">Projeto</option>
+            </select>
             </fieldset>
             <p className={styles.errorFormk}>{touched.select && errors.select}</p>
+
+            {
+              certificadoClicado && ( 
+                <div>
+                  <fieldset>
+                    <TextField
+                      className={styles.textfield}
+                      name="institute"
+                      type="text"
+                      value={values.institute}
+                      placeholder="Instituto"
+                      onChange={handleChange}
+                      onBlur={handleBlur} />
+                    <p className={styles.errorFormk}>
+                      {touched.institute && errors.institute}
+                  </p>
+                  </fieldset>
+                  <fieldset>
+                    <TextField
+                      className={styles.textfield}
+                      name="date"
+                      type="text"
+                      value={values.date}
+                      placeholder="Data"
+                      onChange={handleChange}
+                      onBlur={handleBlur} />
+                    <p className={styles.errorFormk}>
+                      {touched.date && errors.date}
+                  </p>
+                  </fieldset>
+                  <fieldset>
+                    <TextField
+                      className={styles.textfield}
+                      name="hour"
+                      type="text"
+                      value={values.hour}
+                      placeholder="Horas"
+                      onChange={handleChange}
+                      onBlur={handleBlur} />
+                    <p className={styles.errorFormk}>
+                      {touched.hour && errors.hour}
+                  </p>
+                  </fieldset>
+                </div>
+                )
+              }  
+
             <fieldset>
               <TextField
                 className={styles.textfield}

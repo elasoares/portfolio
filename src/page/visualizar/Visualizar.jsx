@@ -8,6 +8,10 @@ import styles from './Visualizar.module.css';
 import { IoMdClose } from 'react-icons/io';
 import { CiCircleInfo } from 'react-icons/ci';
 import { TbBrandGithub } from "react-icons/tb";
+import { BiWindowOpen } from "react-icons/bi";
+import { PiBuildingLight } from "react-icons/pi";
+import { IoCalendarOutline } from "react-icons/io5";
+import { TbClockHour5 } from "react-icons/tb";
 
 export function Visualizar() {
   const { id } = useParams();
@@ -32,49 +36,74 @@ export function Visualizar() {
   if (loading) return <LoadingOverlay />;
   if (!post) return <p>Post não encontrado!</p>;
 
-  function fecharModal() {
-    navigate('/projetos');
-  }
-
   return (
-    <div className={styles.primeiroContainer} onClick={fecharModal}>
+    <div className={styles.primeiroContainer}>
       <div className={styles.container1}>
         <div className={styles.container} onClick={(e) => e.stopPropagation()}>
           <div className={styles.header}>
             <h2>{post.title}</h2>
-            <IoMdClose className={styles.close} onClick={fecharModal} />
+            <IoMdClose className={styles.close} onClick={()=> navigate(-1)} />
           </div>
+          
           <div className={styles.conatinerTechHeader}>
-            <p>{"</>"} Tecnologias</p>
+            {post.tecnologia && (<p>{"</>"} Tecnologias</p>)}
             <ul>
-              {post.tecnologia && post.tecnologia.map((itensTech, index)=>(
-                <li key={index}>{itensTech}</li> 
-              )) }
-              </ul>
+              {post.tecnologia && post.tecnologia.map((itemTech, index) => (
+                  <li key={index}>{itemTech}</li>
+              ))}
+            </ul>
+              {post.select === "certificado" &&(
+                <div>
+                  <div className={styles["container-info"]}>
+                    <PiBuildingLight /> 
+                    <p>{post.institute}</p>
+                  </div>
+                  <div  className={styles["container-info"]}>
+                    <IoCalendarOutline />
+                    <p>{post.date}</p>
+                  </div>
+                  <div  className={styles["container-info"]}>
+                    <TbClockHour5 />  
+                    <p>{post.hour}</p>
+                  </div>
+                </div>
+              )}
           </div>
-          {post.link && (
-            <div className={styles["container-icon-github"]}>
-              <a href={post.link} className={styles["socialMedia-icon"]}>
-              <TbBrandGithub /> Ver código</a>
-            </div>
-          )}
-            
+          {
+            post.link && (
+              <div className={styles["container-redirecionamento"]}>
+                <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles["container-redirecionamento-icon"]}>
+                  {post.select === "projeto" ? (
+                    <>
+                    <TbBrandGithub /> Ver código
+                    </>
+                  ):(
+                    <>
+                    <BiWindowOpen /> Verificar certificado
+                    </>
+                  )}
+                </a>
+              </div>
+            )
+          }
           <div className={styles.containerImagemPostada}>
             <img className={styles.imagem} src={post.imageUrl} alt={post.title} />
           </div>
-          <div className={styles.containerInfo}>
-            <div className={styles.info}>
-              <h3 className={styles.tituloSobre}><CiCircleInfo /> Sobre o projeto</h3>
-              <p className={styles.mensagem}>{post.about}</p>
-                  
-                  {post.functionality && (
-                    <div className={styles.info}>
-                      <h4 className={styles.funcionalidade}>Funcionalidades</h4> 
-                      <p className={styles.mensagem}>{post.functionality}</p>
-                    </div>
-                  )}
+
+          {post.select === "projeto" && (
+            <div className={styles.containerInfo}>
+              <div className={styles.info}>
+                <h3 className={styles.tituloSobre}><CiCircleInfo /> Sobre o projeto</h3>
+                <p className={styles.mensagem}>{post.about}</p>
+              </div>
+              {post.functionality && (
+                <div className={styles.info}>
+                  <h4 className={styles.funcionalidade}>Funcionalidades</h4> 
+                  <p className={styles.mensagem}>{post.functionality}</p>
+                </div>
+              )}
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

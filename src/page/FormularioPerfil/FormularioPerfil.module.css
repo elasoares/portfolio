@@ -69,16 +69,18 @@ width: 100%;
       }
      /*======================== InPut================================ */
       .textfield {
-        font-size: 0.7em;
         border: 1px solid #9d8189;
         border-radius: 5px;
         margin: 0; 
         padding: 10px 0 10px 8px;  
         width: 75vw;
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
       }
       /*========================Text Area Messagem================================ */
     .textAreaMessagem {
-        font-size: 0.7em;
+        font-size: 1em;
+      font-family: "Montserrat", sans-serif;
         border: 1px solid #9d8189;
         border-radius: 5px;
         padding: 10px 0 0 8px; 
@@ -164,7 +166,8 @@ width: 100%;
 }
 
 .textfieldTech{
-  font-size: 0.7em;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
   border: 1px solid #9d8189;
   border-radius: 5px;
   margin: 0; 
@@ -232,6 +235,9 @@ width: 100%;
 .textfield {
   width: 75vw;
 }
+.card {
+  margin: 350px 0 50px 0;
+}
 } 
 
 @media (min-width: 650px) {
@@ -246,6 +252,7 @@ width: 100%;
 .textfield {
   width: 78vw;
 }
+
 }
 @media (min-width: 720px) {
   .formulario {

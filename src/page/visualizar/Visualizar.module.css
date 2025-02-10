@@ -101,8 +101,10 @@
 
 .close:hover {
   color: red;
+  cursor: pointer;
+  border: 1px solid rgb(43, 58, 85);
+  border-radius: 4px;
 }
-
 
 /* Informação do post */
 
@@ -111,6 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: auto;
   margin: 20px 0 20px 0 ;
@@ -154,17 +157,12 @@
   }
 
     /* Container icon github */
-.container-icon-github{
+.container-redirecionamento{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   height: 50px;
-  line-height: 50px;
-  width: 180px;
+  width: 250px;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
@@ -172,14 +170,22 @@
   animation: bottomIn 1.4s ease-in-out forwards;
   animation-delay: 0.5s;
   background-color: rgba(43, 58, 85, 0.9);
-  color: white;
 }
 
-.container-icon-github:hover {
+.container-redirecionamento:hover {
   background-color: rgb(133, 40, 255);
+}
+.container-redirecionamento-icon{
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: white;
 }
 
+.container-redirecionamento-icon:hover{
+  color: white;
+}
 
     /* Imagem do post */
     .container-imagem-postada{
@@ -196,3 +202,16 @@
       height: auto;
       border: 1px solid #e5e7eb;
     }
+
+    /* =========================== Informação do certificado ================================ */
+
+.container-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}  

@@ -4,66 +4,72 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
+body{
+  overflow: scroll;
+  height: 100vh;
+}
 a {
   text-decoration: none;
 }
 
 ul li {
   list-style: none;
-}    
-    
-    
+}  
     /*========================Formulario================================ */
-    .formulario {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 10px;
-      width: 90%;
-      height: auto;
-      position: absolute;
-      z-index: 1001;
-      border: #e0dfdf 1px solid;
-      border-radius: 10px;
-      background-color: white;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* ===========================Card================================ */
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+overflow-y: scroll;
+height: 100%;
+max-height: 100vh;
+width: 100%;
+}
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    height: auto;
+    font-family: "Montserrat", sans-serif;
+  }
+      
+  /* HEADER EDITAR */
+  .container-header-editar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+  }
 
-      .card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      overflow: hidden;
-      height: 100vh; 
-      }
-    /* ===========================Header-editar================================ */
-      .container-header-editar{
-          display: flex;
-          justify-content:space-around;
-          align-items: center;
-      }
-      .cancelar{
-        position: absolute;
-        right: 10px;
-        top: 8px;
-        font-size:medium;
-      }
 
-    /*========================Título================================ */
-    .titulo{
-      font-family: "Montserrat", sans-serif;
-      color: #4a148c;
-      padding: 5px;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
+      /* ===========================Card================================ */
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  margin: auto 0;
+  border: rgb(133, 40, 255) 1px solid; 
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  margin-top: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 150px 0 50px 0;
+}
+
       
       /*========================FieldSet================================ */
     
@@ -72,97 +78,230 @@ ul li {
         padding: 0;
         margin: 0;
       }
-
-        /*======================== InPut================================ */
-        .textfield {
-          font-size: 0.7em;
-          border: 1px solid #4a148c;
-          border-radius: 5px;
-          margin: 0; 
-          padding: 10px 0 10px 8px;  
-          width: 40vw;
-/*           font-family: "Montserrat", sans-serif; */
-        }
-        /*========================Text Area Messagem================================ */
-      .textAreaMessagem {
-          font-size: 0.7em;
-          border: 1px solid #4a148c;
-          border-radius: 5px;
-         padding: 10px 0 0 8px; 
-          width: 40vw;
-          font-family: "Montserrat", sans-serif;
-        }
+     /*======================== InPut================================ */
+      .textfield {
+        border: 1px solid #9d8189;
+        border-radius: 5px;
+        margin: 0; 
+        padding: 10px 0 10px 8px;  
+        width: 75vw;
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+      }
+      /*========================Text Area Messagem================================ */
+    .textAreaMessagem {
+        font-size: 1em;
+      font-family: "Montserrat", sans-serif;
+        border: 1px solid #9d8189;
+        border-radius: 5px;
+        padding: 10px 0 0 8px; 
+        width: 75vw;
+        resize: none;
+      }
+    
+      /*========================Error================================ */
+    .errorFormk {
+        font-size: 12px;
+        font-weight: bold;
+        color: red;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
       
-        /*========================Error================================ */
-      .errorFormk {
-          font-size: 12px;
-          font-weight: bold;
-          color: red;
-          padding: 0;
-          margin: 0;
-          text-align: center;
-        }
-
+      /*========================Títlo================================ */
+      .titulo{
+        color: rgb(43, 58, 85);
+        text-align: center;
+        font-size: 1.7rem;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+      }
       
-    /*========================Botao================================ */
+    
+      /*========================Envio do post  e camera ================================ */
+
+      .container-envio-e-camera{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      
+  /*========================Botao================================ */
   .botao {
-    border-radius: 8px;
-    border: 1px solid #ba68c8;
-    padding: 0.6em 1.2em;
-    font-size: 1.2em;
+    font-size: 1.3rem;
+    background-color: rgb(43, 58, 85);
+    color: #ffffff;
+    padding: 9px 10px;
     font-weight: bold;
-    background-color: #ba68c8;
-    color: #4a148c;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
     cursor: pointer;
     transition: border-color 0.25s;
     width: 50%;
-   margin: auto 0;
+    margin: 25px 0 0 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
   }
   .botao:hover {
-    filter: brightness(0.5);
     transform: scale(1);
-    opacity: 0.5;
     color: white;
+    border: none;
+    background-color: rgb(133, 40, 255);
   }
-  
-  .botao:focus,
-  .botao:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-        .container-envio-e-camera{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-         width: 100%;
-        }
-      
-      
-      
-         @media (min-width: 600px) {
-          .formulario {
-            width: 40vw;
-            
-          }
-        
-          .textAreaMessagem {
-            width: 35vw;
-          }
-          .textfield {
-            width: 35vw;
-          }
-        } 
 
-        @media (min-width: 750px) {
-           .formulario {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             flex-wrap: nowrap;
-             
-            }
-          .card{
-           
-          }
-         
-         
-          }
+
+
+/*--------------------------- Botao Tech-------------------------  */
+.containerTech{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.inputTech{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 20px;
+}
+
+.textfieldTech{
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #9d8189;
+  border-radius: 5px;
+  margin: 0; 
+  padding: 10px 0 10px 0;  
+  width: 38vw;
+}
+.botaoTech{
+  font-size: 1.3rem;
+  background-color: rgb(43, 58, 85);
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 7px 0 10px 0;  
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 100%;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.botaoTech:hover{
+  transform: scale(1);
+  color: white;
+  border: none;
+  background-color: rgb(133, 40, 255);
+}
+
+/* =============================Tecnologias============================ */
+.techList{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}    
+
+.techItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.closedTech{
+  background-color: transparent;
+  color:  rgb(43, 58, 85);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.closedTech:hover {
+  color: red;
+  cursor: pointer;
+  border: 1px solid rgb(43, 58, 85);
+  border-radius: 4px;
+}
+
+    
+@media (min-width: 550px) {
+.formulario {
+  width: 80vw;
+}
+
+.textAreaMessagem {
+  width: 75vw;
+}
+.textfield {
+  width: 75vw;
+}
+.card {
+  margin: 350px 0 50px 0;
+}
+} 
+
+@media (min-width: 650px) {
+  .formulario {
+  width: 80vw;
+}
+
+.textAreaMessagem {
+  width: 78vw;
+}
+
+.textfield {
+  width: 78vw;
+}
+
+}
+@media (min-width: 720px) {
+  .formulario {
+  width: 80vw;
+}
+.textAreaMessagem {
+  width: 66vw;
+}
+
+.textfield {
+  width: 66vw;
+}
+}
+@media (min-width: 850px) {
+  .formulario {
+  width: 80vw;
+}
+
+.textAreaMessagem {
+  width: 68vw;
+}
+.textfield {
+  width: 68vw;
+}
+}
+@media (min-width: 1050px) {
+.card{
+  width: 60%;
+}
+
+.textAreaMessagem {
+  width: 48vw;
+}
+.textfield {
+  width: 48vw;
+}
+}
+
+

@@ -4,9 +4,10 @@ import { axios } from "../../axios";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 import styles from './Certificado.module.css';
 import { Card } from "../../components/Card/Card";
-import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
-import { MensagemCVerMais } from "../../components/MensagemCVerMais/MensagemCVerMais";
-import { Link } from "react-router-dom";
+import { PiBuildingLight } from "react-icons/pi";
+import { IoCalendarOutline } from "react-icons/io5";
+import { TbClockHour5 } from "react-icons/tb";
+import { VerMais } from "../../components/VerMais/VerMais";
 
 export function Certificado() {
   const [dados, setDados] = useState([]);
@@ -37,36 +38,23 @@ export function Certificado() {
         <LoadingOverlay />
         {dados.length > 0 ? (
             dados
-              .filter((dado) => dado.select === "certificado") // Filtra apenas os projetos
+              .filter((dado) => dado.select === "certificado") 
               .map((dado, index) => (
                 <Card className={styles.card} key={"post_" + index}>
-                  <Link to={`/visualizar/${dado.id}`}>
-                    <div className={styles.header}>
-                      <div className={styles["container-header-perfil"]}>
-                        <FotoPerfil className={styles.fotoPerfil} />
-                        <div className={styles['container-header-titulo']}>
-                          <h2>Elaine Soares</h2>
-                          <p>{dado.subtitle}</p> 
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles["container-imagem-postada"]}>
-                      {dado.imageUrl && <img src={dado.imageUrl} alt="Imagem do post" className={styles.imagem} />}
-                    </div>
-                    <div className={styles.containerMensagem}>
-                      <MensagemCVerMais 
-                        classNameContainer={styles['container-info']} 
-                        classNameFilho={styles.mensagem}
-                      >
-                        {dado.about}
-                      </MensagemCVerMais>
-                      <ul>
-                        {dado.tecnologia && dado.tecnologia.map((itensTech, index)=>(
-                          <li key={index}>{itensTech}</li> 
-                        )) }
-                      </ul>
-                    </div>
-                  </Link>
+                    <h1>{dado.title}</h1>
+                  <div className={styles["container-info"]}>
+                    <PiBuildingLight /> 
+                    <p>{dado.institute}</p>
+                  </div>
+                  <div  className={styles["container-info"]}>
+                    <IoCalendarOutline />
+                    <p>{dado.date}</p>
+                  </div>
+                  <div  className={styles["container-info"]}>
+                    <TbClockHour5 />  
+                    <p>{dado.hour}</p>
+                  </div>
+                  <VerMais to={dado.id}/>
                 </Card>
               ))
           ) : (
