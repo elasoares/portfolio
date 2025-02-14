@@ -30,6 +30,11 @@ ul li {
   min-height: 100%;
   padding-bottom: 20px;
   overflow-y: scroll;
+
+  background-image: url("/background-home.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -55,7 +60,7 @@ ul li {
 }
 
 .titulo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
   color: rgba(43, 58, 85, 0.9);
   animation: bottomIn 1.4s ease-in-out forwards;
@@ -80,7 +85,7 @@ ul li {
   width: 90%;
 }
 .subtitulo h3{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: rgba(43, 58, 85, 0.9);
   font-weight: 900;
   letter-spacing: 2px;
@@ -92,7 +97,7 @@ ul li {
 
 .descricao-sub{
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 1px;
   color: rgba(75, 85, 99, 0.884);
@@ -135,7 +140,7 @@ ul li:hover{
   justify-content: center;
   gap: 50px;
   width: 90%;
-  padding-top: 40px;
+  padding-top: 5px;
 }
 
 .botao {
@@ -152,10 +157,10 @@ ul li:hover{
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(43, 58, 85, 0.2);
+  box-shadow: 0 10px 10px rgba(43, 58, 85, 0.25);
   animation: bottomIn 1.4s ease-in-out forwards;
   animation-delay: 0.5s;
-  background-color: rgba(43, 58, 85, 0.9);
+  background-color: rgb(43, 58, 85);
   color: white;
 }
 
@@ -168,9 +173,9 @@ ul li:hover{
   text-align: center;
   background-color: transparent;
   color: rgb(133, 40, 255);
-  border: 2px solid rgb(133, 40, 255);
+  border: 3px solid rgb(133, 40, 255);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 650;
   letter-spacing: 1px;
   text-transform: uppercase;
   height: 50px;
@@ -179,7 +184,6 @@ ul li:hover{
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(43, 58, 85, 0.2);
   animation: bottomIn 1.4s ease-in-out forwards;
   animation-delay: 0.5s;
 }
@@ -197,62 +201,56 @@ ul li:hover{
 
 .primeiro-background-foto {
   position: relative;
-  width: 100%;
-  height: 340px;
-  border-radius: 50%;
+  width: 380px;
+  height: 360px;
+  border-radius:100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 350px 0 0 0 ;
+  background-image: url("/background-image-home.svg");
+  background-position: center;
+  background-size: cover;
 }
 
 .foto {
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
- /*  position: relative; 
-  z-index: 2;  */
   object-fit:cover;
 }
 
-/* .primeiro-background-foto > div {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  transform-origin: center;
-} */
 .socialMedia-icon{
   color: rgb(133, 40, 255);
 }
 
 .socialMedia-icon:hover{
-  opacity: 0.8;
+  color: rgb(43, 58, 85);
 }
 
 
 
-.primeiro-background-foto > div:nth-child(1) {
-  transform: rotate(32deg) translate(190px);
- 
+/* .primeiro-background-foto > div:nth-child(1) {
+  transform: rotate(40deg) translate(170px);
+  z-index: 100;
 }
 
 .primeiro-background-foto > div:nth-child(2) {
-  transform: rotate(340deg) translate(180px);
-  color: rgb(133, 40, 255);
+  transform: rotate(320deg)  translate(160px);
+  z-index: 100;
 }
 
 .primeiro-background-foto > div:nth-child(3) {
-  transform: rotate(190deg) translate(190px);
+  transform: rotate(1deg) translate(160px);
   color: rgb(133, 40, 255);
-}
-.primeiro-background-foto > div {
+  z-index: 100;
+} */
+/* .primeiro-background-foto > div {
   position: absolute;
   font-size: 30px;
   color: #563d7c;
   
-}
+} */
 
 .typingAnimation {
   display: inline-block;
@@ -297,7 +295,7 @@ ul li:hover{
 }
 @media (min-width: 450px) {
   .primeiro-background-foto {
-    margin: 200px 0 0 0 ;
+    margin: 350px 0 0 0 ;
   }
 
   div > ul{
@@ -308,7 +306,8 @@ ul li:hover{
 }
 @media (min-width: 650px) {
   .primeiro-background-foto {
-    margin: 250px 0 0 0 ;
+    width: 400px;
+    height: 390px;
   }
   div > ul{
     width: 90%;
@@ -322,6 +321,7 @@ ul li:hover{
     height: 290px;
 
   }
+
 }
 @media (min-width: 800px) {
 
@@ -337,12 +337,54 @@ ul li:hover{
     margin: 0;
     padding: 0;
     flex-direction: row;
+    margin: 50px 0 0 0 ;
+  }
+
+  .descricao-sub{
+    font-size: 1.5rem;
+  }
+
+.titulo {
+  font-size: 2rem;
+}
+.subtitulo {
+  width: 90%;
+}
+  .subtitulo h3{
+    font-size: 1.9rem;
+    color: rgb(43, 58, 85);
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .subtitulo span {
+    color: rgb(133, 40, 255);
   }
 
   .container-main {
     margin: 0;
     overflow-y: hidden;
   }
+}
+@media (min-width: 900px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .subtitulo {
+    width: 70%;
+  }
+  
+    .subtitulo h3{
+      font-size: 2rem;
+      color: rgb(43, 58, 85);
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .subtitulo span {
+      color: rgb(133, 40, 255);
+    }
 }
 @media (min-width: 1000px) {
   div > ul{

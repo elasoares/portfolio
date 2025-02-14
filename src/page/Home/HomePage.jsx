@@ -3,9 +3,10 @@ import { GoDownload } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { LoadingOverlay } from "../../Layout/LoadingOverlay";
 import { FotoPerfil } from "../../components/FotoPerfilGet/FotoPerfil";
-import { SlSocialLinkedin } from "react-icons/sl";
+/* import { SlSocialLinkedin } from "react-icons/sl";
 import { TbBrandGithub } from "react-icons/tb";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { BsTelephoneInbound } from "react-icons/bs"; */
 
 
 const navigator = [
@@ -27,7 +28,7 @@ export function HomePage() {
         <div className={styles["container"]}>
           <div className={styles.section1}>
             <div className={styles["primeiro-background-foto"]}>
-              <div>
+              {/* <div>
                 <a href="https://www.linkedin.com/in/elaine-soares-ti/" className={styles["socialMedia-icon"]}>
                 <SlSocialLinkedin /></a>
               </div>
@@ -38,7 +39,7 @@ export function HomePage() {
               <div>
               <a href="mailto:elaine.almeida@al.infnet.edu.br" className={styles["socialMedia-icon"]}>
               <MdOutlineMailOutline /></a>
-              </div>
+              </div> */}
               <div className={styles["segundo-background-foto"]}>
                 <FotoPerfil className={styles.foto} />
               </div>
@@ -50,19 +51,12 @@ export function HomePage() {
                     Elaine Soares
                   </span> 
               </h1>
-            <div className={styles["container-botao"]}>
-              <Link className={`${styles["botao-contato"]}`} to={navigator[0].link}> CONTATE-ME</Link>
-              <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className={styles.botao}>
-              CURRÍCULO 
-                  <GoDownload />
-              </a>
-            </div>
+            
           </div>
           <div className={styles.section2}>
           <div className={styles["container-info"]}>
               <div className={styles.subtitulo}>
                 <h3>Sou desenvolvedora <span>Front-end</span></h3>
-                
                 <p className={styles["descricao-sub"]}>
                   Possuo experiência no desenvolvimento de interfaces responsivas e 
                   acessíveis. Além disso, 
@@ -80,7 +74,14 @@ export function HomePage() {
                 <li>Firebase</li>
                 <li>Node.js</li>
               </ul>
-            </div>                
+            </div>    
+            <div className={styles["container-botao"]}>
+              <Link className={`${styles["botao-contato"]}`} to={navigator[0].link}> CONTATE-ME</Link>
+              <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className={styles.botao}>
+              CURRÍCULO 
+                  <GoDownload />
+              </a>
+            </div>            
           </div>
           
         </div>
