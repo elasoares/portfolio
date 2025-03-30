@@ -33,14 +33,20 @@
 }
 
 /* ======= Entrar ========  */
-.perfil{
-    height: auto;
-    text-align: center;
+
+
+.desativado{
+    display: none;
 }
-.perfil-container{
-    padding: 5px 10px;
-    background-color: rgb(133, 40, 255);
-    border-radius: 10px;
+.ativado{
+    background-color: rgba(255, 255, 255, 0.699);
+    z-index: 1250;
+    display: flex;
+    flex-direction: column;
+    z-index: 250;
+    position: absolute;
+    right: 45px;
+    top: 30px;
 }
 .entrar{
     font-family: "Montserrat", sans-serif;
@@ -48,10 +54,103 @@
     font-weight: 600;
     letter-spacing: 1px;
     color: white;
-    height: 45px;
-    width: 200px;
+}
+
+.botao-entrar{
+    padding: 5px 10px;
+    background-color: rgb(133, 40, 255);
+    border-radius: 10px;
+    height: 35px;
+    width: 300px;    
+    text-align: center;
+}
+.botao-entrar:hover{
+    background-color: rgb(43, 58, 85);
     cursor: pointer;
-    /* transition: 0.3s; */
+}
+.entrar:hover{
+    color: white;
+}
+
+
+/* ======= Container item ========  */
+.container-navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    padding: 0;
+    margin: 0;
+    }
+
+.item-menu {
+color: rgb(97, 1, 223);
+font-size: 1.2rem;
+font-weight: 650;
+font-family: "Montserrat", sans-serif;
+letter-spacing: 0.1rem;
+}
+
+.item-menu:hover {
+color:rgb(43, 58, 85);
+}
+
+
+
+.hamburger{
+    color: rgb(133, 40, 255);
+    font-size: 2rem;
+}
+.fechar{
+    color: rgb(133, 40, 255);
+    font-size: 2rem;
+    position: absolute;
+    right: 30px;
+    z-index: 3000;
+    cursor:pointer;
+}
+
+
+
+
+@media(min-width: 820px) {
+.item-menu {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+}
+
+.ativado, .perfil{
+    background-color: transparent;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    z-index: 0;
+    position: none;
+    left: 0;
+    top: -30px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+.hamburger{
+    display: none;
+}
+.fechar{
+    display: none;
+}
+.container-navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    margin: auto 0;
+    }
+
 }
 
 

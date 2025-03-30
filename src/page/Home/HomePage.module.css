@@ -30,7 +30,6 @@ ul li {
   min-height: 100%;
   padding-bottom: 20px;
   overflow-y: scroll;
-
   background-image: url("/background-home.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -70,6 +69,7 @@ ul li {
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
+  
 }
 
 .titulo span{
@@ -104,7 +104,7 @@ ul li {
 }
 
 /* ============ Habilidades ============ */
-div > ul {
+.container-habilidades > .ul-lista {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +115,7 @@ div > ul {
   height: auto;
 }
 
-ul li{
+.ul-lista> .itens-lista{
   background-color: rgba(133, 40, 255, 0.178);
   border-color: 1px transparent;
   border-radius: 5px;
@@ -129,7 +129,7 @@ ul li{
   font-size: .75rem;
   font-family: "Montserrat", sans-serif;
 }
-ul li:hover{
+.ul-lista> .itens-lista:hover{
   opacity: 0.8;
 }
 
@@ -198,8 +198,13 @@ ul li:hover{
 }
 
 /* ============ Foto ============ */
-
-.primeiro-background-foto {
+.container-icon-foto{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.background-foto {
   position: relative;
   width: 380px;
   height: 360px;
@@ -207,7 +212,6 @@ ul li:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 350px 0 0 0 ;
   background-image: url("/background-image-home.svg");
   background-position: center;
   background-size: cover;
@@ -229,29 +233,23 @@ ul li:hover{
 }
 
 
-
-/* .primeiro-background-foto > div:nth-child(1) {
-  transform: rotate(40deg) translate(170px);
-  z-index: 100;
-}
-
-.primeiro-background-foto > div:nth-child(2) {
-  transform: rotate(320deg)  translate(160px);
-  z-index: 100;
-}
-
-.primeiro-background-foto > div:nth-child(3) {
-  transform: rotate(1deg) translate(160px);
-  color: rgb(133, 40, 255);
-  z-index: 100;
-} */
-/* .primeiro-background-foto > div {
+.container-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
   position: absolute;
-  font-size: 30px;
-  color: #563d7c;
-  
-} */
-
+  left: 15px;
+}
+.container-icon > li > a{
+  font-size: 2rem;
+  color: rgb(133, 40, 255);
+}
+.container-icon > li > a:hover{
+  cursor: pointer;
+  color: rgb(43, 58, 85);
+}
 .typingAnimation {
   display: inline-block;
   overflow: hidden;
@@ -262,7 +260,7 @@ ul li:hover{
 
 @keyframes blink {
   from {
-    border-right-color: rgba(255, 255, 255, 0.75);
+    border-right-color: rgba(133, 40, 255, 0.596);
   }
   to {
     border-right-color: transparent;
@@ -274,7 +272,7 @@ ul li:hover{
     width: 0;
   }
   to {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -293,23 +291,31 @@ ul li:hover{
 .section2{
   gap: 15px;
 }
-@media (min-width: 450px) {
-  .primeiro-background-foto {
+@media (min-width: 400px) {
+
+  .container-icon-foto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+ /*    width: 100%; */
+    padding: 20px;
     margin: 350px 0 0 0 ;
   }
 
-  div > ul{
+  .container-habilidades > .ul-lista{
     width: 90%;
     margin: 0 0 0 45px;
     padding-bottom: 5px;
   }
 }
 @media (min-width: 650px) {
-  .primeiro-background-foto {
+  .background-foto {
     width: 400px;
     height: 390px;
   }
-  div > ul{
+  .container-habilidades > .ul-lista{
     width: 90%;
     margin: 0 0 0 45px;
     padding-bottom: 5px;
@@ -325,23 +331,24 @@ ul li:hover{
 }
 @media (min-width: 800px) {
 
-  .primeiro-background-foto {
-    margin: 0 0 0 0 ;
-  }
-  div > ul{
+
+.container-habilidades > .ul-lista{
     width: 80%;
     margin: 0 auto;
   }
   .container{ 
     align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 50px 0 0 0 ;
   }
 
   .descricao-sub{
     font-size: 1.5rem;
+    width: 80%;
   }
 
 .titulo {
@@ -351,7 +358,7 @@ ul li:hover{
   width: 90%;
 }
   .subtitulo h3{
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     color: rgb(43, 58, 85);
     font-weight: 900;
     letter-spacing: 2px;
@@ -372,22 +379,24 @@ ul li:hover{
   }
 
   .subtitulo {
-    width: 70%;
+    width: 100%;
   }
   
-    .subtitulo h3{
-      font-size: 2rem;
-      color: rgb(43, 58, 85);
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-align: center;
+    .container-icon-foto{
+      margin:0 0 0 0 ;
+      gap: 5px;
+      
     }
-    .subtitulo span {
-      color: rgb(133, 40, 255);
+    .container{ 
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      flex-direction: row;
     }
 }
 @media (min-width: 1000px) {
-  div > ul{
+.container-habilidades > .ul-lista{
     width: 70%;
     margin: 0 auto;
   }
