@@ -30,7 +30,7 @@
 
 .menu-perfil{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     gap: 25px;
@@ -38,13 +38,11 @@
     width: 100%;
 } 
 
-
-
   .item-menu{
-    padding: 20px 30px; 
     font-size: 1.4rem;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
+    font-style: normal;
     transition: 0.2s;
     letter-spacing: 0.1rem;
     color: rgb(43, 58, 85);
@@ -58,27 +56,28 @@
     color:#3d348b;
     cursor: pointer;
     border-bottom: 2px rgb(43, 58, 85) solid ;
-    width: 100%;
   }
   .container-acessar{
     position: absolute;
     width: 150px;
-    height:250px;
+    height:auto;
     background-color: rgba(255, 255, 255, 0.726);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
     border-radius: 4px;
-    top: 85px;
-    right: 15px;
-    z-index: 300;
+    top: 5px;
+    right: 5px;
+    z-index: 3000;
   }
   @media (min-width: 700px){
     .container-acessar{
-      height:50vh;
+      top: 92px;
+      right:5px;
+      height: 10vh;
     }
     .menu-perfil {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
     } 
   }
@@ -104,23 +103,11 @@
     } 
   } */
 
-  @media(min-width: 1200px){
+/*   @media(min-width: 1600px){
     .menu-perfil {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
     } 
-  }
-  @media(min-width: 1600px){
-    .container-acessar{
-      top: 98px;
-      right: 35px;
-    }
-    .menu-perfil {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
-    } 
-  }
+  } */
