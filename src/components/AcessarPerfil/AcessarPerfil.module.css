@@ -4,7 +4,9 @@
 .container-perfil {
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
 }
 
 
@@ -31,11 +33,9 @@
 .menu-perfil{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 25px;
-    height: 100%;
-    width: 50%;
 } 
 
   .item-menu{
@@ -58,17 +58,17 @@
     border-bottom: 2px rgb(43, 58, 85) solid ;
   }
   .container-acessar{
-    position: absolute;
-    width: 150px;
+    /* position: absolute; */
+ /*    width: 150px; */
     height:auto;
-    background-color: rgba(255, 255, 255, 0.726);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
+   /*  background-color: rgba(255, 255, 255, 0.726);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);  */
     border-radius: 4px;
-    top: 5px;
+    /* top: 5px;
     right: 5px;
-    z-index: 3000;
+    z-index: 3000; */
   }
-  @media (min-width: 700px){
+  /* @media (min-width: 700px){
     .container-acessar{
       top: 92px;
       right:5px;
@@ -80,7 +80,7 @@
       align-items: center;
       justify-content: center;
     } 
-  }
+  } */
 
 
 /*   @media (min-width: 850px){

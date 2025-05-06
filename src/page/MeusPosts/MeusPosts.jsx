@@ -47,9 +47,6 @@ toast("Erro ao tentar deletar, verifique e tente novamente." + error.message);
 }
 }
 
-
-
-
     return (
         <div  className={styles.PrimeiroContainer} >
             <div  className={styles.container} >

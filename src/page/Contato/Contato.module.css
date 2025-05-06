@@ -97,6 +97,11 @@ fieldset {
   justify-content: center;
   flex-direction: row;
 }
+.input-termo{
+  width: 50px;
+  height: 20px;
+  margin-right: 5px;
+}
 .termStyles {
   font-size: 1em;
   font-weight: 500;

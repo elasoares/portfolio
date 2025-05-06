@@ -1,12 +1,21 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container-footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 90%;
   height: auto;
+  margin:  auto 0;
+
 }
 
 p{
-  color: black;
+  color: rgb(1, 10, 29);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.8rem;
 }
+
 

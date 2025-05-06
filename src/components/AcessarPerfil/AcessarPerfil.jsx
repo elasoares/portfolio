@@ -39,7 +39,7 @@ export function AcessarPerfil({className}) {
             to="/perfil"
             onClick={() => handleEntrarPerfil("/perfil")}
           >
-            Perfil
+            Acessar
           </Link>
           <button className={styles["item-menu"]} onClick={handleSair}>
             Sair

@@ -11,7 +11,6 @@ import { Button } from "../../components/Button/Button";
 import toast from "react-simple-toasts";
 import { UpLoadsImagens } from "../../components/UpLoadsImagens/UpLoadsImagens";
 import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { GrSend } from "react-icons/gr";
 
 
 export function FormularioPerfil() {
@@ -258,7 +257,7 @@ setSubmitting(false);
                     className={styles.textfieldTech}
                   />
                   <Button type="button" onClick={handleSaveTech} className={styles.botaoTech}>
-                  Adicionar tecnologia
+                  Add tecnologias
                   </Button>
                 </fieldset>
               <ul className={styles.techList}>
@@ -273,7 +272,7 @@ setSubmitting(false);
               </ul> 
             </div>
             <div className={styles[`container-envio-e-camera`]}>
-              <Button type="submit" className={styles.botao}>  Enviar <GrSend/></Button>
+              <Button type="submit" className={styles.botao}>  Enviar </Button>
             </div>
           </form>
         </Card>

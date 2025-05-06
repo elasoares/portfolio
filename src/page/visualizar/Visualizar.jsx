@@ -41,15 +41,15 @@ export function Visualizar() {
       <div className={styles.container1}>
         <div className={styles.container} onClick={(e) => e.stopPropagation()}>
           <div className={styles.header}>
-            <h2>{post.title}</h2>
+            <h2 className={styles.title}>{post.title}</h2>
             <IoMdClose className={styles.close} onClick={()=> navigate(-1)} />
           </div>
           
           <div className={styles.conatinerTechHeader}>
-            {post.tecnologia && (<p>{"</>"} Tecnologias</p>)}
+            {post.tecnologia && (<p className={styles.paragrafo}>{"</>"} Tecnologias</p>)}
             <ul>
               {post.tecnologia && post.tecnologia.map((itemTech, index) => (
-                  <li key={index}>{itemTech}</li>
+                  <li className={styles.tecnologia} key={index}>{itemTech}</li>
               ))}
             </ul>
               {post.select === "certificado" &&(

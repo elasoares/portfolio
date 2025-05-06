@@ -10,7 +10,7 @@ html, body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   background-color: #f4f1f7;
-  color: #2c2c2c;
+  color: rgb(1, 10, 29);
   overflow-y: scroll;
 }
 
@@ -124,7 +124,7 @@ ul li {
   background-color: rgba(133, 40, 255, 0.178);
   border-color: 1px transparent;
   border-radius: 5px;
-  color: rgb(133, 40, 255);
+  color: rgb(1, 10, 29);
   width: 142px;
   height: 30px;
   display: flex;
@@ -133,6 +133,7 @@ ul li {
   font-weight: 700;
   font-size: .75rem;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 .ul-lista> .itens-lista:hover{
   opacity: 0.8;
@@ -152,6 +153,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -177,14 +179,14 @@ ul li {
 .botao-contato {
   text-align: center;
   background-color: transparent;
-  color: rgb(133, 40, 255);
-  border: 3px solid rgb(133, 40, 255);
+  color: rgb(1, 10, 29);
+  border: 3px solid rgb(1, 10, 29);
   font-size: 1rem;
   font-weight: 650;
   letter-spacing: 1px;
   text-transform: uppercase;
   height: 50px;
-  line-height: 50px;
+  line-height: 45px;
   width: 150px;
   cursor: pointer;
   transition: 0.3s;
@@ -195,6 +197,7 @@ ul li {
 
 .botao-contato:hover {
   background-color: rgb(133, 40, 255);
+  border:none;
   color: white;
 }
 

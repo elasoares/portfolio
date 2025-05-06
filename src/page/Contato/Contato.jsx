@@ -164,7 +164,7 @@ export function Contato() {
                 /> 
                 <label htmlFor="acceptTerms" className={styles.termStyles}>
                   Para continuar, você deverá preencher o campo, conforme
-                  <a className={styles.termLinkStyles} href="https://caiogondim.github.io/piao-da-casa-propria-em-css-3d/">
+                  <a className={styles.termLinkStyles} href="https://www.termsfeed.com/live/0f1a2b8c-4d3e-4a5b-9f7c-6d0e2f3f1a2b" target="_blank" rel="noopener noreferrer">
                     termo de contrato.
                   </a>
                 </label> 
