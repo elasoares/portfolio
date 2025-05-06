@@ -37,7 +37,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
-  width: 350px;
+  width: 320px;
   height: 380px;
   border: 1px solid #dbdbdb;
   padding: 10px;
@@ -50,11 +50,11 @@
 
 
 .card h1 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
   padding: 10px 0;
-  color: #000000;
+  color: rgb(1, 10, 29);
 }
 
 
@@ -75,7 +75,7 @@
 .container-info p {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #000000;
+  color: rgb(1, 10, 29);
 }
 
 @media (min-width: 650px) {

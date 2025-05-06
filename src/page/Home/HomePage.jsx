@@ -53,8 +53,8 @@ export function HomePage() {
           <div className={styles.section2}>
           <div className={styles["container-info"]}>
               <div className={styles.subtitulo}>
-                <h3>Sou desenvolvedora <span>Front-end</span></h3>
                 <p className={styles["descricao-sub"]}>
+                  Sou desenvolvedora <span>Front-end. </span>
                   Possuo experiência no desenvolvimento de interfaces responsivas e 
                   acessíveis. Além disso, 
                   tenho conhecimento em:
@@ -65,9 +65,6 @@ export function HomePage() {
               <ul className={styles["ul-lista"]}>
                 <li className={styles["itens-lista"]}>JavaScript</li>
                 <li className={styles["itens-lista"]}>React</li>
-                <li className={styles["itens-lista"]}>Styled Comonent</li>
-                <li className={styles["itens-lista"]}>Tailwind CSS</li>
-                <li className={styles["itens-lista"]}>Bootstrap</li>
                 <li className={styles["itens-lista"]}>Firebase</li>
                 <li className={styles["itens-lista"]}>Node.js</li>
               </ul>

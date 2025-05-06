@@ -65,7 +65,7 @@ fieldset {
   /*========================Botao================================ */
   .botao {
     font-size: 1.3rem;
-    background-color: rgb(43, 58, 85);
+    background-color: rgb(1, 10, 29);
     color: #ffffff;
     padding: 9px 10px;
     font-weight: bold;
@@ -75,7 +75,9 @@ fieldset {
     transition: border-color 0.25s;
     width: 30%;
     margin: 25px 0 0 0;
-    outline: none
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .botao:hover {
     transform: scale(1);
@@ -87,7 +89,7 @@ fieldset {
 /*========================Títlo================================ */
 .titulo {
   font-family: "Montserrat", sans-serif;
-  color: #543787;
+  color: rgb(1, 10, 29);
   letter-spacing: 0.1rem;
   transition: 1.2s;
   font-size: 1.8em;

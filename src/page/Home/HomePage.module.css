@@ -59,9 +59,9 @@ ul li {
 }
 
 .titulo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  color: rgba(43, 58, 85, 0.9);
+  color: rgb(1, 10, 29);
   animation: bottomIn 1.4s ease-in-out forwards;
   animation-delay: 0.2s;
   display: flex;
@@ -69,6 +69,9 @@ ul li {
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+
   
 }
 
@@ -84,13 +87,13 @@ ul li {
   height: auto;
   width: 90%;
 }
-.subtitulo h3{
-  font-size: 1.8rem;
+/* .subtitulo h3{
+  font-size: 1.2rem;
   color: rgba(43, 58, 85, 0.9);
   font-weight: 900;
   letter-spacing: 2px;
   text-align: center;
-}
+} */
 .subtitulo span {
   color: rgb(133, 40, 255);
 }
@@ -100,7 +103,9 @@ ul li {
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: rgba(75, 85, 99, 0.884);
+  color: rgb(1, 10, 29);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
 }
 
 /* ============ Habilidades ============ */
@@ -147,20 +152,20 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   height: 50px;
   line-height: 50px;
-  width: 180px;
+  width: 150px;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(43, 58, 85, 0.25);
   animation: bottomIn 1.4s ease-in-out forwards;
   animation-delay: 0.5s;
-  background-color: rgb(43, 58, 85);
+  background-color: rgb(1, 10, 29);
   color: white;
 }
 
@@ -174,13 +179,13 @@ ul li {
   background-color: transparent;
   color: rgb(133, 40, 255);
   border: 3px solid rgb(133, 40, 255);
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 650;
   letter-spacing: 1px;
   text-transform: uppercase;
   height: 50px;
   line-height: 50px;
-  width: 180px;
+  width: 150px;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 5px;
@@ -203,11 +208,12 @@ ul li {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 420px;
 }
 .background-foto {
   position: relative;
-  width: 380px;
-  height: 360px;
+  width: 350px;
+  height: 350px;
   border-radius:100%;
   display: flex;
   justify-content: center;
@@ -218,8 +224,8 @@ ul li {
 }
 
 .foto {
-  width: 270px;
-  height: 270px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit:cover;
 }
@@ -239,8 +245,9 @@ ul li {
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  position: absolute;
-  left: 15px;
+  z-index: 1001;
+  position: relative;
+  left: 10px;
 }
 .container-icon > li > a{
   font-size: 2rem;

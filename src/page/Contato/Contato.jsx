@@ -60,7 +60,6 @@ export function Contato() {
 
 
   return (
-    <div className={styles["primeiro-container"]}>
       <div className={styles.containerContato}>
   
       <div className={styles.formContainer}>
@@ -185,7 +184,6 @@ export function Contato() {
         )}
       </Formik>
 
-    </div>
     </div>
     </div>
   );
