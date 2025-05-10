@@ -31,10 +31,10 @@ width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  max-height: 100vh;
+  height: auto;
   width: 100%;
   font-family: "Montserrat", sans-serif;
+  z-index: 10001;
   }
       
       /* ===========================Card================================ */
@@ -237,7 +237,7 @@ width: 100%;
   width: 75vw;
 }
 .card {
-  margin: 350px 0 50px 0;
+  margin: 320px 0 50px 0;
 }
 } 
 
