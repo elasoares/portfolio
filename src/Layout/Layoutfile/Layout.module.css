@@ -13,7 +13,7 @@
         "main"
         "footer";
     grid-template-columns: auto;
-    grid-template-rows: 20% 1fr 6%;
+    grid-template-rows: 15% 1fr 6%;
     background-color: rgba(255, 255, 255, 0.9);
 }
 .header {
