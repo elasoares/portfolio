@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { axios } from '../../axios';
+import { supabase } from "../../Supabaseconfig";
 import toast from 'react-simple-toasts';
 import { LoadingOverlay } from '../../Layout/LoadingOverlay';
 import styles from './Visualizar.module.css';
@@ -22,8 +22,13 @@ export function Visualizar() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`/meu-post/${id}.json`);
-        setPost(response.data);
+        const { data, error } = await supabase
+          .from("posts")
+          .select("*")
+          .eq("id", id)
+          .single();
+        if (error) throw error;
+        setPost(data);
       } catch (error) {
         toast('Erro ao carregar o post: ' + error.message);
       } finally {
@@ -42,55 +47,49 @@ export function Visualizar() {
         <div className={styles.container} onClick={(e) => e.stopPropagation()}>
           <div className={styles.header}>
             <h2 className={styles.title}>{post.title}</h2>
-            <IoMdClose className={styles.close} onClick={()=> navigate(-1)} />
+            <IoMdClose className={styles.close} onClick={() => navigate(-1)} />
           </div>
-          
+
           <div className={styles.conatinerTechHeader}>
             {post.tecnologia && (<p className={styles.paragrafo}>{"</>"} Tecnologias</p>)}
             <ul>
               {post.tecnologia && post.tecnologia.map((itemTech, index) => (
-                  <li className={styles.tecnologia} key={index}>{itemTech}</li>
+                <li className={styles.tecnologia} key={index}>{itemTech}</li>
               ))}
             </ul>
-              {post.select === "certificado" &&(
-                <div>
-                  <div className={styles["container-info"]}>
-                    <PiBuildingLight /> 
-                    <p>{post.institute}</p>
-                  </div>
-                  <div  className={styles["container-info"]}>
-                    <IoCalendarOutline />
-                    <p>{post.date}</p>
-                  </div>
-                  <div  className={styles["container-info"]}>
-                    <TbClockHour5 />  
-                    <p>{post.hour}</p>
-                  </div>
+            {post.tipo === "certificado" && (
+              <div>
+                <div className={styles["container-info"]}>
+                  <PiBuildingLight />
+                  <p>{post.institute}</p>
                 </div>
-              )}
-          </div>
-          {
-            post.link && (
-              <div className={styles["container-redirecionamento"]}>
-                <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles["container-redirecionamento-icon"]}>
-                  {post.select === "projeto" ? (
-                    <>
-                    <TbBrandGithub /> Ver código
-                    </>
-                  ):(
-                    <>
-                    <BiWindowOpen /> Verificar certificado
-                    </>
-                  )}
-                </a>
+                <div className={styles["container-info"]}>
+                  <IoCalendarOutline />
+                  <p>{post.date}</p>
+                </div>
+                <div className={styles["container-info"]}>
+                  <TbClockHour5 />
+                  <p>{post.hour}</p>
+                </div>
               </div>
-            )
-          }
+            )}
+          </div>
+          {post.link && (
+            <div className={styles["container-redirecionamento"]}>
+              <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles["container-redirecionamento-icon"]}>
+                {post.tipo === "projeto" ? (
+                  <><TbBrandGithub /> Ver código</>
+                ) : (
+                  <><BiWindowOpen /> Verificar certificado</>
+                )}
+              </a>
+            </div>
+          )}
           <div className={styles.containerImagemPostada}>
-            <img className={styles.imagem} src={post.imageUrl} alt={post.title} />
+            <img className={styles.imagem} src={post.image_url} alt={post.title} />
           </div>
 
-          {post.select === "projeto" && (
+          {post.tipo === "projeto" && (
             <div className={styles.containerInfo}>
               <div className={styles.info}>
                 <h3 className={styles.tituloSobre}><CiCircleInfo /> Sobre o projeto</h3>
@@ -98,7 +97,7 @@ export function Visualizar() {
               </div>
               {post.functionality && (
                 <div className={styles.info}>
-                  <h4 className={styles.funcionalidade}>Funcionalidades</h4> 
+                  <h4 className={styles.funcionalidade}>Funcionalidades</h4>
                   <p className={styles.mensagem}>{post.functionality}</p>
                 </div>
               )}

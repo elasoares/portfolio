@@ -54,10 +54,9 @@ export function HomePage() {
           <div className={styles["container-info"]}>
               <div className={styles.subtitulo}>
                 <p className={styles["descricao-sub"]}>
-                  Sou desenvolvedora <span>Front-end. </span>
-                  Possuo experiência no desenvolvimento de interfaces responsivas e 
-                  acessíveis. Além disso, 
-                  tenho conhecimento em:
+                  Sou desenvolvedora <span>Full Stack.</span> Possuo experiência no
+                  desenvolvimento de interfaces responsivas e acessíveis, além de atuar
+                  no back-end com Java e Spring Boot. Tenho conhecimento em:
                 </p>
               </div>
             </div>
@@ -65,8 +64,9 @@ export function HomePage() {
               <ul className={styles["ul-lista"]}>
                 <li className={styles["itens-lista"]}>JavaScript</li>
                 <li className={styles["itens-lista"]}>React</li>
-                <li className={styles["itens-lista"]}>Firebase</li>
                 <li className={styles["itens-lista"]}>Node.js</li>
+                <li className={styles["itens-lista"]}>Java</li>
+                <li className={styles["itens-lista"]}>Spring Boot</li>
               </ul>
             </div>    
             <div className={styles["container-botao"]}>

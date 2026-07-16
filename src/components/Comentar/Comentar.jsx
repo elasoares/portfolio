@@ -1,48 +1,41 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import styles from './Comentar.module.css';
-import { dataBase } from '../../firebaseConfig.js';
-import { ref, push, onValue } from 'firebase/database';
+import { supabase } from "../../Supabaseconfig";
 import toast from 'react-simple-toasts';
-/* import { Curtir } from '../Curtir/Curtir.jsx'; */
 
 export function Comentar({ postID }) {
   const [comentario, setComentario] = useState('');
   const [comentariosEnviados, setComentariosEnviados] = useState([]);
 
+  async function carregarComentarios() {
+    const { data, error } = await supabase
+      .from("comentarios")
+      .select("*")
+      .eq("post_id", postID)
+      .order("created_at", { ascending: true });
+    if (!error) setComentariosEnviados(data || []);
+  }
+
   useEffect(() => {
-    const mensRef = ref(dataBase, `/comentarios/${postID}`);
-    const unsubscribe = onValue(mensRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const comentariosArray = Object.entries(data).map(([key, value]) => ({
-          id: key,
-          texto: value.texto,
-        }));
-        setComentariosEnviados(comentariosArray);
-      } else {
-        setComentariosEnviados([]);
-      }
-    });
-    return () => unsubscribe();
+    carregarComentarios();
   }, [postID]);
 
-  const handleChange = (event) => {
-    const { value } = event.target;
-    setComentario(value);
-  };
+  const handleChange = (event) => setComentario(event.target.value);
 
-  const enviarParaFirebase = () => {
-    const mensRef = ref(dataBase, `/comentarios/${postID}`);
-
-    push(mensRef, { texto: comentario })
-      .then(() => {
-        setComentario('');
-        toast('Comentário realizado com sucesso!');
-      })
-      .catch((erro) => {
-        toast('Erro: ' + erro.message);
-      });
+  const enviarComentario = async () => {
+    if (comentario.trim() === "") return;
+    try {
+      const { error } = await supabase
+        .from("comentarios")
+        .insert([{ post_id: postID, texto: comentario }]);
+      if (error) throw error;
+      setComentario('');
+      toast('Comentário realizado com sucesso!');
+      carregarComentarios();
+    } catch (erro) {
+      toast('Erro: ' + erro.message);
+    }
   };
 
   return (
@@ -55,24 +48,13 @@ export function Comentar({ postID }) {
           </div>
         ))}
       </div>
-
       <div className={styles['container-mensagem']}>
-        {/* <Curtir className={styles['container-curtir']} /> */}
         <fieldset>
-          <textarea
-            placeholder="Deixe seu comentário aqui"
-            value={comentario}
-            name="mensagem"
-            id="mensagem"
-            rows="1"
-            cols="30"
-            className={styles['campo-input']}
-            onChange={handleChange}
-          />
+          <textarea placeholder="Deixe seu comentário aqui" value={comentario}
+            name="mensagem" id="mensagem" rows="1" cols="30"
+            className={styles['campo-input']} onChange={handleChange} />
         </fieldset>
-        <button className={styles.botao} onClick={enviarParaFirebase}>
-          Enviar
-        </button>
+        <button className={styles.botao} onClick={enviarComentario}>Enviar</button>
       </div>
     </div>
   );
